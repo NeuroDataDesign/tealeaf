@@ -36,6 +36,7 @@ conda install -c conda-forge jupyter_contrib_nbextensions \
 
 pip install graspy mgcpy lolP
 ```
+3. Follow the instructions [here](https://rerf.neurodata.io/install.html#mac) to install SPORF
 
 ## Usage
 
