@@ -9,7 +9,7 @@ An easy first step is to make sure we all use the same computing environment!
 
 ## Procedure
 
-1. Install miniconda for Python 3 (download [here]("https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"))
+1. Install miniconda for Python 3 (download [here](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh))
 2. Run the following script in terminal to setup your environment
 ```
 # Specify environment details
