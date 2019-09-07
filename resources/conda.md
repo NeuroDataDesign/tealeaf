@@ -2,7 +2,7 @@
 
 Vivek Gopalakrishnan | September 6, 2019
 
->>> If 2+2=4 on my computer, it better equal 4 on your computer too.
+> If 2+2=4 on my computer, it better equal 4 on your computer too.
 
 Being able to reproduce results is an essential part of data science.
 An easy first step is to make sure we all use the same computing environment!
