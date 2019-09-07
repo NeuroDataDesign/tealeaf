@@ -7,6 +7,10 @@ Vivek Gopalakrishnan | September 6, 2019
 Being able to reproduce results is an essential part of data science.
 An easy first step is to make sure we all use the same computing environment!
 
+We do this using Conda, an open-source package management system and environment 
+management system that works across all operating systems. More information is
+available [here](https://conda.io/en/latest/).
+
 ## Procedure
 
 1. Install miniconda for Python 3 (download [here](https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh))
@@ -33,7 +37,7 @@ conda install -c conda-forge jupyter_contrib_nbextensions \
 pip install graspy mgcpy lolP
 ```
 
-# Usage
+## Usage
 
 When you want use the `tealeaf` environment, start by running `conda activate tealeaf` in terminal.
 
