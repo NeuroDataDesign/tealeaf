@@ -11,10 +11,13 @@ Just a quick aside: _oblique_ means neither perpendicular nor parallel, so in th
 
 ## Methods
 
-## Drawbacks / areas for improvement
-
-- SPORF (and all oblique ensembles) forfeit 
 
 ## Needs
 
-- SPORF for regression (uni- and multi-variate) is not implemented
+- SPORF for regression is not implemented
+- Seems like no one knows how to do multivariate regression with RF and its varients
+
+## Outstanding questions
+
+- How does SPORF maintain interpretability if splits are obique?
+- Is SPORF consistently an improvement over RF?
