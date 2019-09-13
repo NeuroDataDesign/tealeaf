@@ -11,6 +11,17 @@ Just a quick aside: _oblique_ means neither perpendicular nor parallel, so in th
 
 ## Methods
 
+### All oblique methods split along different projections of the input data
+- A generalized model for oblique ensembles is to think about searching over the space of all possible projection matrices
+- If the data matrix $X$ is in R^{n x p} (_n_ subjects and _p_ features), then all projection matrices live in R^{n x d}
+- _d_ is the dimensionality of the projected space
+
+### SPORF considers sparse projection matrices
+- The potential projection matrices __A__ considered by SPORF are _sparse_
+- (_sparse_ means most entries are 0)
+- Why sparse matrices?
+> Li et al. [8] demonstrates that very sparse random projections, in which a large fraction of entries in A are zero, can maintain high accuracy and significantly speed up the matrix multiplication by a factor of sqrt(p) or more.
+- See Section 3.1 for the distribution for a sparse matrix
 
 ## Needs
 
@@ -19,5 +30,6 @@ Just a quick aside: _oblique_ means neither perpendicular nor parallel, so in th
 
 ## Outstanding questions
 
+- In SPORF, is each tree in an ensemble trained on the same projection of the data?
 - How does SPORF maintain interpretability if splits are obique?
 - Is SPORF consistently an improvement over RF?
