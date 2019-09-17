@@ -3,7 +3,7 @@
 ## High-level points
 
 - Decision forests (ensembles of decision trees) work well in many scenarios
-- Trees usually recursively split the input space with boundaries parallel to the input axes. Whenever classes are not seperable along any single dimension, decision boundaries become more complicated.
+- Trees usually recursively split the input space with boundaries parallel to the input axes. Whenever classes are not seperable along any single dimension, decision boundaries become more complicated (see [taxicab geometry](https://en.wikipedia.org/wiki/Taxicab_geometry#/media/File:Manhattan_distance.svg)).
 - "Oblique" ensembles address this problem by splitting on linear combinations of features
 - SPORF adapts RF by splitting data along linear combinations of a small number of features
 
@@ -22,6 +22,12 @@ Just a quick aside: _oblique_ means neither perpendicular nor parallel, so in th
 - Why sparse matrices?
 > Li et al. [8] demonstrates that very sparse random projections, in which a large fraction of entries in A are zero, can maintain high accuracy and significantly speed up the matrix multiplication by a factor of sqrt(p) or more.
 - See Section 3.1 for the distribution for a sparse matrix
+
+### A quick aside about MORF
+- Manifold Forests (MORF) are a _further_ extension of SPORF
+- MORF operates on structured data (ie data where the indices encode important important information)
+- MORF uses the structure of the data to create data-minded projection matrices
+- The projections considered by MORF are a subset of SPORF
 
 ## Needs
 
