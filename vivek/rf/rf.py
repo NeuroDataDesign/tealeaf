@@ -11,7 +11,7 @@ def information(y):
     Calculate information criteria.
     """
 
-    y_bar = np.mean(y, axis=1).reshape(-1, 1)
+    y_bar = np.mean(y, axis=0).reshape(-1, 1)
     return sum([np.linalg.norm(row - y_bar) for row in y])
 
 
@@ -41,7 +41,7 @@ def find_best_partition(X, y, n_features):
     """
 
     # Choose random features
-    feature_idx = list(range(0, X.shape[1] - 1))
+    feature_idx = list(range(0, X.shape[1]))
     chosen_features = np.random.choice(feature_idx, size=n_features, replace=False)
 
     # Track the best score
@@ -85,6 +85,9 @@ def find_best_partition(X, y, n_features):
 
 class RFDecisionNode:
     def __init__(self, X, y, max_depth, n_features, depth=0):
+
+        assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
+
         self.X = X
         self.y = y
         self.terminal = False
