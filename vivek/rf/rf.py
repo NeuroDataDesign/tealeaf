@@ -1,34 +1,30 @@
 from collections import namedtuple
-import random
 
 import numpy as np
 
-
-# Named tuple for groups
+# Named tuple for potential splits
 Group = namedtuple("Group", "X y")
 
 
-# Calcualte information criteria
 def information(y):
+    """
+    Calculate information criteria.
+    """
 
     y_bar = np.mean(y, axis=1).reshape(-1, 1)
-
-    score = 0
-
-    for row in y:
-        score += np.linalg.norm(row - y_bar)
-
-    return score
+    return sum([np.linalg.norm(row - y_bar) for row in y])
 
 
-# Partitions data depending on condition
-def partition(X, y, feature, condition):
+def partition(X, y, feature, split):
+    """
+    Partition data based on a given split
+    """
 
     indices_1 = []
     indices_2 = []
 
     for idx, row in enumerate(X):
-        if row[feature] > condition:
+        if row[feature] > split:
             indices_1.append(idx)
         else:
             indices_2.append(idx)
@@ -39,23 +35,27 @@ def partition(X, y, feature, condition):
     return group_1, group_2
 
 
-# Find the best split at a given node
 def find_best_partition(X, y, n_features):
-
-    best_score = 10 ** 8
+    """
+    Find the best split at a given node
+    """
 
     # Choose random features
-    chosen_features = random.sample(list(range(0, len(X[0]) - 1)), n_features)
+    feature_idx = list(range(0, X.shape[1] - 1))
+    chosen_features = np.random.choice(feature_idx, size=n_features, replace=False)
 
+    # Track the best score
+    best_score = 0
     found = False
 
+    # Iterate over possible (feature, split) combinations
     for i in chosen_features:
 
-        possible_conditions = list(set([row[i] for row in X]))
+        possible_splits = np.unique([row[i] for row in X])
 
-        for j in possible_conditions:
+        for j in possible_splits:
 
-            group_1, group_2 = partition(X, y, feature=i, condition=j)
+            group_1, group_2 = partition(X, y, feature=i, split=j)
 
             if len(group_1.X) < 10 or len(group_2.X) < 10:
                 continue
@@ -66,21 +66,21 @@ def find_best_partition(X, y, n_features):
                 - information(group_2.y) * len(group_2.y)
             )
 
-            if score < best_score:
+            if score > best_score:
                 found = True
                 best_score = score
                 best_group_1 = group_1
                 best_group_2 = group_2
-                best_condition = j
+                best_split = j
                 best_feature = i
 
     if found == False:
-        best_condition = 1
+        best_split = 1
         best_feature = 1
         best_group_1 = Group(X, y)
         best_group_2 = Group(np.array([]), np.array([]))
 
-    return best_group_1, best_group_2, best_condition, best_feature, best_score
+    return best_group_1, best_group_2, best_split, best_feature, best_score
 
 
 class RFDecisionNode:
@@ -95,7 +95,7 @@ class RFDecisionNode:
         self.n_features = n_features
 
     def _reached_stop(self):
-        if (self.depth == self.max_depth) or (self.X.shape[1] < 10):
+        if (self.depth == self.max_depth) or (len(self.X) < 10):
             return True
         else:
             return False
@@ -109,7 +109,7 @@ class RFDecisionNode:
             self.terminal = True
             self.prediction = self._get_prediction()
         else:
-            group_1, group_2, self.condition, self.feature, score = find_best_partition(
+            group_1, group_2, self.split, self.feature, score = find_best_partition(
                 self.X, self.y, self.n_features
             )
 
@@ -139,12 +139,12 @@ class RFDecisionNode:
             return self.prediction
         else:
             if isinstance(test_data[self.feature], str):
-                if test_data[self.feature] == self.condition:
+                if test_data[self.feature] == self.split:
                     return self.left.predict(test_data)
                 else:
                     return self.right.predict(test_data)
             else:
-                if test_data[self.feature] <= self.condition:
+                if test_data[self.feature] <= self.split:
                     return self.left.predict(test_data)
                 else:
                     return self.right.predict(test_data)
@@ -159,7 +159,7 @@ class RF:
         self.n_trees = n_trees
         self.n_bagging = n_bagging
 
-    def RF_build_tree(self, dat):
+    def RF_build_tree(self, X, y):
         root = RFDecisionNode(X, y, self.max_depth, self.n_features)
         root.split()
         return root
@@ -168,16 +168,17 @@ class RF:
         self.forest = []
         for _ in range(self.n_trees):
             chosen_input = random.sample(list(range(0, len(self.X))), self.n_bagging)
-            bag = []
+            bag_x = []
+            bag_y = []
             for j in chosen_input:
-                bag.append(self.data[j])
+                bag_x.append(self.X[j])
+                bag_y.append(self.y[j])
 
-            temp = self.RF_build_tree(bag)
+            temp = self.RF_build_tree(bag_x, bag_y)
             self.forest.append(temp)
 
     def predict(self, test_data):
         temp_result = []
         for tree in self.forest:
             temp_result.append(tree.predict(test_data))
-        return np.mean(temp_result, axis=1)
-
+        return temp_result
