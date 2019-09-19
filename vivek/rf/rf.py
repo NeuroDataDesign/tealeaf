@@ -35,7 +35,7 @@ def partition(X, y, feature, split):
     return group_1, group_2
 
 
-def find_best_partition(X, y, n_features):
+def find_best_partition(X, y, n_features, min_leaf_size):
     """
     Find the best split at a given node
     """
@@ -57,7 +57,7 @@ def find_best_partition(X, y, n_features):
 
             group_1, group_2 = partition(X, y, feature=i, split=j)
 
-            if len(group_1.X) < 10 or len(group_2.X) < 10:
+            if len(group_1.X) < min_leaf_size or len(group_2.X) < min_leaf_size:
                 continue
 
             score = (
@@ -85,19 +85,20 @@ def find_best_partition(X, y, n_features):
 
 class RFDecisionNode:
     
-    def __init__(self, X, y, max_depth, n_features, depth=0):
+    def __init__(self, X, y, max_depth, n_features, min_leaf_size=5, depth=0):
         self.X = X
         self.y = y
         self.terminal = False
         self.max_depth = max_depth
         self.depth = depth
         self.n_features = n_features
+        self.min_leaf_size = min_leaf_size
         
     def _reached_stop(self):
         """
         Determine if node has reached stop criteria
         """
-        if (self.depth == self.max_depth) or (len(self.X) < 10):
+        if (self.depth == self.max_depth) or (len(self.X) < self.min_leaf_size):
             return True
         else:
             return False
@@ -117,7 +118,7 @@ class RFDecisionNode:
             self.prediction = self._get_prediction()
         else:
             group_1, group_2, self.split, self.feature, score = find_best_partition(
-                self.X, self.y, self.n_features
+                self.X, self.y, self.n_features, self.min_leaf_size
             )
 
             if len(group_1.X) == 0 or len(group_2.X) == 0:
