@@ -85,7 +85,7 @@ def find_best_partition(X, y, n_features, min_leaf_size):
 
 class RFDecisionNode:
     
-    def __init__(self, X, y, max_depth, n_features, min_leaf_size=5, depth=0):
+    def __init__(self, X, y, max_depth, n_features, min_leaf_size, depth=0):
         self.X = X
         self.y = y
         self.terminal = False
@@ -153,7 +153,7 @@ class RFDecisionNode:
 
 
 class RF:
-    def __init__(self, X, y, max_depth, n_features, n_trees, n_bagging):
+    def __init__(self, X, y, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5):
         assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
         self.X = X
         self.y = y
@@ -161,9 +161,10 @@ class RF:
         self.n_features = n_features
         self.n_trees = n_trees
         self.n_bagging = n_bagging
+        self.min_leaf_size = min_leaf_size
 
     def RF_build_tree(self, X, y):
-        root = RFDecisionNode(X, y, self.max_depth, self.n_features)
+        root = RFDecisionNode(X, y, self.max_depth, self.n_features, self.min_leaf_size)
         root.split()
         return root
 
@@ -180,7 +181,7 @@ class RF:
                 bag_x.append(self.X[j])
                 bag_y.append(self.y[j])
 
-            temp = self.RF_build_tree(bag_x, bag_y)
+            temp = self.RF_build_tree(np.array(bag_x), np.array(bag_y))
             self.forest.append(temp)
 
     def predict(self, test_data):
