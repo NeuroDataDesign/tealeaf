@@ -85,9 +85,6 @@ def find_best_partition(X, y, n_features):
 
 class RFDecisionNode:
     def __init__(self, X, y, max_depth, n_features, depth=0):
-
-        assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
-
         self.X = X
         self.y = y
         self.terminal = False
@@ -108,7 +105,7 @@ class RFDecisionNode:
         """
         Prediction is the mean of the response variables
         """
-        return np.mean(self.y, axis=1)
+        return np.mean(self.y, axis=0)
 
     def split(self):
         """
@@ -161,6 +158,7 @@ class RFDecisionNode:
 
 class RF:
     def __init__(self, X, y, max_depth, n_features, n_trees, n_bagging):
+        assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
         self.X = X
         self.y = y
         self.max_depth = max_depth
