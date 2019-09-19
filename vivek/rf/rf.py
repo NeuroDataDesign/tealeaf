@@ -148,3 +148,36 @@ class RFDecisionNode:
                     return self.left.predict(test_data)
                 else:
                     return self.right.predict(test_data)
+
+
+class RF:
+    def __init__(self, X, y, max_height, n_features, n_trees, n_bagging):
+        self.X = X
+        self.y = y
+        self.max_height = max_height
+        self.n_features = n_features
+        self.n_trees = n_trees
+        self.n_bagging = n_bagging
+
+    def RF_build_tree(self, dat):
+        root = RFDecisionNode(X, y, self.max_height, self.n_features)
+        root.split()
+        return root
+
+    def create_model(self):
+        self.forest = []
+        for _ in range(self.n_trees):
+            chosen_input = random.sample(list(range(0, len(self.X))), self.n_bagging)
+            bag = []
+            for j in chosen_input:
+                bag.append(self.data[j])
+
+            temp = self.RF_build_tree(bag)
+            self.forest.append(temp)
+
+    def predict(self, test_data):
+        temp_result = []
+        for tree in self.forest:
+            temp_result.append(tree.predict(test_data))
+        return np.mean(temp_result, axis=1)
+
