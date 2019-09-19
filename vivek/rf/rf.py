@@ -151,16 +151,16 @@ class RFDecisionNode:
 
 
 class RF:
-    def __init__(self, X, y, max_height, n_features, n_trees, n_bagging):
+    def __init__(self, X, y, max_depth, n_features, n_trees, n_bagging):
         self.X = X
         self.y = y
-        self.max_height = max_height
+        self.max_depth = max_depth
         self.n_features = n_features
         self.n_trees = n_trees
         self.n_bagging = n_bagging
 
     def RF_build_tree(self, dat):
-        root = RFDecisionNode(X, y, self.max_height, self.n_features)
+        root = RFDecisionNode(X, y, self.max_depth, self.n_features)
         root.split()
         return root
 
