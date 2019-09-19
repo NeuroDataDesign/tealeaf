@@ -84,8 +84,6 @@ def find_best_partition(X, y, n_features):
 
 
 class RFDecisionNode:
-
-    # Initialization
     def __init__(self, X, y, max_depth, n_features, depth=0):
         self.X = X
         self.y = y
@@ -95,16 +93,24 @@ class RFDecisionNode:
         self.n_features = n_features
 
     def _reached_stop(self):
+        """
+        Determine if node has reached stop criteria
+        """
         if (self.depth == self.max_depth) or (len(self.X) < 10):
             return True
         else:
             return False
 
     def _get_prediction(self):
+        """
+        Prediction is the mean of the response variables
+        """
         return np.mean(self.y, axis=1)
 
-    # Split node and create child nodes
     def split(self):
+        """
+        Split node and create child nodes
+        """
         if self._reached_stop():
             self.terminal = True
             self.prediction = self._get_prediction()
@@ -167,7 +173,10 @@ class RF:
     def create_model(self):
         self.forest = []
         for _ in range(self.n_trees):
-            chosen_input = random.sample(list(range(0, len(self.X))), self.n_bagging)
+            input_idx = list(range(0, len(self.X)))
+            chosen_input = np.random.choice(
+                input_idx, size=self.n_bagging, replace=False
+            )
             bag_x = []
             bag_y = []
             for j in chosen_input:
