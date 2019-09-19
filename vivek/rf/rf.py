@@ -84,6 +84,7 @@ def find_best_partition(X, y, n_features):
 
 
 class RFDecisionNode:
+    
     def __init__(self, X, y, max_depth, n_features, depth=0):
         self.X = X
         self.y = y
@@ -91,7 +92,7 @@ class RFDecisionNode:
         self.max_depth = max_depth
         self.depth = depth
         self.n_features = n_features
-
+        
     def _reached_stop(self):
         """
         Determine if node has reached stop criteria
@@ -144,16 +145,10 @@ class RFDecisionNode:
         if self.terminal == True:
             return self.prediction
         else:
-            if isinstance(test_data[self.feature], str):
-                if test_data[self.feature] == self.split:
-                    return self.left.predict(test_data)
-                else:
-                    return self.right.predict(test_data)
+            if test_data[self.feature] > self.split:
+                return self.left.predict(test_data)
             else:
-                if test_data[self.feature] <= self.split:
-                    return self.left.predict(test_data)
-                else:
-                    return self.right.predict(test_data)
+                return self.right.predict(test_data)
 
 
 class RF:
