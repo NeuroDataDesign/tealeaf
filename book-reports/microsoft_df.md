@@ -2,12 +2,12 @@
 
 (link to paper)[https://www.microsoft.com/en-us/research/publication/decision-forests-for-classification-regression-density-estimation-manifold-learning-and-semi-supervised-learning/]
 
-## Density forests (Section 5)
+## Density forests
 Similar to quantile regression, estimate posterior distribution F(y|X) from the leaf nodes. This paper recommends estimating the distribution by fitting a multivariate gaussian to each distribution.
 
 This section also talks about what to do if the data is unlabelled. 
 
-## Manifold forests (Section 6)
+## Manifold forests
 Problem statement: learn a mapping from R^d to a space of much lower dimensionality that preserves relative geodesic distances. I guess that "relative distance" can be interpreted on a local scale.
 
 ## Biggest take-away
