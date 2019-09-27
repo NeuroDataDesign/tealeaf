@@ -12,7 +12,7 @@ def information(y):
     """
 
     y_bar = np.mean(y, axis=0).reshape(-1, 1)
-    return sum([np.linalg.norm(row - y_bar) for row in y])
+    return np.sum([np.linalg.norm(row - y_bar) for row in y])
 
 
 def partition(X, y, feature, split):
