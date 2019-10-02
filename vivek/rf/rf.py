@@ -2,17 +2,10 @@ from collections import namedtuple
 
 import numpy as np
 
+from .split import *
+
 # Named tuple for potential splits
 Group = namedtuple("Group", "X y")
-
-
-def information(y):
-    """
-    Calculate information criteria.
-    """
-
-    y_bar = np.mean(y, axis=0).reshape(-1, 1)
-    return np.sum([np.linalg.norm(row - y_bar) for row in y])
 
 
 def partition(X, y, feature, split):
@@ -42,7 +35,8 @@ def find_best_partition(X, y, n_features, min_leaf_size):
 
     # Choose random features
     feature_idx = list(range(0, X.shape[1]))
-    chosen_features = np.random.choice(feature_idx, size=n_features, replace=False)
+    chosen_features = np.random.choice(
+        feature_idx, size=n_features, replace=False)
 
     # Track the best score
     best_score = 0
@@ -84,7 +78,7 @@ def find_best_partition(X, y, n_features, min_leaf_size):
 
 
 class RFDecisionNode:
-    
+
     def __init__(self, X, y, max_depth, n_features, min_leaf_size, depth=0):
         self.X = X
         self.y = y
@@ -93,7 +87,7 @@ class RFDecisionNode:
         self.depth = depth
         self.n_features = n_features
         self.min_leaf_size = min_leaf_size
-        
+
     def _reached_stop(self):
         """
         Determine if node has reached stop criteria
@@ -164,7 +158,8 @@ class RF:
         self.min_leaf_size = min_leaf_size
 
     def RF_build_tree(self, X, y):
-        root = RFDecisionNode(X, y, self.max_depth, self.n_features, self.min_leaf_size)
+        root = RFDecisionNode(X, y, self.max_depth,
+                              self.n_features, self.min_leaf_size)
         root.split()
         return root
 
