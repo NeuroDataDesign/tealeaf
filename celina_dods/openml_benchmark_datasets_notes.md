@@ -15,6 +15,11 @@ URL: https://www.openml.org/s/99/data
   * Features: having IP address, URL_length, etc.
   * Features space: x ∈ ℝ(31)
   * Output space: y ∈ ℝ(1)
+* bank-marketing
+  * 45211 clients (feature info from client phone calls) -> if the client will subscribe a term deposit y ∈ {0,1} 
+  * Features: age, gender, marital status, etc.
+  * Feature space: x ∈ ℝ(17)
+  * Output space: y ∈ ℝ(1)
   
   
 ### 1. Non-UCI 
