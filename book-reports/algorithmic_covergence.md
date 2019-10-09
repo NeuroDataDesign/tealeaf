@@ -21,3 +21,10 @@ Resampled means the training data is randomly sampled with replacement.
 Define MSE_t to be the expected mean-squared error of an ensemble of size t. Then MSE_infinity is the limit of MSE_t as t goes to infinity.
 
 We are interested in quantifying the Pr[(MSE_t - MSE_infinity) < q]. This is the same as the differential quantiles of MSE_t.
+
+
+## Main result
+
+For a fixed dataset D, mse_t − mse_infinity ≤ q_{1−α}(t)
+
+q_{1−α}(t) is estimated using bootstrap methods
