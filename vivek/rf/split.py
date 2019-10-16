@@ -26,8 +26,8 @@ def projection_axis(y):
     u = np.zeros(shape=p)
     u[idx] = 1.
 
-    proj_y = np.dot(y, u)
-    return mse(y)
+    proj_y = np.dot(u, y)
+    return mse(proj_y)
 
 
 def projection_random(y, dist=[0.1, 0.8, 0.1]):
@@ -40,5 +40,5 @@ def projection_random(y, dist=[0.1, 0.8, 0.1]):
         u[idx] = i
     u = u/np.linalg.norm(u)
 
-    proj_y = np.dot(y, u)
-    return mse(y)
+    proj_y = np.dot(u, y)
+    return mse(proj_y)

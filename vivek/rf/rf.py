@@ -82,24 +82,12 @@ class RFDecisionNode:
     def __init__(self, X, y, criteria, max_depth, n_features, min_leaf_size, depth=0):
         self.X = X
         self.y = y
-        self.criteria = self._get_criteria(criteria)
+        self.criteria = criteria
         self.terminal = False
         self.max_depth = max_depth
         self.depth = depth
         self.n_features = n_features
         self.min_leaf_size = min_leaf_size
-
-    def _get_criteria(self, criteria):
-        if criteria == "mae":
-            return mae
-        elif criteria == "mse":
-            return mse
-        elif criteria == "projection_axis":
-            return projection_axis
-        elif criteria == "projection_random":
-            return projection_random
-        else:
-            raise ValueError
 
     def _reached_stop(self):
         """
@@ -135,15 +123,19 @@ class RFDecisionNode:
                 self.left = RFDecisionNode(
                     group_1.X,
                     group_1.y,
+                    self.criteria,
                     self.max_depth,
                     self.n_features,
+                    self.min_leaf_size,
                     self.depth + 1,
                 )
                 self.right = RFDecisionNode(
                     group_2.X,
                     group_2.y,
+                    self.criteria,
                     self.max_depth,
                     self.n_features,
+                    self.min_leaf_size,
                     self.depth + 1,
                 )
                 self.left.split()
@@ -160,19 +152,38 @@ class RFDecisionNode:
 
 
 class RF:
-    def __init__(self, X, y, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5):
+    def __init__(self, X, y, criteria, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5):
         assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
         self.X = X
         self.y = y
+        self.criteria = self._get_criteria(criteria)
         self.max_depth = max_depth
         self.n_features = n_features
         self.n_trees = n_trees
         self.n_bagging = n_bagging
         self.min_leaf_size = min_leaf_size
 
+    def _get_criteria(self, criteria):
+        if criteria == "mae":
+            return mae
+        elif criteria == "mse":
+            return mse
+        elif criteria == "projection_axis":
+            return projection_axis
+        elif criteria == "projection_random":
+            return projection_random
+        else:
+            raise ValueError
+
     def RF_build_tree(self, X, y):
-        root = RFDecisionNode(X, y, self.max_depth,
-                              self.n_features, self.min_leaf_size)
+        root = RFDecisionNode(
+            X,
+            y,
+            self.criteria,
+            self.max_depth,
+            self.n_features,
+            self.min_leaf_size,
+        )
         root.split()
         return root
 
