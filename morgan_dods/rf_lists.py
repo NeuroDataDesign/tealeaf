@@ -127,7 +127,37 @@ def gini_index(groups, classes):
         # weight the group score by its relative size
         gini += (1.0 - score) * (size / n_instances)
     return gini
- 
+
+def rss(groups):
+    rssL = 0
+    rssR = 0
+    meanL = sum([row[-1]/len(groups[0]) for row in groups[0]])
+    meanR = sum([row[-1]/len(groups[1]) for row in groups[1]])
+    for row in groups[0]:
+        rssL += (row[-1] - meanL)**2# / len(groups[0])
+    for row in groups[1]:
+        rssR += (row[-1] - meanR)**2 #/ len(groups[1])
+    #if ((rssL + rssR) > 999):
+    #    print(rssL + rssR)
+    return rssL + rssR
+        
+# Select the best split point for a dataset
+def get_split_regression(dataset, n_features):
+    class_values = list(set(row[-1] for row in dataset))
+    b_index, b_value, b_score, b_groups = 999999, 999999, 999999, None
+    features = list()
+    while len(features) < n_features:
+        index = randrange(len(dataset[0])-1)
+        if index not in features:
+            features.append(index)
+    for index in features:
+        for row in dataset:
+            groups = test_split(index, row[index], dataset)
+            rss_score = rss(groups)
+            if rss_score < b_score:
+                b_index, b_value, b_score, b_groups = index, row[index], rss_score, groups
+    return {'index':b_index, 'value':b_value, 'groups':b_groups} 
+
 # Select the best split point for a dataset
 def get_split(dataset, n_features):
     class_values = list(set(row[-1] for row in dataset))
@@ -180,10 +210,41 @@ def split(node, max_depth, min_size, n_features, depth):
         node['right'] = get_split(right, n_features)
         split(node['right'], max_depth, min_size, n_features, depth+1)
  
+# Create child splits for a node or make terminal
+def split_regression(node, max_depth, min_size, n_features, depth):
+    left, right = node['groups']
+    del(node['groups'])
+    # check for a no split
+    if not left or not right:
+        node['left'] = node['right'] = to_terminal(left + right)
+        return
+    # check for max depth
+    if depth >= max_depth:
+        node['left'], node['right'] = to_terminal(left), to_terminal(right)
+        return
+    # process left child
+    if len(left) <= min_size:
+        node['left'] = to_terminal(left)
+    else:
+        node['left'] = get_split_regression(left, n_features)
+        split_regression(node['left'], max_depth, min_size, n_features, depth+1)
+    # process right child
+    if len(right) <= min_size:
+        node['right'] = to_terminal(right)
+    else:
+        node['right'] = get_split_regression(right, n_features)
+        split_regression(node['right'], max_depth, min_size, n_features, depth+1)
+ 
 # Build a decision tree
 def build_tree(train, max_depth, min_size, n_features):
     root = get_split(train, n_features)
     split(root, max_depth, min_size, n_features, 1)
+    return root
+
+# Build a decision tree
+def build_tree_regression(train, max_depth, min_size, n_features):
+    root = get_split_regression(train, n_features)
+    split_regression(root, max_depth, min_size, n_features, 1)
     return root
  
 # Make a prediction with a decision tree
@@ -235,7 +296,7 @@ def random_forest_regression(train, test, max_depth, min_size, sample_size, n_tr
     trees = list()
     for i in range(n_trees):
         sample = subsample(train, sample_size)
-        tree = build_tree(sample, max_depth, min_size, n_features)
+        tree = build_tree_regression(sample, max_depth, min_size, n_features)
         trees.append(tree)
     predictions = [bagging_predict(trees, row) for row in test]
     return predictions, test
