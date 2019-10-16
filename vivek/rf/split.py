@@ -28,6 +28,7 @@ def projection_random(y, dist=[0.1, 0.8, 0.1]):
     for idx, elem in enumerate(u):
         i = np.random.choice([-1, 0, 1], p=dist)
         u[idx] = i
+    u = u/np.linalg.norm(u)
 
     proj_y = np.dot(y, u)
     return information(y)
