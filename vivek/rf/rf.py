@@ -2,7 +2,7 @@ from collections import namedtuple
 
 import numpy as np
 
-from .split import *
+from split import mae, mse, projection_axis, projection_random
 
 # Named tuple for potential splits
 Group = namedtuple("Group", "X y")
@@ -28,7 +28,7 @@ def partition(X, y, feature, split):
     return group_1, group_2
 
 
-def find_best_partition(X, y, n_features, min_leaf_size):
+def find_best_partition(X, y, criteria, n_features, min_leaf_size):
     """
     Find the best split at a given node
     """
@@ -55,9 +55,9 @@ def find_best_partition(X, y, n_features, min_leaf_size):
                 continue
 
             score = (
-                information(y) * len(y)
-                - information(group_1.y) * len(group_1.y)
-                - information(group_2.y) * len(group_2.y)
+                criteria(y) * len(y)
+                - criteria(group_1.y) * len(group_1.y)
+                - criteria(group_2.y) * len(group_2.y)
             )
 
             if score > best_score:
@@ -68,7 +68,7 @@ def find_best_partition(X, y, n_features, min_leaf_size):
                 best_split = j
                 best_feature = i
 
-    if found == False:
+    if found is False:
         best_split = 1
         best_feature = 1
         best_group_1 = Group(X, y)
@@ -79,9 +79,10 @@ def find_best_partition(X, y, n_features, min_leaf_size):
 
 class RFDecisionNode:
 
-    def __init__(self, X, y, max_depth, n_features, min_leaf_size, depth=0):
+    def __init__(self, X, y, criteria, max_depth, n_features, min_leaf_size, depth=0):
         self.X = X
         self.y = y
+        self.criteria = criteria
         self.terminal = False
         self.max_depth = max_depth
         self.depth = depth
@@ -112,7 +113,7 @@ class RFDecisionNode:
             self.prediction = self._get_prediction()
         else:
             group_1, group_2, self.split, self.feature, score = find_best_partition(
-                self.X, self.y, self.n_features, self.min_leaf_size
+                self.X, self.y, self.criteria, self.n_features, self.min_leaf_size
             )
 
             if len(group_1.X) == 0 or len(group_2.X) == 0:
@@ -122,22 +123,26 @@ class RFDecisionNode:
                 self.left = RFDecisionNode(
                     group_1.X,
                     group_1.y,
+                    self.criteria,
                     self.max_depth,
                     self.n_features,
+                    self.min_leaf_size,
                     self.depth + 1,
                 )
                 self.right = RFDecisionNode(
                     group_2.X,
                     group_2.y,
+                    self.criteria,
                     self.max_depth,
                     self.n_features,
+                    self.min_leaf_size,
                     self.depth + 1,
                 )
                 self.left.split()
                 self.right.split()
 
     def predict(self, test_data):
-        if self.terminal == True:
+        if self.terminal:
             return self.prediction
         else:
             if test_data[self.feature] > self.split:
@@ -147,19 +152,38 @@ class RFDecisionNode:
 
 
 class RF:
-    def __init__(self, X, y, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5):
+    def __init__(self, X, y, criteria, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5):
         assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
         self.X = X
         self.y = y
+        self.criteria = self._get_criteria(criteria)
         self.max_depth = max_depth
         self.n_features = n_features
         self.n_trees = n_trees
         self.n_bagging = n_bagging
         self.min_leaf_size = min_leaf_size
 
+    def _get_criteria(self, criteria):
+        if criteria == "mae":
+            return mae
+        elif criteria == "mse":
+            return mse
+        elif criteria == "projection_axis":
+            return projection_axis
+        elif criteria == "projection_random":
+            return projection_random
+        else:
+            raise ValueError
+
     def RF_build_tree(self, X, y):
-        root = RFDecisionNode(X, y, self.max_depth,
-                              self.n_features, self.min_leaf_size)
+        root = RFDecisionNode(
+            X,
+            y,
+            self.criteria,
+            self.max_depth,
+            self.n_features,
+            self.min_leaf_size,
+        )
         root.split()
         return root
 
