@@ -1,12 +1,22 @@
 import numpy as np
 
-def mse(y):
+
+def mae(y):
     """
-    Calculate information criteria.
+    Calcualte the mean absolute error
     """
 
     y_bar = np.mean(y, axis=0).reshape(-1, 1)
-    return np.sum([np.linalg.norm(row - y_bar) for row in y])
+    return np.sum([np.abs(row - y_bar) for row in y])
+
+
+def mse(y):
+    """
+    Calculate the mean squared error
+    """
+
+    y_bar = np.mean(y, axis=0).reshape(-1, 1)
+    return np.sum([np.linalg.norm(row - y_bar)**2 for row in y])
 
 
 def projection_axis(y):
