@@ -1,6 +1,6 @@
 import numpy as np
 
-def information(y):
+def mse(y):
     """
     Calculate information criteria.
     """
@@ -17,7 +17,7 @@ def projection_axis(y):
     u[idx] = 1.
 
     proj_y = np.dot(y, u)
-    return information(y)
+    return mse(y)
 
 
 def projection_random(y, dist=[0.1, 0.8, 0.1]):
@@ -31,4 +31,4 @@ def projection_random(y, dist=[0.1, 0.8, 0.1]):
     u = u/np.linalg.norm(u)
 
     proj_y = np.dot(y, u)
-    return information(y)
+    return mse(y)
