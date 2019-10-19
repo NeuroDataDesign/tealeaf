@@ -35,8 +35,7 @@ def find_best_partition(X, y, criteria, n_features, min_leaf_size):
 
     # Choose random features
     feature_idx = list(range(0, X.shape[1]))
-    chosen_features = np.random.choice(
-        feature_idx, size=n_features, replace=False)
+    chosen_features = np.random.choice(feature_idx, size=n_features, replace=False)
 
     # Track the best score
     best_score = 0
@@ -78,7 +77,6 @@ def find_best_partition(X, y, criteria, n_features, min_leaf_size):
 
 
 class RFDecisionNode:
-
     def __init__(self, X, y, criteria, max_depth, n_features, min_leaf_size, depth=0):
         self.X = X
         self.y = y
@@ -152,7 +150,9 @@ class RFDecisionNode:
 
 
 class RF:
-    def __init__(self, X, y, criteria, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5):
+    def __init__(
+        self, X, y, criteria, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5
+    ):
         assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
         self.X = X
         self.y = y
@@ -177,12 +177,7 @@ class RF:
 
     def RF_build_tree(self, X, y):
         root = RFDecisionNode(
-            X,
-            y,
-            self.criteria,
-            self.max_depth,
-            self.n_features,
-            self.min_leaf_size,
+            X, y, self.criteria, self.max_depth, self.n_features, self.min_leaf_size
         )
         root.split()
         return root
