@@ -76,7 +76,7 @@ def find_best_partition(X, y, criteria, n_features, min_leaf_size):
     return best_group_1, best_group_2, best_split, best_feature, best_score
 
 
-class RFDecisionNode:
+class RandomForestNode:
     def __init__(self, X, y, criteria, max_depth, n_features, min_leaf_size, depth=0):
         self.X = X
         self.y = y
@@ -118,7 +118,7 @@ class RFDecisionNode:
                 self.terminal = True
                 self.prediction = self._get_prediction()
             else:
-                self.left = RFDecisionNode(
+                self.left = RandomForestNode(
                     group_1.X,
                     group_1.y,
                     self.criteria,
@@ -127,7 +127,7 @@ class RFDecisionNode:
                     self.min_leaf_size,
                     self.depth + 1,
                 )
-                self.right = RFDecisionNode(
+                self.right = RandomForestNode(
                     group_2.X,
                     group_2.y,
                     self.criteria,
@@ -149,7 +149,7 @@ class RFDecisionNode:
                 return self.right.predict(test_data)
 
 
-class RF:
+class RandomForest:
     def __init__(
         self, X, y, criteria, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5
     ):
@@ -176,7 +176,7 @@ class RF:
             raise ValueError
 
     def RF_build_tree(self, X, y):
-        root = RFDecisionNode(
+        root = RandomForestNode(
             X, y, self.criteria, self.max_depth, self.n_features, self.min_leaf_size
         )
         root.split()
