@@ -198,8 +198,36 @@ class RandomForest:
             temp = self.RF_build_tree(np.array(bag_x), np.array(bag_y))
             self.forest.append(temp)
 
-    def predict(self, test_data):
-        temp_result = []
-        for tree in self.forest:
-            temp_result.append(tree.predict(test_data))
-        return temp_result
+    def predict(self, X, method="mean"):
+        """
+        Return predictions for every element in X.
+
+        Parameters
+        ==========
+        X : array of shape (n_samples, n_features)
+            Input data
+        method : string ("mean" (default), "full", "quantile")
+            "mean" : return average of predictions for each tree
+            "full" : return all predictions from each tree
+
+        Return
+        ======
+        yhat : array of shape (n_samples, n_predictors)
+            Predicted outputs
+        """
+
+        for xi in X:
+            yhat = []
+            for tree in self.forest:
+                yhat.append(tree.predict(xi))
+        yhat = np.array(yhat)
+
+        if method == "mean":
+            return np.mean(yhat, axis=0)
+        elif method == "full":
+            return yhat
+        elif method == "quantile":
+            # TODO: implement quantile method
+            raise NotImplementedError("Quantile method not implemented")
+        else:
+            raise ValueError(f"Undefined method: {method}")
