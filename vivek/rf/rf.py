@@ -173,7 +173,7 @@ class RandomForest:
         elif criteria == "projection_random":
             return projection_random
         else:
-            raise ValueError
+            raise (ValueError, "Unknown split criteria")
 
     def RF_build_tree(self, X, y):
         root = RandomForestNode(
