@@ -34,7 +34,7 @@ def find_best_partition(X, y, criteria, n_features, min_leaf_size):
     """
 
     # Choose random features
-    feature_idx = list(range(0, X.shape[1]))
+    feature_idx = np.arange(0, X.shape[1])
     chosen_features = np.random.choice(feature_idx, size=n_features, replace=False)
 
     # Track the best score
@@ -43,9 +43,7 @@ def find_best_partition(X, y, criteria, n_features, min_leaf_size):
 
     # Iterate over possible (feature, split) combinations
     for i in chosen_features:
-
         possible_splits = np.unique([row[i] for row in X])
-
         for j in possible_splits:
 
             group_1, group_2 = partition(X, y, feature=i, split=j)
@@ -151,11 +149,8 @@ class RandomForestNode:
 
 class RandomForest:
     def __init__(
-        self, X, y, criteria, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5
+        self, criteria, max_depth, n_features, n_trees, n_bagging, min_leaf_size=5
     ):
-        assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
-        self.X = X
-        self.y = y
         self.criteria = self._get_criteria(criteria)
         self.max_depth = max_depth
         self.n_features = n_features
@@ -175,28 +170,37 @@ class RandomForest:
         else:
             raise (ValueError, "Unknown split criteria")
 
-    def RF_build_tree(self, X, y):
+    def _build_tree(self, X, y):
         root = RandomForestNode(
             X, y, self.criteria, self.max_depth, self.n_features, self.min_leaf_size
         )
         root.split()
         return root
 
-    def create_model(self):
-        self.forest = []
-        for _ in range(self.n_trees):
-            input_idx = list(range(0, len(self.X)))
-            chosen_input = np.random.choice(
-                input_idx, size=self.n_bagging, replace=False
-            )
-            bag_x = []
-            bag_y = []
-            for j in chosen_input:
-                bag_x.append(self.X[j])
-                bag_y.append(self.y[j])
+    def fit(self, X, y):
+        """
+        Train an ensemble of trees.
 
-            temp = self.RF_build_tree(np.array(bag_x), np.array(bag_y))
-            self.forest.append(temp)
+        For each tree, train on a randomly sampled subset of the data (without replacement).
+        """
+
+        assert X.ndim == y.ndim == 2, "X and y must be shape (n, p) and (n, q)"
+
+        self.forest = []
+
+        for _ in range(self.n_trees):
+
+            # Randomly sample the data
+            idxs = np.arange(0, X.shape[0])
+            chosen_input = np.random.choice(idxs, size=self.n_bagging, replace=False)
+            bag_x = X[chosen_input]
+            bag_y = y[chosen_input]
+
+            # Train a tree and add to the forest
+            tree = self._build_tree(bag_x, bag_y)
+            self.forest.append(tree)
+
+        return self
 
     def predict(self, X, method="mean"):
         """
@@ -216,18 +220,21 @@ class RandomForest:
             Predicted outputs
         """
 
-        for xi in X:
-            yhat = []
-            for tree in self.forest:
-                yhat.append(tree.predict(xi))
-        yhat = np.array(yhat)
+        yhat = []
 
-        if method == "mean":
-            return np.mean(yhat, axis=0)
-        elif method == "full":
-            return yhat
-        elif method == "quantile":
-            # TODO: implement quantile method
-            raise NotImplementedError("Quantile method not implemented")
-        else:
-            raise ValueError(f"Undefined method: {method}")
+        for xi in X:
+            yi = np.array([tree.predict(xi) for tree in self.forest])
+
+            if method == "mean":
+                yi = np.mean(yi, axis=0)
+            elif method == "full":
+                yi = yi
+            elif method == "quantile":
+                # TODO: implement quantile method
+                raise NotImplementedError("Quantile method not implemented")
+            else:
+                raise ValueError(f"Undefined method: {method}")
+
+            yhat.append(yi)
+
+        return yhat
