@@ -65,3 +65,4 @@
 146825,Fashion-MNIST,0.8845,2:02:23.275867
 167119,jungle_chess_2pcs_raw_endgame_complete,0.8111,0:05:18.625584
 167120,numerai28.6,0.5137,0:51:05.870956
+167121,Devnagari-Script,0.9196,4:43:03.385480
