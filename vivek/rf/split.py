@@ -42,7 +42,7 @@ def projection_random(y, sparse=0.1):
     p = y.shape[0]
     u = np.zeros(shape=p)
 
-    max_nonzero = max(1, np.floor(p * sparse))
+    max_nonzero = max(2, np.floor(p * sparse))
     num_nonzero = np.random.randint(1, max_nonzero)
 
     for idx in range(num_nonzero):
