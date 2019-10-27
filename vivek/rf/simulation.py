@@ -104,7 +104,7 @@ def measure_mse(
     return errors
 
 
-def run_simulation(simulation_params, rf_params={}):
+def run_simulation(simulation_params, rf_params={}, savename="simulation"):
 
     columns = ["n_samples", "n_dim", "mae", "mse", "axis", "oblique"]
     results = []
@@ -127,4 +127,4 @@ def run_simulation(simulation_params, rf_params={}):
         value_name="mse",
     )
 
-    return results
+    results.to_csv(f"results/{savename}.csv")
