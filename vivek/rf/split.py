@@ -33,7 +33,7 @@ def projection_axis(y):
     return mse(proj_y)
 
 
-def projection_random(y, sparse=0.1):
+def projection_random(y, lam=2):
     """
     Project onto a randomly generated sparse oblique line and split.
     """
@@ -42,9 +42,7 @@ def projection_random(y, sparse=0.1):
     p = y.shape[0]
     u = np.zeros(shape=p)
 
-    max_nonzero = max(2, np.floor(p * sparse))
-    num_nonzero = np.random.randint(1, max_nonzero)
-
+    num_nonzero = max(np.random.poisson(lam=lam), 1)
     for idx in range(num_nonzero):
         u[idx] = np.random.choice([-1, 1])
 
