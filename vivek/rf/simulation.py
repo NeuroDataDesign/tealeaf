@@ -6,7 +6,7 @@ from tqdm import tqdm
 from rf import RandomForest
 
 
-def generate_random_data(n_samples, n_dim, mean=None, cov=None):
+def generate_linear_data(n_samples, n_dim, mean=None, cov=None, loc=0.0, scale=1.0):
     """
     Sample random input and output data for regression simulations.
 
@@ -24,6 +24,10 @@ def generate_random_data(n_samples, n_dim, mean=None, cov=None):
         Mean of the multivariate normal distribution
     cov : array-like, shape=(n_dim, n_dim)
         Covariance matrix of the multivariate normal distribution
+    loc : float, default=0.0
+        Mean of normally distributed noise
+    scale : float, default=1.0
+        Standard deviation of the normally distributed noise
 
     Returns
     =======
@@ -52,6 +56,9 @@ def generate_random_data(n_samples, n_dim, mean=None, cov=None):
     # Generate the input and output data (X, y)
     X = np.random.multivariate_normal(mean, cov, size=n_samples)
     y = np.dot(A, X.T).T
+
+    # Add Gaussian noise to the output data
+    y += np.random.normal(loc=loc, scale=scale, size=y.size).reshape(y.shape)
 
     return X, y
 
@@ -113,7 +120,7 @@ def run_simulation(simulation_params, rf_params={}, savename="simulation"):
         for n_dim in tqdm(simulation_params["n_dim"], desc="Number of dimensions"):
             for _ in tqdm(range(simulation_params["n_iter"]), desc="Iterations"):
 
-                X, y = generate_random_data(n_samples, n_dim)
+                X, y = generate_linear_data(n_samples, n_dim)
                 mse = measure_mse(X, y, **rf_params)
                 results.append([n_samples, n_dim] + mse)
 
