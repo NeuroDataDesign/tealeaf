@@ -162,7 +162,7 @@ if __name__ == "__main__":
     for n_dim in tqdm(
         np.arange(start=2, stop=40, step=1, dtype=np.int), desc="Number of dimensions"
     ):
-        for _ in tqdm(range(n_iter)):
+        for _ in tqdm(range(n_iter), desc="Number of iterations"):
             X, y = generate_linear_data(n_samples, n_dim)
             mse = measure_mse(X, y)
             results.append([n_samples, n_dim] + mse)
@@ -182,9 +182,10 @@ if __name__ == "__main__":
         for scale in np.linspace(
             start=0, stop=10, num=50, desc="Number of noise steps"
         ):
-            X, y = generate_linear_data(n_samples, n_dim, scale=scale)
-            mse = measure_mse(X, y)
-            results.append([n_samples, n_dim] + mse)
+            for _ in tqdm(range(n_iter), desc="Number of iterations"):
+                X, y = generate_linear_data(n_samples, n_dim, scale=scale)
+                mse = measure_mse(X, y)
+                results.append([n_samples, n_dim] + mse)
 
     to_csv(results, savename="simulation_2")
     del results
