@@ -60,7 +60,7 @@ def generate_linear_data(n_samples, n_dim, mean=None, cov=None, loc=0.0, scale=1
     y = np.dot(A, X.T).T
 
     # Add Gaussian noise to the output data
-    y += np.random.normal(loc=loc, scale=scale, size=y.size).reshape(y.shape)
+    y += np.random.normal(loc=loc, scale=scale, size=y.shape)
 
     return X, y
 
