@@ -42,7 +42,9 @@ def projection_random(y, lam=2):
     p = y.shape[0]
     u = np.zeros(shape=p)
 
-    num_nonzero = max(np.random.poisson(lam=lam), 1)
+    tmp = np.random.poisson(lam=lam)
+    num_nonzero = min(max(tmp, 1), p)
+
     for idx in range(num_nonzero):
         u[idx] = np.random.choice([-1, 1])
 
