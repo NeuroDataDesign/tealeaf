@@ -173,7 +173,7 @@ if __name__ == "__main__":
     # Simulation 2
     # Fix n_samples=30, n_dim \in {3, 30}, increase noise.
     # -------------------------------------------------------------------------
-    print("Simulation 2: Increase noise")
+    print("\nSimulation 2: Increase noise")
     n_samples = 30
 
     results = []
@@ -193,4 +193,4 @@ if __name__ == "__main__":
     # Simulation 3
     # Try nonlinear simulations?
     # -------------------------------------------------------------------------
-    print("Simulation 3: Try nonlinear simulations")
+    print("\nSimulation 3: Try nonlinear simulations")
