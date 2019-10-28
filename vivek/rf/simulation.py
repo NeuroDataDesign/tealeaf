@@ -131,9 +131,7 @@ def measure_mse(
     return errors
 
 
-def to_csv(results, savename="simulation"):
-
-    columns = ["n_samples", "n_dim", "mae", "mse", "axis", "oblique"]
+def to_csv(results, columns, savename="simulation"):
 
     # Melt dataframe
     results = pd.DataFrame(results, columns=columns)
@@ -167,7 +165,8 @@ if __name__ == "__main__":
             mse = measure_mse(X, y)
             results.append([n_samples, n_dim] + mse)
 
-    to_csv(results, savename="simulation_1")
+    columns = ["n_samples", "n_dim", "mae", "mse", "axis", "oblique"]
+    to_csv(results, columns, savename="simulation_1")
     del results
 
     # Simulation 2
@@ -180,14 +179,15 @@ if __name__ == "__main__":
 
     for n_dim in tqdm([3, 30], desc="Number of dimensions"):
         for scale in tqdm(
-            np.linspace(start=0, stop=10, num=50), desc="Number of noise steps"
+            np.linspace(start=0, stop=5, num=50), desc="Number of noise steps"
         ):
             for _ in tqdm(range(n_iter), desc="Number of iterations"):
                 X, y = generate_linear_data(n_samples, n_dim, scale=scale)
                 mse = measure_mse(X, y)
-                results.append([n_samples, n_dim] + mse)
+                results.append([n_samples, n_dim, scale] + mse)
 
-    to_csv(results, savename="simulation_2")
+    columns = ["n_samples", "n_dim", "scale", "mae", "mse", "axis", "oblique"]
+    to_csv(results, columns, savename="simulation_2")
     del results
 
     # Simulation 3
