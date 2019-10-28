@@ -179,8 +179,8 @@ if __name__ == "__main__":
     results = []
 
     for n_dim in tqdm([3, 30], desc="Number of dimensions"):
-        for scale in np.linspace(
-            start=0, stop=10, num=50, desc="Number of noise steps"
+        for scale in tqdm(
+            np.linspace(start=0, stop=10, num=50), desc="Number of noise steps"
         ):
             for _ in tqdm(range(n_iter), desc="Number of iterations"):
                 X, y = generate_linear_data(n_samples, n_dim, scale=scale)
