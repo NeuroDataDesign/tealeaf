@@ -125,18 +125,9 @@ def measure_mse(
     return errors
 
 
-def run_simulation(simulation_params, rf_params={}, savename="simulation"):
+def to_csv(results, savename="simulation"):
 
     columns = ["n_samples", "n_dim", "mae", "mse", "axis", "oblique"]
-    results = []
-
-    for n_samples in tqdm(simulation_params["n_samples"], desc="Number of samples"):
-        for n_dim in tqdm(simulation_params["n_dim"], desc="Number of dimensions"):
-            for _ in tqdm(range(simulation_params["n_iter"]), desc="Iterations"):
-
-                X, y = generate_linear_data(n_samples, n_dim)
-                mse = measure_mse(X, y, **rf_params)
-                results.append([n_samples, n_dim] + mse)
 
     # Melt dataframe
     results = pd.DataFrame(results, columns=columns)
@@ -149,3 +140,46 @@ def run_simulation(simulation_params, rf_params={}, savename="simulation"):
     )
 
     results.to_csv(f"results/{savename}.csv")
+
+
+if __name__ == "__main__":
+
+    # Simulation 1
+    # Fix n_samples=100, increase n_dim.
+    # -------------------------------------------------------------------------
+    print("Simulation 1: Increasing dimensionality")
+    n_samples = 75
+    n_iter = 10
+
+    results = []
+
+    for n_dim in tqdm(np.arange(start=2, stop=40, step=1, dtype=np.int), desc="Number of dimensions"):
+        for _ in tqdm(range(n_iter)):
+            X, y = generate_linear_data(n_samples, n_dim)
+            mse = measure_mse(X, y)
+            results.append([n_samples, n_dim] + mse)
+
+    to_csv(results, savename="simulation_1")
+    del results
+
+    # Simulation 2
+    # Fix n_samples=30, n_dim \in {3, 30}, increase noise.
+    # -------------------------------------------------------------------------
+    print("Simulation 2: Increase noise")
+    n_samples = 30
+
+    results = []
+
+    for n_dim in tqdm([3, 30], desc="Number of dimensions"):
+        for scale in np.linspace(start=0, stop=10, num=50, desc="Number of noise steps"):
+            X, y = generate_linear_data(n_samples, n_dim, scale=scale)
+            mse = measure_mse(X, y)
+            results.append([n_samples, n_dim] + mse)
+
+    to_csv(results, savename="simulation_2")
+    del results
+
+    # Simulation 3
+    # Try nonlinear simulations?
+    # -------------------------------------------------------------------------
+    print("Simulation 3: Try nonlinear simulations")
