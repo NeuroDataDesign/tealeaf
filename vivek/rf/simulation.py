@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from scipy.stats import ortho_group
+from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 
 from rf import RandomForest
@@ -64,7 +65,7 @@ def generate_linear_data(n_samples, n_dim, mean=None, cov=None, loc=0.0, scale=1
 
 
 def measure_mse(
-    X, y, max_depth=10, n_features=1, min_leaf_size=5, n_trees=1000, n_bagging=10
+    X, y, max_depth=10, n_features=1, min_leaf_size=5, n_trees=1000, n_bagging=10, test_size=0.25
 ):
     """
     For each split criteria, measure Mean Squared Error (MSE).
@@ -78,6 +79,8 @@ def measure_mse(
     min_leaf_size : int
     n_trees : int
     n_bagging : int
+    test_size : float, default=0.25
+        Fraction of data to hold out for MSE evaluation
 
     Returns
     =======
@@ -94,6 +97,10 @@ def measure_mse(
         "n_bagging": n_bagging,
     }
 
+    # Split the data into training and test sets
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=test_size)
+
     # Iterate over different split criteria and calculate MSE
     n_samples = X.shape[0]
     errors = []
@@ -101,11 +108,11 @@ def measure_mse(
 
         # Fit model
         rf = RandomForest(criteria=split, **default)
-        rf.fit(X, y)
+        rf.fit(X_train, y_train)
 
         # Make predictions and score
-        yhat = rf.predict(X)
-        mse = np.linalg.norm(y - yhat) / n_samples
+        y_pred = rf.predict(X_test)
+        mse = np.linalg.norm(y_test - y_pred)**2 / n_samples
         errors.append(mse)
 
     return errors
