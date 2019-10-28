@@ -72,7 +72,14 @@ def generate_nonlinear_data(sim, n_samples, n_dim, **params):
 
 
 def measure_mse(
-    X, y, max_depth=10, n_features=1, min_leaf_size=5, n_trees=1000, n_bagging=10, test_size=0.25
+    X,
+    y,
+    max_depth=10,
+    n_features=1,
+    min_leaf_size=5,
+    n_trees=1000,
+    n_bagging=10,
+    test_size=0.25,
 ):
     """
     For each split criteria, measure Mean Squared Error (MSE).
@@ -105,8 +112,7 @@ def measure_mse(
     }
 
     # Split the data into training and test sets
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=test_size)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size)
 
     # Iterate over different split criteria and calculate MSE
     n_samples = X.shape[0]
@@ -119,7 +125,7 @@ def measure_mse(
 
         # Make predictions and score
         y_pred = rf.predict(X_test)
-        mse = np.linalg.norm(y_test - y_pred)**2 / n_samples
+        mse = np.linalg.norm(y_test - y_pred) ** 2 / n_samples
         errors.append(mse)
 
     return errors
@@ -153,7 +159,9 @@ if __name__ == "__main__":
 
     results = []
 
-    for n_dim in tqdm(np.arange(start=2, stop=40, step=1, dtype=np.int), desc="Number of dimensions"):
+    for n_dim in tqdm(
+        np.arange(start=2, stop=40, step=1, dtype=np.int), desc="Number of dimensions"
+    ):
         for _ in tqdm(range(n_iter)):
             X, y = generate_linear_data(n_samples, n_dim)
             mse = measure_mse(X, y)
@@ -171,7 +179,9 @@ if __name__ == "__main__":
     results = []
 
     for n_dim in tqdm([3, 30], desc="Number of dimensions"):
-        for scale in np.linspace(start=0, stop=10, num=50, desc="Number of noise steps"):
+        for scale in np.linspace(
+            start=0, stop=10, num=50, desc="Number of noise steps"
+        ):
             X, y = generate_linear_data(n_samples, n_dim, scale=scale)
             mse = measure_mse(X, y)
             results.append([n_samples, n_dim] + mse)
