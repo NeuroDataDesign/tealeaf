@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from mgcpy.benchmarks import simulations as sims
 from scipy.stats import ortho_group
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
@@ -62,6 +63,12 @@ def generate_linear_data(n_samples, n_dim, mean=None, cov=None, loc=0.0, scale=1
     y += np.random.normal(loc=loc, scale=scale, size=y.size).reshape(y.shape)
 
     return X, y
+
+
+def generate_nonlinear_data(sim, n_samples, n_dim, **params):
+
+    sim = getattr(sims, sim)
+    return sim(num_samp=n_samples, num_dim=n_dim, **params)
 
 
 def measure_mse(
