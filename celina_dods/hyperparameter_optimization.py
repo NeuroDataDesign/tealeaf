@@ -9,7 +9,7 @@ def hyperparameter_optimization(X, y, *argv):
         # run randomized search
         n_iter_search = 10
         random_search = RandomizedSearchCV(
-            clf, param_distributions=param_dist, n_iter=n_iter_search, cv=10, iid=False
+            clf, param_distributions=params, n_iter=n_iter_search, cv=10, iid=False
         )
         random_search.fit(X, y)
         clf_best_params[clf] = random_search.best_params_
