@@ -1,8 +1,5 @@
-import numpy as np
 from sklearn.model_selection import RandomizedSearchCV
-import openml
-from rerf.rerfClassifier import rerfClassifier
-from sklearn.model_selection import KFold
+
 
 def hyperparameter_optimization(X,y,*argv):
     
@@ -16,4 +13,3 @@ def hyperparameter_optimization(X,y,*argv):
         random_search.fit(X, y)       
         clf_best_params[clf] = random_search.best_params_  
     return clf_best_params
-
