@@ -131,14 +131,15 @@ def measure_mse(
     return errors
 
 
-def to_csv(results, columns, savename="simulation"):
+def to_csv(results, id_vars, value_vars, savename="simulation"):
 
     # Melt dataframe
+    columns = id_vars + value_vars
     results = pd.DataFrame(results, columns=columns)
     results = pd.melt(
         results,
-        id_vars=["n_samples", "n_dim"],
-        value_vars=columns[2:],
+        id_vars=id_vars,
+        value_vars=value_vars,
         var_name="split",
         value_name="mse",
     )
@@ -152,7 +153,7 @@ if __name__ == "__main__":
     # Fix n_samples=100, increase n_dim.
     # -------------------------------------------------------------------------
     print("Simulation 1: Increasing dimensionality")
-    n_samples = 75
+    n_samples = 50
     n_iter = 10
 
     results = []
@@ -165,8 +166,9 @@ if __name__ == "__main__":
             mse = measure_mse(X, y)
             results.append([n_samples, n_dim] + mse)
 
-    columns = ["n_samples", "n_dim", "mae", "mse", "axis", "oblique"]
-    to_csv(results, columns, savename="simulation_1")
+    id_vars = ["n_samples", "n_dim"]
+    value_vars = ["mae", "mse", "axis", "oblique"]
+    to_csv(results, id_vars, value_vars, savename="simulation_1")
     del results
 
     # Simulation 2
@@ -174,6 +176,7 @@ if __name__ == "__main__":
     # -------------------------------------------------------------------------
     print("\nSimulation 2: Increase noise")
     n_samples = 30
+    n_iter = 10
 
     results = []
 
@@ -186,11 +189,30 @@ if __name__ == "__main__":
                 mse = measure_mse(X, y)
                 results.append([n_samples, n_dim, scale] + mse)
 
-    columns = ["n_samples", "n_dim", "scale", "mae", "mse", "axis", "oblique"]
-    to_csv(results, columns, savename="simulation_2")
+    id_vars = ["n_samples", "n_dim", "scale"]
+    value_vars = ["mae", "mse", "axis", "oblique"]
+    to_csv(results, id_vars, value_vars, savename="simulation_2")
     del results
 
     # Simulation 3
     # Try nonlinear simulations?
     # -------------------------------------------------------------------------
     print("\nSimulation 3: Try nonlinear simulations")
+
+    n_samples = 30
+    n_iter = 10
+    n_dims = range(1, 10)
+
+    results = []
+
+    for n_dim in tqdm(n_dims):
+        for sim in ["cub_sim", "spiral_sim"]:
+            for _ in tqdm(range(n_iter)):
+                X, y = generate_nonlinear_data(sim, n_samples=n_samples, n_dim=n_dim)
+                mse = measure_mse(X, y)
+                results.append([sim, n_samples, n_dim] + mse)
+
+    id_vars = ["sim", "n_samples", "n_dim"]
+    value_vars = ["mae", "mse", "axis", "oblique"]
+    to_csv(results, id_vars, value_vars, savename="nonlinear_1")
+    del results
