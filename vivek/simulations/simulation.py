@@ -24,8 +24,8 @@ def sample(n_features, n_targets, epsilon, n_samples=1000, random_state=715, p_i
     X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.15)
 
     # Contaminate a subset of the data
-    n_contaminated = int(round(epsilon * n_samples))
-    contaminated = np.random.choice(range(y_train.shape[1]), size=n_contaminated)
+    n_contaminated = int(round(epsilon * X_train.shape[0]))
+    contaminated = np.random.choice(range(y_train.shape[0]), size=n_contaminated)
     y_train[contaminated] = np.square(y_train[contaminated])
 
     return X_train, X_test, y_train, y_test
@@ -91,4 +91,4 @@ if __name__ == "__main__":
         df = pd.DataFrame(df, columns=columns)
         print(df.head())
 
-        df.to_csv("sim_results.csv")
+        df.to_csv("sim1_results.csv")
