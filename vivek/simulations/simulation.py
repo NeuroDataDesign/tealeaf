@@ -36,7 +36,7 @@ def _train_forest(X, y, criterion):
     Fit a RandomForestRegressor with default parameters and specific criterion.
     """
 
-    regr = RandomForestRegressor(n_estimators=500, criterion=criterion)
+    regr = RandomForestRegressor(n_estimators=500, criterion=criterion, max_features="sqrt")
     regr.fit(X, y)
     return regr
 
