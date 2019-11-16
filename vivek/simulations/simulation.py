@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 
-def sample(n_features, n_targets, epsilon, n_samples=1000, random_state=715, p_informative=0.5):
+def sample(n_features, n_targets, epsilon, n_samples=1000, p_informative=0.5):
 
     n_informative = round(n_features * p_informative)
     X, y, coef = make_regression(
@@ -17,7 +17,6 @@ def sample(n_features, n_targets, epsilon, n_samples=1000, random_state=715, p_i
         n_features=n_features,
         n_informative=n_informative,
         n_targets=n_targets,
-        random_state=random_state,
         coef=True,
     )
 
