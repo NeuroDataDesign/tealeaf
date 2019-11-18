@@ -1,4 +1,5 @@
 import numpy as np
+from sklearn.datasets import make_spd_matrix
 
 
 class GrossErrorModel:
@@ -11,60 +12,74 @@ class GrossErrorModel:
         Number of input features
     n_targets : int
         Number if output targets to predict
-    u_1 : float (default=0)
-        Mean of the gross population
-    u_2 : float (default=5)
-        Mean of the true population
     """
 
-    def __init__(self, n_features, n_targets, u_1=0, u_2=5):
-
-        self.u_1 = np.repeat(u_1, n_features + n_targets)
-        self.u_2 = np.repeat(u_2, n_features + n_targets)
+    def __init__(self, n_features, n_targets, n_informative, transform=np.sin, sigma=5):
 
         self.n_features = n_features
         self.n_targets = n_targets
-        self.cov_1 = self._build_random_covariance_matrix(n_features, n_targets)
-        self.cov_2 = self._build_random_covariance_matrix(n_features, n_targets)
+        self.n_informative = n_informative
 
-    def _build_random_covariance_matrix(self, n_features, n_targets):
+        self.weights = self._make_weight_matrix()
+        self.transform = transform
 
-        A_1 = np.identity(n=n_features)
-        A_2 = np.random.uniform(size=(n_targets, n_targets))
-        A_2 = (A_2 + A_2.T) / 2.0
-        np.fill_diagonal(A_2, 1)
-        B = np.random.uniform(size=(n_targets, n_features))
+        self.cov_1 = make_spd_matrix(n_dim=n_features)
+        self.cov_2 = self.cov_2 * sigma
 
-        cov = np.hstack([np.vstack([A_1, B]), np.vstack([B.T, A_2])])
+    def _make_weight_matrix(self):
+        """
+        Make a sparse weight matrix.
+        """
 
-        return cov
+        weights = np.zeros((self.n_features, self.n_targets))
+        weights[: self.n_informative, :] = np.random.uniform(
+            low=-10, high=10, size=(self.n_informative, self.n_targets)
+        )
+        weights = np.random.shuffle(weights)
 
-    def _sample(self, n_samples, population):
+        return weights
 
-        if population == "true":
-            samples = np.random.multivariate_normal(
-                mean=self.u_1, cov=self.cov_1, size=n_samples
-            )
-        elif population == "gross":
-            samples = np.random.multivariate_normal(
-                mean=self.u_2, cov=self.cov_1, size=n_samples
-            )
-        else:
-            raise ValueError(f"Unknown model type {population}")
+    def sample(self, epsilon, n_iter=25, n_train=30, n_test=1000):
+        """
+        Create a generator for training data and a heldout validation set.
+        """
 
-        X = samples[:, : self.n_features]
-        y = samples[:, self.n_features :]
+        # Create sample training data
+        train_gen = self._create_training_data(epsilon, n_iter, n_train)
+
+        # Create validation set
+        X_test = np.random.uniform(low=-10, high=10, size=(n_test, self.n_features))
+        y_test = np.dot(X_test, self.weights)
+
+        return train_gen, X_test, y_test
+
+    def _create_training_data(self, epsilon, n_iter, n_train):
+        """
+        Create a generator of training data (X_train, y_train).
+        """
+
+        for _ in range(n_iter):
+            X_train, y_train = self._sample_train(epsilon, n_iter, n_train)
+            yield X_train, y_train
+
+    def _sample_train(self, epsilon, n_iter, n_train):
+        """
+        Sample contaminated training data.
+        """
+
+        # Sample uncontanimated data
+        X = np.random.uniform(low=-10, high=10, size=(n_train, self.n_features))
+
+        # Index contaminated data
+        n_contaminated = int(round(n_train * epsilon))
+        contaminated = np.random.choice(range(n_train), size=n_contaminated)
+        not_contaminated = np.setdiff1d(range(n_train), contaminated)
+
+        # Contaminate a subset of the data
+        y = np.zeros((n_train, self.n_targets))
+        y[not_contaminated] = np.dot(X, self.weights) + np.random.normal(0, self.cov_1)
+        y[contaminated] = self.transform(
+            np.dot(X, self.weights) + np.random.normal(0, self.cov_2)
+        )
+
         return X, y
-
-    def sample(self, n_samples, epsilon):
-
-        n_gross = np.random.binomial(n=n_samples, p=epsilon)
-        n_true = n_samples - n_gross
-
-        X_gross, y_gross = self._sample(n_gross, population="gross")
-        X_true, y_true = self._sample(n_true, population="true")
-        X = np.concatenate((X_gross, X_true), axis=0)
-        y = np.concatenate((y_gross, y_true), axis=0)
-        model_label = np.concatenate((np.repeat(0, n_gross), np.repeat(1, n_true)))
-
-        return X, y, model_label
