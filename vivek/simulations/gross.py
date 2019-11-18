@@ -76,9 +76,16 @@ class GrossErrorModel:
 
         # Contaminate a subset of the data
         y = np.zeros((n_train, self.n_targets))
-        y[not_contaminated] = np.dot(X, self.weights) + np.random.normal(0, self.cov_1)
+        y[not_contaminated] = np.dot(
+            X[not_contaminated], self.weights
+        ) + np.random.multivariate_normal(
+            np.zeros((self.n_targets,)), self.cov_1, size=(len(not_contaminated))
+        )
         y[contaminated] = self.transform(
-            np.dot(X, self.weights) + np.random.normal(0, self.cov_2)
+            np.dot(X[contaminated], self.weights)
+            + np.random.multivariate_normal(
+                np.zeros((self.n_targets,)), self.cov_2, size=(len(contaminated))
+            )
         )
 
         return X, y
