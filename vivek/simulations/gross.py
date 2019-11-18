@@ -23,8 +23,8 @@ class GrossErrorModel:
         self.weights = self._make_weight_matrix()
         self.transform = transform
 
-        self.cov_1 = make_spd_matrix(n_dim=n_features)
-        self.cov_2 = self.cov_2 * sigma
+        self.cov_1 = make_spd_matrix(n_dim=n_targets)
+        self.cov_2 = self.cov_1 * sigma
 
     def _make_weight_matrix(self):
         """
