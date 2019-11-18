@@ -30,7 +30,6 @@ class GrossErrorModel:
         """
         Make a sparse weight matrix.
         """
-
         weights = np.zeros((self.n_features, self.n_targets))
         weights[: self.n_informative, :] = np.random.uniform(
             low=-10, high=10, size=(self.n_informative, self.n_targets)
