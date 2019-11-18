@@ -35,8 +35,7 @@ class GrossErrorModel:
         weights[: self.n_informative, :] = np.random.uniform(
             low=-10, high=10, size=(self.n_informative, self.n_targets)
         )
-        weights = np.random.shuffle(weights)
-
+        np.random.shuffle(weights)
         return weights
 
     def sample(self, epsilon, n_iter=25, n_train=30, n_test=1000):
