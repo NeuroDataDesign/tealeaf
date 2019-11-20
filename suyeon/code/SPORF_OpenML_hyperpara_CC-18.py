@@ -91,12 +91,15 @@ for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
               "max_features": ["auto", "sqrt","log2", None, n_features**2]}
 
         clf_best_params = hyperparameter_optimization_grid(X_CC18, y_CC18, (clf, param_dist))
-        # best_params.append(clf_best_params, axis = 0)
         print(task_id)
         print('Data set: %s: ' % (task.get_dataset().name))
-        print(clf_best_params)
+        print(clf_best_params["feature_combinations"])
+        print(clf_best_params["max_depth"])
+        print(clf_best_params["max_features"])
+        print(clf_best_params["min_samples_split"])
+        print(clf_best_params["n_estimators"])
         print('Time: '+ str(datetime.now() - startTime))
-        f.write('%i,%s,%s,%f,%f,%f,%f,%f\n' % (task_id,task.get_dataset().name,str(datetime.now() - startTime),clf_best_params[0],clf_best_params[1],clf_best_params[2],clf_best_params[3],clf_best_params[4]))
+        f.write('%i,%s,%s,%f,%f,%f,%f,%f\n' % (task_id,task.get_dataset().name,str(datetime.now() - startTime),clf_best_params["feature_combinations"],clf_best_params["max_depth"],clf_best_params["max_features"],clf_best_params["min_samples_split"],clf_best_params["n_estimators"]))
         f.close()
 #     except:
 #         print('Error in OpenML CC-18 dataset ' + str(task_id))
