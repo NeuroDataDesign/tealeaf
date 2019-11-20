@@ -4,30 +4,9 @@ from multiprocessing import Pool
 import numpy as np
 import pandas as pd
 from numpy.linalg import norm
-from sklearn.datasets import make_regression
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
 
-
-def sample(n_features, n_targets, epsilon, n_samples=1000, p_informative=0.5):
-
-    n_informative = round(n_features * p_informative)
-    X, y, coef = make_regression(
-        n_samples=n_samples,
-        n_features=n_features,
-        n_informative=n_informative,
-        n_targets=n_targets,
-        coef=True,
-    )
-
-    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.15)
-
-    # Contaminate a subset of the data
-    n_contaminated = int(round(epsilon * X_train.shape[0]))
-    contaminated = np.random.choice(range(y_train.shape[0]), size=n_contaminated)
-    y_train[contaminated] = np.square(y_train[contaminated])
-
-    return X_train, X_test, y_train, y_test
+from gross import GrossErrorModel
 
 
 def _train_forest(X, y, criterion):
@@ -35,7 +14,9 @@ def _train_forest(X, y, criterion):
     Fit a RandomForestRegressor with default parameters and specific criterion.
     """
 
-    regr = RandomForestRegressor(n_estimators=500, criterion=criterion, max_features="sqrt")
+    regr = RandomForestRegressor(
+        n_estimators=500, criterion=criterion, max_features="sqrt"
+    )
     regr.fit(X, y)
     return regr
 
@@ -49,20 +30,27 @@ def _test_forest(X, y, regr):
     return norm(y_pred - y) / len(y)
 
 
-def main(n_features, n_targets, epsilon, n_iter=25):
+def main(n_features, n_targets, epsilon, n_iter=50):
 
     print(epsilon)
 
     scores = []
 
-    for _ in range(n_iter):
+    # Sample training and testing data
+    gem = GrossErrorModel(
+        n_features=n_features, n_targets=n_targets, n_informative=n_features
+    )
+    train_gen, X_test, y_test = gem.sample(
+        epsilon, n_iter=n_iter, n_train=30, n_test=1000
+    )
 
-        # Sample training and testing data
-        X_train, X_test, y_train, y_test = sample(n_features, n_targets, epsilon)
+    criteria = ["mae", "mse", "friedman_mse"]
 
-        # Train forests and score them
-        criteria = ["mae", "mse", "friedman_mse"]
+    # Train forests and score them
+    for X_train, y_train in train_gen:
+
         score = []
+
         for criterion in criteria:
             regr = _train_forest(X_train, y_train, criterion)
             forest_score = _test_forest(X_test, y_test, regr)
@@ -70,8 +58,11 @@ def main(n_features, n_targets, epsilon, n_iter=25):
 
         scores.append(score)
 
+    # Calculate average and standard deviation
     scores = np.array(scores)
-    return scores.mean(axis=0)
+    score = scores.mean(axis=0)
+    error = scores.std(axis=0) / np.sqrt(n_iter)
+    return np.concatenate((score, error))
 
 
 if __name__ == "__main__":
@@ -79,15 +70,25 @@ if __name__ == "__main__":
     with Pool() as pool:
 
         scores = pool.starmap(
-            main, zip(repeat(6), repeat(2), np.linspace(0, 0.5, num=50))
+            main, zip(repeat(10), repeat(2), np.linspace(0, 0.5, num=10))
         )
 
-        param_space = zip(repeat(6), repeat(2), np.linspace(0, 0.5, num=50))
+        param_space = zip(repeat(10), repeat(2), np.linspace(0, 0.5, num=10))
         param_space = np.array(list(param_space))
 
         df = np.concatenate((param_space, scores), axis=1)
-        columns = ["n_features", "n_targets", "epsilon", "mae", "mse", "friedman_mse"]
+        columns = [
+            "n_features",
+            "n_targets",
+            "epsilon",
+            "mae_score",
+            "mse_score",
+            "friedman_mse_score",
+            "mae_std",
+            "mse_std",
+            "friedman_mse_std",
+        ]
         df = pd.DataFrame(df, columns=columns)
         print(df.head())
 
-        df.to_csv("sim1_results.csv")
+        df.to_csv("sim3_results.csv")
