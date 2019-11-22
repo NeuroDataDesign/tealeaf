@@ -102,7 +102,7 @@ def find_dim(sim_name):
     return dim
 
 
-def main(n_train, sim_name, criterion, n_iter=5):
+def main(n_train, sim_name, criterion, n_iter=10):
 
     # Print the simulation name
     sim, _ = simulations[sim_name]
@@ -127,7 +127,7 @@ def main(n_train, sim_name, criterion, n_iter=5):
     error = score.std() / np.sqrt(n_iter)
     out = np.array([average, error])
 
-    np.savetxt(f"results/sim_2/{sim_name}_{criterion}_{n_train}", out)
+    np.savetxt(f"results/sim_3/{sim_name}_{criterion}_{n_train}", out)
     print(sim_name)
 
     return out
