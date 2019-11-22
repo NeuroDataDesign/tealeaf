@@ -107,7 +107,7 @@ def main(n_train, sim_name, criterion, n_iter=5):
     # Print the simulation name
     sim, _ = simulations[sim_name]
     # dim = find_dim(sim_name)
-    dim = 5
+    dim = 10
 
     # Make a validation dataset
     X_test, y_test = sim(num_samp=1000, num_dim=dim)
@@ -127,7 +127,7 @@ def main(n_train, sim_name, criterion, n_iter=5):
     error = score.std() / np.sqrt(n_iter)
     out = np.array([average, error])
 
-    np.savetxt(f"results/{sim_name}_{criterion}_{n_train}", out)
+    np.savetxt(f"results/sim_2/{sim_name}_{criterion}_{n_train}", out)
     print(sim_name)
 
     return out
@@ -156,7 +156,7 @@ if __name__ == "__main__":
         df = pd.DataFrame(df, columns=columns)
         print(df.head())
 
-        df.to_csv("./results/sim_1.csv")
+        df.to_csv("./results/sim_2/sim_2.csv")
 
     # Print runtime
     print("All finished!")
