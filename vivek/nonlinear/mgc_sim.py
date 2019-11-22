@@ -102,11 +102,12 @@ def find_dim(sim_name):
     return dim
 
 
-def main(n_train, sim_name, criterion, n_iter=25):
+def main(n_train, sim_name, criterion, n_iter=5):
 
     # Print the simulation name
     sim, _ = simulations[sim_name]
-    dim = find_dim(sim_name)
+    # dim = find_dim(sim_name)
+    dim = 5
     print(sim_name)
 
     # Make a validation dataset
