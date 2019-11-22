@@ -126,7 +126,11 @@ def main(n_train, sim_name, criterion, n_iter=5):
     score = np.array(score)
     average = score.mean()
     error = score.std() / np.sqrt(n_iter)
-    return [average, error]
+    out = np.array([average, error])
+
+    np.savetxt(f"{sim_name}_{criterion}_{n_train}", out)
+
+    return out
 
 
 if __name__ == "__main__":
