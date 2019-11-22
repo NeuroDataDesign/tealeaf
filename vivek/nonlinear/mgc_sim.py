@@ -127,8 +127,8 @@ def main(n_train, sim_name, criterion, n_iter=5):
     error = score.std() / np.sqrt(n_iter)
     out = np.array([average, error])
 
+    np.savetxt(f"results/{sim_name}_{criterion}_{n_train}", out)
     print(sim_name)
-    np.savetxt(f"{sim_name}_{criterion}_{n_train}", out)
 
     return out
 
