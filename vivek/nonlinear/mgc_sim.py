@@ -108,9 +108,10 @@ def main(n_train, sim_name, criterion, n_iter=10):
     sim, _ = simulations[sim_name]
     # dim = find_dim(sim_name)
     dim = 20
+    noise = 10
 
     # Make a validation dataset
-    X_test, y_test = sim(num_samp=1000, num_dim=dim)
+    X_test, y_test = sim(num_samp=1000, num_dim=dim, noise=noise)
 
     # Train forests and score them
     score = []
@@ -127,7 +128,7 @@ def main(n_train, sim_name, criterion, n_iter=10):
     error = score.std() / np.sqrt(n_iter)
     out = np.array([average, error])
 
-    np.savetxt(f"results/sim_3/{sim_name}_{criterion}_{n_train}", out)
+    # np.savetxt(f"results/sim_noise/{sim_name}_{criterion}_{n_train}", out)
     print(sim_name)
 
     return out
@@ -156,7 +157,7 @@ if __name__ == "__main__":
         df = pd.DataFrame(df, columns=columns)
         print(df.head())
 
-        df.to_csv("./results/sim_3/sim_3.csv")
+        df.to_csv("./results/sim_noise/results.csv")
 
     # Print runtime
     print("All finished!")
