@@ -88,7 +88,7 @@ def main(n_train, sim_name, criterion, n_iter=10):
     noise = 10
 
     # Make a validation dataset
-    if sim_name == "multi_indep_sim":
+    if sim_name == "multi_indept":
         X_test, y_test = sim(num_samp=1000, num_dim=dim)
     else:
         X_test, y_test = sim(num_samp=1000, num_dim=dim, noise=noise)
