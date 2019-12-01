@@ -79,29 +79,6 @@ simulations = {
 }
 
 
-def find_dim(sim_name):
-    if sim_name in ["joint_normal", "sine_4pi", "sine_16pi", "multi_noise"]:
-        dim = 10
-    elif sim_name in [
-        "step",
-        "spiral",
-        "circle",
-        "ellipse",
-        "quadratic",
-        "w_shape",
-        "two_parabolas",
-        "fourth_root",
-    ]:
-        dim = 20
-    elif sim_name in ["multi_indept", "bernoulli", "log"]:
-        dim = 100
-    elif sim_name in ["linear", "exponential", "cubic"]:
-        dim = 1000
-    else:
-        dim = 40
-    return dim
-
-
 def main(n_train, sim_name, criterion, n_iter=10):
 
     # Print the simulation name
@@ -111,7 +88,10 @@ def main(n_train, sim_name, criterion, n_iter=10):
     noise = 10
 
     # Make a validation dataset
-    X_test, y_test = sim(num_samp=1000, num_dim=dim, noise=noise)
+    if sim_name == "multi_indep_sim":
+        X_test, y_test = sim(num_samp=1000, num_dim=dim)
+    else:
+        X_test, y_test = sim(num_samp=1000, num_dim=dim, noise=noise)
 
     # Train forests and score them
     score = []
