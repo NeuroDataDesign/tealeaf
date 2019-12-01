@@ -88,16 +88,19 @@ def main(n_train, sim_name, criterion, n_iter=10):
     noise = 10
 
     # Make a validation dataset
-    if sim_name == "multi_indept":
-        X_test, y_test = sim(num_samp=1000, num_dim=dim)
-    else:
+    try:
         X_test, y_test = sim(num_samp=1000, num_dim=dim, noise=noise)
+    except TypeError:
+        X_test, y_test = sim(num_samp=1000, num_dim=dim)
 
     # Train forests and score them
     score = []
     for _ in range(n_iter):
 
-        X_train, y_train = sim(num_samp=int(n_train), num_dim=dim)
+        try:
+            X_test, y_test = sim(num_samp=int(n_train), num_dim=dim, noise=noise)
+        except TypeError:
+            X_test, y_test = sim(num_samp=int(n_train), num_dim=dim)
         regr = _train_forest(X_train, y_train, criterion)
         forest_score = _test_forest(X_test, y_test, regr)
         score.append(forest_score)
