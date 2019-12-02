@@ -80,7 +80,7 @@ for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
         #specify max_depth and min_sample_splits ranges
         max_depth_array = (np.unique(np.round((np.arange(2,math.log(n_samples),
                             (math.log(n_samples)-2)/10))))).astype(int)
-        max_depth_range = np.append(max_depth_array, None)
+        max_depth_range_rerf = np.append(max_depth_array, None)
 
         min_sample_splits_range = (np.unique(np.round((np.arange(1,math.log(n_samples),
                                     (math.log(n_samples)-2)/10))))).astype(int)
