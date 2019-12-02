@@ -82,7 +82,7 @@ for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
                             (math.log(n_samples)-2)/10))))).astype(int)
         max_depth_range_rerf = np.append(max_depth_array, None)
 
-        min_sample_splits_range = (np.unique(np.round((np.arange(1,math.log(n_samples),
+        min_sample_splits_range = (np.unique(np.round((np.arange(2,math.log(n_samples),
                                     (math.log(n_samples)-2)/10))))).astype(int)
 
         # specify parameters and distributions to sample from
