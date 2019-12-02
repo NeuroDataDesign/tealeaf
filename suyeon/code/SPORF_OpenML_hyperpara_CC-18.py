@@ -88,7 +88,7 @@ for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
         # specify parameters and distributions to sample from
         param_dist = {"n_estimators": np.arange(100,550,25),
               "max_depth": max_depth_range_rerf,
-              "min_samples_split": min_sample_splits_range,
+              # "min_samples_split": min_sample_splits_range,
               "feature_combinations": [1,2,3,4,5], 
               "max_features": ["auto", "sqrt","log2", None, n_features**2]}
         # print(param_dist)
@@ -98,13 +98,13 @@ for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
         print(task_id)
         print('Data set: %s: ' % (task.get_dataset().name))
         default = "rerfClassifier(feature_combinations=1.5, image_height=None, image_width=None,max_depth=None, max_features='auto', min_samples_split=1,n_estimators=100, n_jobs=None, oob_score=False,patch_height_max=None, patch_height_min=1, patch_width_max=None,patch_width_min=1, projection_matrix='RerF', random_state=None)"
-        print(clf_best_params[default]["feature_combinations"])
-        print(clf_best_params[default]["max_depth"])
-        print(clf_best_params[default]["max_features"])
-        print(clf_best_params[default]["min_samples_split"])
-        print(clf_best_params[default]["n_estimators"])
+        # print(clf_best_params[default]["feature_combinations"])
+        # print(clf_best_params[default]["max_depth"])
+        # print(clf_best_params[default]["max_features"])
+        # print(clf_best_params[default]["min_samples_split"])
+        # print(clf_best_params[default]["n_estimators"])
         print('Time: '+ str(datetime.now() - startTime))
-        f.write('%i,%s,%s,%f,%f,%f,%f,%f\n' % (task_id,task.get_dataset().name,str(datetime.now() - startTime),clf_best_params["feature_combinations"],clf_best_params["max_depth"],clf_best_params["max_features"],clf_best_params["min_samples_split"],clf_best_params["n_estimators"]))
+        # f.write('%i,%s,%s,%f,%f,%f,%f,%f\n' % (task_id,task.get_dataset().name,str(datetime.now() - startTime),clf_best_params["feature_combinations"],clf_best_params["max_depth"],clf_best_params["max_features"],clf_best_params["min_samples_split"],clf_best_params["n_estimators"]))
         f.close()
     # except:
     #     print('Error in OpenML CC-18 dataset ' + str(task_id))
