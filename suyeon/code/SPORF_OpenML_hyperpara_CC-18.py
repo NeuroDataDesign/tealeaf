@@ -63,7 +63,7 @@ def hyperparameter_optimization_grid(X, y, *argv):
 dimen_CC18 = []
 best_params = []
 
-for task_id in benchmark_suite.tasks[47:49]:  # iterate over all tasks
+for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
     # try:
         f = open("SPORF_accuracies_CC-18_hyperpara.txt","a")
         task = openml.tasks.get_task(task_id)  # download the OpenML task
