@@ -66,32 +66,33 @@ best_params = []
 for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
     # try:
         # print(estimator.get_params().keys())
-        print(min_samples_split)
 
-        # f = open("SPORF_accuracies_CC-18_hyperpara.txt","a")
-        # task = openml.tasks.get_task(task_id)  # download the OpenML task
-        # X_CC18, y_CC18 = task.get_X_and_y()  # get the data
-        # dimen_CC18.append(np.shape(X_CC18))
-        # n_features = np.shape(X_CC18)[1]
-        # n_samples = np.shape(X_CC18)[0]
+        f = open("SPORF_accuracies_CC-18_hyperpara.txt","a")
+        task = openml.tasks.get_task(task_id)  # download the OpenML task
+        X_CC18, y_CC18 = task.get_X_and_y()  # get the data
+        dimen_CC18.append(np.shape(X_CC18))
+        n_features = np.shape(X_CC18)[1]
+        n_samples = np.shape(X_CC18)[0]
 
-        # # build a classifier
-        # clf = rerfClassifier(n_estimators=100)
+        # build a classifier
+        clf = rerfClassifier(n_estimators=100)
         
-        # #specify max_depth and min_sample_splits ranges
-        # max_depth_array = (np.unique(np.round((np.arange(2,math.log(n_samples),
-        #                     (math.log(n_samples)-2)/10))))).astype(int)
-        # max_depth_range = np.append(max_depth_array, None)
+        #specify max_depth and min_sample_splits ranges
+        max_depth_array = (np.unique(np.round((np.arange(2,math.log(n_samples),
+                            (math.log(n_samples)-2)/10))))).astype(int)
+        max_depth_range = np.append(max_depth_array, None)
 
-        # min_sample_splits_range = (np.unique(np.round((np.arange(1,math.log(n_samples),
-        #                             (math.log(n_samples)-2)/10))))).astype(int)
+        min_sample_splits_range = (np.unique(np.round((np.arange(1,math.log(n_samples),
+                                    (math.log(n_samples)-2)/10))))).astype(int)
 
-        # # specify parameters and distributions to sample from
-        # param_dist = {"n_estimators": np.arange(100,550,25),
-        #       "max_depth": max_depth_range_rerf,
-        #       "min_samples_split": min_sample_splits_range,
-        #       "feature_combinations": [1,2,3,4,5], 
-        #       "max_features": ["auto", "sqrt","log2", None, n_features**2]}
+        # specify parameters and distributions to sample from
+        param_dist = {"n_estimators": np.arange(100,550,25),
+              "max_depth": max_depth_range_rerf,
+              "min_samples_split": min_sample_splits_range,
+              "feature_combinations": [1,2,3,4,5], 
+              "max_features": ["auto", "sqrt","log2", None, n_features**2]}
+
+        print(min_samples_split)
 
         # clf_best_params = hyperparameter_optimization_grid(X_CC18, y_CC18, (clf, param_dist))
         # print(task_id)
