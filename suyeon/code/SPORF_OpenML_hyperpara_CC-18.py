@@ -64,7 +64,7 @@ dimen_CC18 = []
 best_params = []
 
 for task_id in benchmark_suite.tasks[61:62]:  # iterate over all tasks
-    try:
+    # try:
         # print(estimator.get_params().keys())
 
         f = open("SPORF_accuracies_CC-18_hyperpara.txt","a")
@@ -106,8 +106,8 @@ for task_id in benchmark_suite.tasks[61:62]:  # iterate over all tasks
         print('Time: '+ str(datetime.now() - startTime))
         # f.write('%i,%s,%s,%f,%f,%f,%f,%f\n' % (task_id,task.get_dataset().name,str(datetime.now() - startTime),clf_best_params["feature_combinations"],clf_best_params["max_depth"],clf_best_params["max_features"],clf_best_params["min_samples_split"],clf_best_params["n_estimators"]))
         f.close()
-    except:
-        print('Error in OpenML CC-18 dataset ' + str(task_id))
+    # except:
+    #     print('Error in OpenML CC-18 dataset ' + str(task_id))
 
 
 ## Run SPORF with optimized hyperparameters
