@@ -15,5 +15,5 @@
 # module math
 # module warnings
 #### execute python code
-python SPORF_OpenML_hyperparamer_CC-18.py
+python SPORF_OpenML_hyperpara_CC-18.py
 echo "Finished with job $SLURM_JOBID"
