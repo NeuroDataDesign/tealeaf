@@ -63,7 +63,7 @@ def hyperparameter_optimization_grid(X, y, *argv):
 dimen_CC18 = []
 best_params = []
 
-for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
+for task_id in benchmark_suite.tasks[0:1]:  # iterate over all tasks
     # try:
         # print(estimator.get_params().keys())
 
