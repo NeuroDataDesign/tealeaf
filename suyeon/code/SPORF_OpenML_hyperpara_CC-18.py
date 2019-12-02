@@ -84,15 +84,14 @@ for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
 
         min_sample_splits_range = (np.unique(np.round((np.arange(1,math.log(n_samples),
                                     (math.log(n_samples)-2)/10))))).astype(int)
-        print(min_sample_splits_range)
 
-        # specify parameters and distributions to sample from
-        # param_dist = {"n_estimators": np.arange(100,550,25),
-        #       "max_depth": max_depth_range_rerf,
-        #       "min_samples_split": min_sample_splits_range,
-        #       "feature_combinations": [1,2,3,4,5], 
-        #       "max_features": ["auto", "sqrt","log2", None, n_features**2]}
-
+        specify parameters and distributions to sample from
+        param_dist = {"n_estimators": np.arange(100,550,25),
+              "max_depth": max_depth_range_rerf,
+              "min_samples_split": min_sample_splits_range,
+              "feature_combinations": [1,2,3,4,5], 
+              "max_features": ["auto", "sqrt","log2", None, n_features**2]}
+        print(param_dist)
 
 
         # clf_best_params = hyperparameter_optimization_grid(X_CC18, y_CC18, (clf, param_dist))
