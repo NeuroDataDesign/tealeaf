@@ -85,7 +85,7 @@ for task_id in benchmark_suite.tasks[47:48]:  # iterate over all tasks
         min_sample_splits_range = (np.unique(np.round((np.arange(1,math.log(n_samples),
                                     (math.log(n_samples)-2)/10))))).astype(int)
 
-        specify parameters and distributions to sample from
+        # specify parameters and distributions to sample from
         param_dist = {"n_estimators": np.arange(100,550,25),
               "max_depth": max_depth_range_rerf,
               "min_samples_split": min_sample_splits_range,
