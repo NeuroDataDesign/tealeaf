@@ -97,7 +97,7 @@ for task_id in benchmark_suite.tasks[61:62]:  # iterate over all tasks
         clf_best_params = hyperparameter_optimization_grid(X_CC18, y_CC18, (clf, param_dist))
         print(task_id)
         print('Data set: %s: ' % (task.get_dataset().name))
-        default = "rerfClassifier(feature_combinations=1.5, image_height=None, image_width=None,max_depth=None, max_features='auto', min_samples_split=1,n_estimators=100, n_jobs=None, oob_score=False,patch_height_max=None, patch_height_min=1, patch_width_max=None,patch_width_min=1, projection_matrix='RerF', random_state=None)"
+        # default = "rerfClassifier(feature_combinations=1.5, image_height=None, image_width=None,max_depth=None, max_features='auto', min_samples_split=1,n_estimators=100, n_jobs=None, oob_score=False,patch_height_max=None, patch_height_min=1, patch_width_max=None,patch_width_min=1, projection_matrix='RerF', random_state=None)"
         # print(clf_best_params[default]["feature_combinations"])
         # print(clf_best_params[default]["max_depth"])
         # print(clf_best_params[default]["max_features"])
