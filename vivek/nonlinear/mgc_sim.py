@@ -112,7 +112,7 @@ def main(n_train, sim_name, criterion, n_iter=10):
     out = np.array([average, error])
 
     # np.savetxt(f"results/sim_noise/{sim_name}_{criterion}_{n_train}", out)
-    print(sim_name)
+    print(sim_name, y_test.shape)
 
     return out
 
