@@ -87,12 +87,28 @@ for task_id in benchmark_suite.tasks[61:62]:  # iterate over all tasks
                                     (math.log(n_samples)-2)/10))))).astype(int)
 
         # specify parameters and distributions to sample from
-        param_dist = {"n_estimators": np.arange(100,550,25),
-              "max_depth": max_depth_range_rerf,
-              "min_samples_split": min_sample_splits_range,
-              "feature_combinations": [1,2,3,4,5], 
-              "max_features": ["auto", "sqrt","log2", None, n_features**2]}
-        # print(param_dist)
+        param_dist = {rerfClassifier(feature_combinations=1.5, image_height=None, image_width=None,
+                           max_depth=None, max_features='auto', min_samples_split=1,
+                           n_estimators=100, n_jobs=None, oob_score=False,
+                           patch_height_max=None, patch_height_min=1, patch_width_max=None,
+                           patch_width_min=1, projection_matrix='RerF', random_state=None): 
+                                {'n_estimators': 350, 
+                                'min_samples_split': 1, 
+                                'max_features': 36, 
+                                'max_depth': 1536, 
+                                'feature_combinations': 2}, 
+                    RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+                            max_depth=None, max_features='auto', max_leaf_nodes=None,
+                            min_impurity_decrease=0.0, min_impurity_split=None,
+                            min_samples_leaf=1, min_samples_split=2,
+                            min_weight_fraction_leaf=0.0, n_estimators=100,
+                            n_jobs=None, oob_score=False, random_state=None,
+                            verbose=0, warm_start=False): 
+                                {'n_estimators': 500, 
+                                 'min_samples_split': 2, 
+                                 'max_features': None, 
+                                 'max_depth': 961}
+                    }    
 
         keys, values = zip(*param_dist.items())
 
