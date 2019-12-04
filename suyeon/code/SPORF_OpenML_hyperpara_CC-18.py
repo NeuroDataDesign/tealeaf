@@ -88,13 +88,22 @@ for task_id in benchmark_suite.tasks[61:62]:  # iterate over all tasks
         # specify parameters and distributions to sample from
         param_dist = {"n_estimators": np.arange(100,550,25),
               "max_depth": max_depth_range_rerf,
-              # "min_samples_split": min_sample_splits_range,
+              "min_samples_split": min_sample_splits_range,
               "feature_combinations": [1,2,3,4,5], 
               "max_features": ["auto", "sqrt","log2", None, n_features**2]}
         # print(param_dist)
 
+        keys, values = zip(*param_dist.items())
 
-        clf_best_params = hyperparameter_optimization_grid(X_CC18, y_CC18, (clf, param_dist))
+        #train test split
+        X_train, X_test, y_train, y_test = train_test_split(X_CC18, y_CC18, test_size=0.33, random_state=42)
+
+        rerf_opti = rerfClassifier(**values[0])
+        rerf_opti.fit(X_train, y_train)
+        rerf_pred_opti = rerf_opti.predict(X_test)
+        rerf_accuracy_opti = metrics.accuracy_score(y_test, rerf_pred_opti)
+        print(rerf_accuracy_opti)
+
         print(task_id)
         print('Data set: %s: ' % (task.get_dataset().name))
         # default = "rerfClassifier(feature_combinations=1.5, image_height=None, image_width=None,max_depth=None, max_features='auto', min_samples_split=1,n_estimators=100, n_jobs=None, oob_score=False,patch_height_max=None, patch_height_min=1, patch_width_max=None,patch_width_min=1, projection_matrix='RerF', random_state=None)"
