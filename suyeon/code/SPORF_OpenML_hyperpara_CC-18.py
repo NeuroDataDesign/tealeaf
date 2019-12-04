@@ -6,6 +6,7 @@ import openml
 import sklearn
 from rerf.rerfClassifier import rerfClassifier
 from sklearn.metrics import accuracy_score
+from sklearn.model_selection import train_test_split
 from datetime import datetime
 import numpy as np
 import pandas as pd
