@@ -136,22 +136,3 @@ for task_id in benchmark_suite.tasks[61:62]:  # iterate over all tasks
     #     print('Error in OpenML CC-18 dataset ' + str(task_id))
 
 
-## Run SPORF with optimized hyperparameters
-
-# clf = sklearn.pipeline.make_pipeline(sklearn.preprocessing.Imputer(), rerfClassifier())
-
-# for task_id in benchmark_suite.tasks[68:]:  # iterate over all tasks
-#     try:
-#         f = open("SPORF_accuracies_CC-18.txt","a")
-#         startTime = datetime.now()
-#         task = openml.tasks.get_task(task_id)  # download the OpenML task
-#         openml.config.apikey = '204cdba18d110fd68ad24b131ea92030'  # set the OpenML Api Key
-#         run = openml.runs.run_model_on_task(clf, task)  # run the classifier on the task
-#         score = run.get_metric_fn(sklearn.metrics.accuracy_score)  # print accuracy score
-#         print(task_id)
-#         print('Data set: %s; Accuracy: %0.4f' % (task.get_dataset().name,score.mean()))
-#         print('Time: '+ str(datetime.now() - startTime))
-#         f.write('%i,%s,%0.4f,%s\n' % (task_id,task.get_dataset().name,score.mean(),str(datetime.now() - startTime)))
-#         f.close()
-#     except:
-#         print('Error in' + str(task_id))
