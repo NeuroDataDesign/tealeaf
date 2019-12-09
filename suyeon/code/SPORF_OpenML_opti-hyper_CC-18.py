@@ -17,7 +17,7 @@ dict = {rerfClassifier(feature_combinations=1.5, image_height=None, image_width=
                patch_height_max=None, patch_height_min=1, patch_width_max=None,
                patch_width_min=1, projection_matrix='RerF', random_state=None): 
                     {'n_estimators': 350, 
-                    'min_samples_split': 1, 
+                    # 'min_samples_split': 1, 
                     'max_features': 36, 
                     'max_depth': 1536, 
                     'feature_combinations': 2}, 
@@ -29,7 +29,7 @@ dict = {rerfClassifier(feature_combinations=1.5, image_height=None, image_width=
                 n_jobs=None, oob_score=False, random_state=None,
                 verbose=0, warm_start=False): 
                     {'n_estimators': 500, 
-                     'min_samples_split': 2, 
+                     # 'min_samples_split': 2, 
                      'max_features': None, 
                      'max_depth': 961}
        }
