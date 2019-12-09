@@ -54,7 +54,7 @@ benchmark_suite = openml.study.get_suite('OpenML-CC18')
 
 for task_id in benchmark_suite.tasks[0:1]:  # iterate over all tasks
     # try:
-        # f = open("SPORF_accuracies_opti-hyper_CC-18.txt","a")
+        f = open("SPORF_accuracies_opti-hyper_CC-18.txt","a")
 
         startTime = datetime.now()
 
@@ -95,8 +95,8 @@ for task_id in benchmark_suite.tasks[0:1]:  # iterate over all tasks
         
         print('Time: '+ str(datetime.now() - startTime))
 
-        # f.write('%i,%s,%s,%f,%f,%f,%f,%f\n' % (task_id,task.get_dataset().name,str(datetime.now() - startTime),clf_best_params["feature_combinations"],clf_best_params["max_depth"],clf_best_params["max_features"],clf_best_params["min_samples_split"],clf_best_params["n_estimators"]))
-        # f.close()
+        f.write('%i,%s,%s,%f,%f,%f,%f,%f,\n' % (task_id,task.get_dataset().name,str(datetime.now() - startTime),rerf_accuracy_opti,rerf_accuracy_default,rf_accuracy_opti,rf_accuracy_default))
+        f.close()
     # except:
     #     print('Error in OpenML CC-18 dataset ' + str(task_id))
 
