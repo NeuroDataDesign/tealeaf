@@ -56,6 +56,8 @@ for task_id in benchmark_suite.tasks[0:1]:  # iterate over all tasks
     # try:
         # f = open("SPORF_accuracies_opti-hyper_CC-18.txt","a")
 
+        startTime = datetime.now()
+
         task = openml.tasks.get_task(task_id)
         X, y = task.get_X_and_y()
         n_features = np.shape(X)[1]
