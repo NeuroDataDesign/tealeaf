@@ -15,6 +15,7 @@
 # module math
 # module warnings
 # module rerf
+# module datetime
 #### execute python code
-python SPORF_OpenML_hyperpara_CC-18.py
+python SPORF_OpenML_opti-hyper_CC-18.py
 echo "Finished with job $SLURM_JOBID"
