@@ -12,7 +12,7 @@ simplefilter(action='ignore', category=FutureWarning)
 
 
 dict = {rerfClassifier(feature_combinations=1.5, image_height=None, image_width=None,
-               max_depth=None, max_features='auto', min_samples_split=1,
+               max_depth=None, max_features='auto', # min_samples_split=1,
                n_estimators=100, n_jobs=None, oob_score=False,
                patch_height_max=None, patch_height_min=1, patch_width_max=None,
                patch_width_min=1, projection_matrix='RerF', random_state=None): 
@@ -24,7 +24,7 @@ dict = {rerfClassifier(feature_combinations=1.5, image_height=None, image_width=
         RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
                 max_depth=None, max_features='auto', max_leaf_nodes=None,
                 min_impurity_decrease=0.0, min_impurity_split=None,
-                min_samples_leaf=1, min_samples_split=2,
+                min_samples_leaf=1, # min_samples_split=2,
                 min_weight_fraction_leaf=0.0, n_estimators=100,
                 n_jobs=None, oob_score=False, random_state=None,
                 verbose=0, warm_start=False): 
