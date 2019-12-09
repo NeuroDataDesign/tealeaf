@@ -56,13 +56,13 @@ for task_id in benchmark_suite.tasks[0:1]:  # iterate over all tasks
     # try:
         # f = open("SPORF_accuracies_opti-hyper_CC-18.txt","a")
 
-        print(task_id)
-        print('Data set: %s: ' % (task.get_dataset().name))
-
         task = openml.tasks.get_task(task_id)
         X, y = task.get_X_and_y()
         n_features = np.shape(X)[1]
         n_samples = np.shape(X)[0]
+
+        print(task_id)
+        print('Data set: %s: ' % (task.get_dataset().name))
 
         #train test split
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
@@ -92,7 +92,7 @@ for task_id in benchmark_suite.tasks[0:1]:  # iterate over all tasks
         print(rf_accuracy_default)
         
         print('Time: '+ str(datetime.now() - startTime))
-        
+
         # f.write('%i,%s,%s,%f,%f,%f,%f,%f\n' % (task_id,task.get_dataset().name,str(datetime.now() - startTime),clf_best_params["feature_combinations"],clf_best_params["max_depth"],clf_best_params["max_features"],clf_best_params["min_samples_split"],clf_best_params["n_estimators"]))
         # f.close()
     # except:
