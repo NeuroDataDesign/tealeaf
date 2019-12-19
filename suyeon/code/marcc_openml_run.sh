@@ -1,10 +1,11 @@
 #!/bin/bash
 #SBATCH --job-name=OpenMLJob
 #SBATCH --time=24:0:0
-#SBATCH --partition=shared
+#SBATCH --partition=lrgmem
 #SBATCH --nodes=1
 # number of tasks (processes) per node
-#SBATCH --ntasks-per-node=24
+#SBATCH --ntasks-per-node=48
+#SBATCH --mem=500G
 #SBATCH --mail-type=end
 #SBATCH --mail-user=sju7@jhu.edu
 #### load and unload modules you may need
