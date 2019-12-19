@@ -50,11 +50,11 @@ keys, values = zip(*dict.items())
 
 # get some data
 openml.config.apikey = '204cdba18d110fd68ad24b131ea92030'
-benchmark_suite = openml.study.get_suite('OpenML-CC18')
+benchmark_suite = openml.study.get_suite('OpenML100')
 
-for task_id in benchmark_suite.tasks[68:]:  # iterate over all tasks
+for task_id in benchmark_suite.tasks[:]:  # iterate over all tasks
     try:
-        f = open("SPORF_accuracies_opti-hyper_CC-18.txt","a")
+        f = open("SPORF_accuracies_opti-hyper_100.txt","a")
 
         task = openml.tasks.get_task(task_id)
         X, y = task.get_X_and_y()
@@ -111,7 +111,7 @@ for task_id in benchmark_suite.tasks[68:]:  # iterate over all tasks
         f.write('%i,%s,%s,%s,%s,%s,%f,%f,%f,%f,\n' % (task_id,task.get_dataset().name,rerf_opti_time,rerf_default_time,rf_opti_time,rf_default_time,rerf_accuracy_opti,rerf_accuracy_default,rf_accuracy_opti,rf_accuracy_default))
         f.close()
     except:
-        print('Error in OpenML CC-18 dataset ' + str(task_id))
+        print('Error in OpenML 100 dataset ' + str(task_id))
 
 
 
