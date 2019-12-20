@@ -52,7 +52,7 @@ keys, values = zip(*dict.items())
 openml.config.apikey = '204cdba18d110fd68ad24b131ea92030'
 benchmark_suite = openml.study.get_suite('OpenML100')
 
-for task_id in benchmark_suite.tasks[52:]:  # iterate over all tasks
+for task_id in benchmark_suite.tasks[98:]:  # iterate over all tasks
     try:
         f = open("SPORF_accuracies_opti-hyper_100.txt","a")
 
