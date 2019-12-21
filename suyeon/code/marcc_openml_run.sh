@@ -18,5 +18,5 @@
 # module rerf
 # module datetime
 #### execute python code
-python SPORF_OpenML_opti-hyper_100.py
+python SPORF_OpenML_opti-hyper_100-trial.py
 echo "Finished with job $SLURM_JOBID"
