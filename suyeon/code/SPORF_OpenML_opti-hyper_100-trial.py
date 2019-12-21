@@ -4,7 +4,7 @@
 
 import openml
 import sklearn
-import hyperparamter_optimization as ho
+import hyperparam_optimization as ho
 from rerf.rerfClassifier import rerfClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
