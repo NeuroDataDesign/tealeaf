@@ -1,0 +1,1256 @@
+starting tree 1
+max depth: 12
+avg leaf node depth: 5.59496
+num leaf nodes: 2222
+starting tree 1
+max depth: 12
+avg leaf node depth: 5.74177
+num leaf nodes: 2370
+starting tree 1
+*** Error in `python': corrupted size vs. prev_size: 0x0000558d6ec34f10 ***
+======= Backtrace: =========
+/usr/lib64/libc.so.6(+0x80da7)[0x2b6ec692bda7]
+/usr/lib64/libc.so.6(+0x8137e)[0x2b6ec692c37e]
+/home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so(+0x2a20c)[0x2b6eceb4220c]
+/home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so(+0x2d967)[0x2b6eceb45967]
+python(+0x10c82b)[0x558d6cb0582b]
+python(+0x1a1870)[0x558d6cb9a870]
+python(+0x10c987)[0x558d6cb05987]
+python(+0x10c987)[0x558d6cb05987]
+python(+0x10c442)[0x558d6cb05442]
+python(_PyFunction_FastCallKeywords+0x290)[0x558d6cb5c340]
+python(_PyEval_EvalFrameDefault+0x6a3)[0x558d6cbc4893]
+python(_PyFunction_FastCallDict+0x10b)[0x558d6cb0d1db]
+python(_PyObject_Call_Prepend+0x63)[0x558d6cb2be33]
+python(+0x16a2da)[0x558d6cb632da]
+python(_PyObject_FastCallKeywords+0x49b)[0x558d6cb6419b]
+python(_PyEval_EvalFrameDefault+0x4a86)[0x558d6cbc8c76]
+python(_PyEval_EvalCodeWithName+0xab8)[0x558d6cb0c978]
+python(_PyFunction_FastCallKeywords+0x387)[0x558d6cb5c437]
+python(_PyEval_EvalFrameDefault+0x416)[0x558d6cbc4606]
+python(_PyFunction_FastCallKeywords+0xfb)[0x558d6cb5c1ab]
+python(_PyEval_EvalFrameDefault+0x6a3)[0x558d6cbc4893]
+python(_PyEval_EvalCodeWithName+0xab8)[0x558d6cb0c978]
+python(_PyFunction_FastCallKeywords+0x387)[0x558d6cb5c437]
+python(_PyEval_EvalFrameDefault+0x6a3)[0x558d6cbc4893]
+python(_PyEval_EvalCodeWithName+0x2f9)[0x558d6cb0c1b9]
+python(_PyFunction_FastCallKeywords+0x387)[0x558d6cb5c437]
+python(_PyEval_EvalFrameDefault+0x4b29)[0x558d6cbc8d19]
+python(_PyEval_EvalCodeWithName+0x2f9)[0x558d6cb0c1b9]
+python(PyEval_EvalCodeEx+0x44)[0x558d6cb0d094]
+python(PyEval_EvalCode+0x1c)[0x558d6cb0d0bc]
+python(+0x22a9e4)[0x558d6cc239e4]
+python(PyRun_FileExFlags+0xa1)[0x558d6cc2dde1]
+python(PyRun_SimpleFileExFlags+0x1c3)[0x558d6cc2dfd3]
+python(+0x2360c5)[0x558d6cc2f0c5]
+python(_Py_UnixMain+0x3c)[0x558d6cc2f1ec]
+/usr/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b6ec68cd445]
+python(+0x1daf7d)[0x558d6cbd3f7d]
+======= Memory map: ========
+2b6ec646b000-2b6ec648d000 r-xp 00000000 00:14 62947                      /usr/lib64/ld-2.17.so
+2b6ec648d000-2b6ec6493000 rw-p 00000000 00:00 0 
+2b6ec6493000-2b6ec649a000 r--s 00000000 00:14 64689                      /usr/lib64/gconv/gconv-modules.cache
+2b6ec649a000-2b6ec65da000 rw-p 00000000 00:00 0 
+2b6ec65da000-2b6ec65dd000 r--p 00000000 00:30 111817335                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/math.cpython-37m-x86_64-linux-gnu.so
+2b6ec65dd000-2b6ec65e3000 r-xp 00003000 00:30 111817335                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/math.cpython-37m-x86_64-linux-gnu.so
+2b6ec65e3000-2b6ec65e5000 r--p 00009000 00:30 111817335                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/math.cpython-37m-x86_64-linux-gnu.so
+2b6ec65e5000-2b6ec65e6000 r--p 0000a000 00:30 111817335                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/math.cpython-37m-x86_64-linux-gnu.so
+2b6ec65e6000-2b6ec65e8000 rw-p 0000b000 00:30 111817335                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/math.cpython-37m-x86_64-linux-gnu.so
+2b6ec65e8000-2b6ec65ea000 r--p 00000000 00:30 111817328                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/select.cpython-37m-x86_64-linux-gnu.so
+2b6ec65ea000-2b6ec65ee000 r-xp 00002000 00:30 111817328                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/select.cpython-37m-x86_64-linux-gnu.so
+2b6ec65ee000-2b6ec65ef000 r--p 00006000 00:30 111817328                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/select.cpython-37m-x86_64-linux-gnu.so
+2b6ec65ef000-2b6ec65f0000 r--p 00006000 00:30 111817328                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/select.cpython-37m-x86_64-linux-gnu.so
+2b6ec65f0000-2b6ec65f2000 rw-p 00007000 00:30 111817328                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/select.cpython-37m-x86_64-linux-gnu.so
+2b6ec65f2000-2b6ec65f4000 r--p 00000000 00:30 111817326                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/binascii.cpython-37m-x86_64-linux-gnu.so
+2b6ec65f4000-2b6ec65f7000 r-xp 00002000 00:30 111817326                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/binascii.cpython-37m-x86_64-linux-gnu.so
+2b6ec65f7000-2b6ec65f9000 r--p 00005000 00:30 111817326                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/binascii.cpython-37m-x86_64-linux-gnu.so
+2b6ec65f9000-2b6ec65fa000 r--p 00006000 00:30 111817326                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/binascii.cpython-37m-x86_64-linux-gnu.so
+2b6ec65fa000-2b6ec65fb000 rw-p 00007000 00:30 111817326                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/binascii.cpython-37m-x86_64-linux-gnu.so
+2b6ec65fb000-2b6ec65fc000 rwxp 00000000 00:00 0 
+2b6ec65fc000-2b6ec65ff000 rw-p 00000000 00:00 0 
+2b6ec65ff000-2b6ec663f000 rw-p 00000000 00:00 0 
+2b6ec6641000-2b6ec6681000 rw-p 00000000 00:00 0 
+2b6ec6681000-2b6ec6682000 r--p 00000000 00:30 111817317                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_heapq.cpython-37m-x86_64-linux-gnu.so
+2b6ec6682000-2b6ec6684000 r-xp 00001000 00:30 111817317                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_heapq.cpython-37m-x86_64-linux-gnu.so
+2b6ec6684000-2b6ec6685000 r--p 00003000 00:30 111817317                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_heapq.cpython-37m-x86_64-linux-gnu.so
+2b6ec6685000-2b6ec6686000 r--p 00003000 00:30 111817317                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_heapq.cpython-37m-x86_64-linux-gnu.so
+2b6ec6686000-2b6ec6688000 rw-p 00004000 00:30 111817317                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_heapq.cpython-37m-x86_64-linux-gnu.so
+2b6ec668c000-2b6ec668d000 r--p 00021000 00:14 62947                      /usr/lib64/ld-2.17.so
+2b6ec668d000-2b6ec668e000 rw-p 00022000 00:14 62947                      /usr/lib64/ld-2.17.so
+2b6ec668e000-2b6ec668f000 rw-p 00000000 00:00 0 
+2b6ec668f000-2b6ec66a6000 r-xp 00000000 00:14 63243                      /usr/lib64/libpthread-2.17.so
+2b6ec66a6000-2b6ec68a5000 ---p 00017000 00:14 63243                      /usr/lib64/libpthread-2.17.so
+2b6ec68a5000-2b6ec68a6000 r--p 00016000 00:14 63243                      /usr/lib64/libpthread-2.17.so
+2b6ec68a6000-2b6ec68a7000 rw-p 00017000 00:14 63243                      /usr/lib64/libpthread-2.17.so
+2b6ec68a7000-2b6ec68ab000 rw-p 00000000 00:00 0 
+2b6ec68ab000-2b6ec6a6e000 r-xp 00000000 00:14 62992                      /usr/lib64/libc-2.17.so
+2b6ec6a6e000-2b6ec6c6d000 ---p 001c3000 00:14 62992                      /usr/lib64/libc-2.17.so
+2b6ec6c6d000-2b6ec6c71000 r--p 001c2000 00:14 62992                      /usr/lib64/libc-2.17.so
+2b6ec6c71000-2b6ec6c73000 rw-p 001c6000 00:14 62992                      /usr/lib64/libc-2.17.so
+2b6ec6c73000-2b6ec6c78000 rw-p 00000000 00:00 0 
+2b6ec6c78000-2b6ec6c7a000 r-xp 00000000 00:14 63027                      /usr/lib64/libdl-2.17.so
+2b6ec6c7a000-2b6ec6e7a000 ---p 00002000 00:14 63027                      /usr/lib64/libdl-2.17.so
+2b6ec6e7a000-2b6ec6e7b000 r--p 00002000 00:14 63027                      /usr/lib64/libdl-2.17.so
+2b6ec6e7b000-2b6ec6e7c000 rw-p 00003000 00:14 63027                      /usr/lib64/libdl-2.17.so
+2b6ec6e7c000-2b6ec6e7e000 r-xp 00000000 00:14 63315                      /usr/lib64/libutil-2.17.so
+2b6ec6e7e000-2b6ec707d000 ---p 00002000 00:14 63315                      /usr/lib64/libutil-2.17.so
+2b6ec707d000-2b6ec707e000 r--p 00001000 00:14 63315                      /usr/lib64/libutil-2.17.so
+2b6ec707e000-2b6ec707f000 rw-p 00002000 00:14 63315                      /usr/lib64/libutil-2.17.so
+2b6ec707f000-2b6ec7086000 r-xp 00000000 00:14 63259                      /usr/lib64/librt-2.17.so
+2b6ec7086000-2b6ec7285000 ---p 00007000 00:14 63259                      /usr/lib64/librt-2.17.so
+2b6ec7285000-2b6ec7286000 r--p 00006000 00:14 63259                      /usr/lib64/librt-2.17.so
+2b6ec7286000-2b6ec7287000 rw-p 00007000 00:14 63259                      /usr/lib64/librt-2.17.so
+2b6ec7287000-2b6ec7388000 r-xp 00000000 00:14 63128                      /usr/lib64/libm-2.17.so
+2b6ec7388000-2b6ec7587000 ---p 00101000 00:14 63128                      /usr/lib64/libm-2.17.so
+2b6ec7587000-2b6ec7588000 r--p 00100000 00:14 63128                      /usr/lib64/libm-2.17.so
+2b6ec7588000-2b6ec7589000 rw-p 00101000 00:14 63128                      /usr/lib64/libm-2.17.so
+2b6ec7589000-2b6ecdab2000 r--p 00000000 00:14 35698                      /usr/lib/locale/locale-archive
+2b6ecdab2000-2b6ecde34000 rw-p 00000000 00:00 0 
+2b6ecde34000-2b6ecde39000 r--p 00000000 00:30 111817355                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_socket.cpython-37m-x86_64-linux-gnu.so
+2b6ecde39000-2b6ecde47000 r-xp 00005000 00:30 111817355                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_socket.cpython-37m-x86_64-linux-gnu.so
+2b6ecde47000-2b6ecde4c000 r--p 00013000 00:30 111817355                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_socket.cpython-37m-x86_64-linux-gnu.so
+2b6ecde4c000-2b6ecde4d000 r--p 00017000 00:30 111817355                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_socket.cpython-37m-x86_64-linux-gnu.so
+2b6ecde4d000-2b6ecde52000 rw-p 00018000 00:30 111817355                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_socket.cpython-37m-x86_64-linux-gnu.so
+2b6ecde52000-2b6ecde92000 rw-p 00000000 00:00 0 
+2b6ecde92000-2b6ecde9c000 r--p 00000000 00:30 111817354                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ssl.cpython-37m-x86_64-linux-gnu.so
+2b6ecde9c000-2b6ecdea7000 r-xp 0000a000 00:30 111817354                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ssl.cpython-37m-x86_64-linux-gnu.so
+2b6ecdea7000-2b6ecdead000 r--p 00015000 00:30 111817354                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ssl.cpython-37m-x86_64-linux-gnu.so
+2b6ecdead000-2b6ecdeae000 ---p 0001b000 00:30 111817354                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ssl.cpython-37m-x86_64-linux-gnu.so
+2b6ecdeae000-2b6ecdeaf000 r--p 0001b000 00:30 111817354                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ssl.cpython-37m-x86_64-linux-gnu.so
+2b6ecdeaf000-2b6ecdeb4000 rw-p 0001c000 00:30 111817354                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ssl.cpython-37m-x86_64-linux-gnu.so
+2b6ecdeb4000-2b6ecded3000 r--p 00000000 00:30 111755519                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libssl.so.1.1
+2b6ecded3000-2b6ecdf1d000 r-xp 0001f000 00:30 111755519                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libssl.so.1.1
+2b6ecdf1d000-2b6ecdf36000 r--p 00069000 00:30 111755519                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libssl.so.1.1
+2b6ecdf36000-2b6ecdf37000 ---p 00082000 00:30 111755519                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libssl.so.1.1
+2b6ecdf37000-2b6ecdf40000 r--p 00082000 00:30 111755519                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libssl.so.1.1
+2b6ecdf40000-2b6ecdf44000 rw-p 0008b000 00:30 111755519                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libssl.so.1.1
+2b6ecdf44000-2b6ecdfbf000 r--p 00000000 00:30 112202773                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libcrypto.so.1.1
+2b6ecdfbf000-2b6ece135000 r-xp 0007b000 00:30 112202773                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libcrypto.so.1.1
+2b6ece135000-2b6ece1c0000 r--p 001f1000 00:30 112202773                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libcrypto.so.1.1
+2b6ece1c0000-2b6ece1c1000 ---p 0027c000 00:30 112202773                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libcrypto.so.1.1
+2b6ece1c1000-2b6ece1ec000 r--p 0027c000 00:30 112202773                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libcrypto.so.1.1
+2b6ece1ec000-2b6ece1ee000 rw-p 002a7000 00:30 112202773                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libcrypto.so.1.1
+2b6ece1ee000-2b6ece1f2000 rw-p 00000000 00:00 0 
+2b6ece1f2000-2b6ece1f5000 r--p 00000000 00:30 111817340                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_struct.cpython-37m-x86_64-linux-gnu.so
+2b6ece1f5000-2b6ece1fa000 r-xp 00003000 00:30 111817340                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_struct.cpython-37m-x86_64-linux-gnu.so
+2b6ece1fa000-2b6ece1fc000 r--p 00008000 00:30 111817340                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_struct.cpython-37m-x86_64-linux-gnu.so
+2b6ece1fc000-2b6ece1fd000 ---p 0000a000 00:30 111817340                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_struct.cpython-37m-x86_64-linux-gnu.so
+2b6ece1fd000-2b6ece1fe000 r--p 0000a000 00:30 111817340                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_struct.cpython-37m-x86_64-linux-gnu.so
+2b6ece1fe000-2b6ece200000 rw-p 0000b000 00:30 111817340                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_struct.cpython-37m-x86_64-linux-gnu.so
+2b6ece200000-2b6ece203000 r--p 00000000 00:30 111745038                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libz.so.1.2.11
+2b6ece203000-2b6ece217000 r-xp 00003000 00:30 111745038                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libz.so.1.2.11
+2b6ece217000-2b6ece21e000 r--p 00017000 00:30 111745038                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libz.so.1.2.11
+2b6ece21e000-2b6ece21f000 r--p 0001d000 00:30 111745038                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libz.so.1.2.11
+2b6ece21f000-2b6ece220000 rw-p 0001e000 00:30 111745038                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libz.so.1.2.11
+2b6ece220000-2b6ece2a0000 rw-p 00000000 00:00 0 
+2b6ece2a0000-2b6ece2a2000 r--p 00000000 00:30 111817323                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_hashlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece2a2000-2b6ece2a5000 r-xp 00002000 00:30 111817323                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_hashlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece2a5000-2b6ece2a7000 r--p 00005000 00:30 111817323                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_hashlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece2a7000-2b6ece2a8000 r--p 00006000 00:30 111817323                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_hashlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece2a8000-2b6ece2a9000 rw-p 00007000 00:30 111817323                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_hashlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece2a9000-2b6ece2ab000 r--p 00000000 00:30 111817345                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_blake2.cpython-37m-x86_64-linux-gnu.so
+2b6ece2ab000-2b6ece2b3000 r-xp 00002000 00:30 111817345                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_blake2.cpython-37m-x86_64-linux-gnu.so
+2b6ece2b3000-2b6ece2b4000 r--p 0000a000 00:30 111817345                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_blake2.cpython-37m-x86_64-linux-gnu.so
+2b6ece2b4000-2b6ece2b5000 ---p 0000b000 00:30 111817345                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_blake2.cpython-37m-x86_64-linux-gnu.so
+2b6ece2b5000-2b6ece2b6000 r--p 0000b000 00:30 111817345                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_blake2.cpython-37m-x86_64-linux-gnu.so
+2b6ece2b6000-2b6ece2b7000 rw-p 0000c000 00:30 111817345                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_blake2.cpython-37m-x86_64-linux-gnu.so
+2b6ece2b7000-2b6ece2f7000 rw-p 00000000 00:00 0 
+2b6ece2f7000-2b6ece2fa000 r--p 00000000 00:30 111817357                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_sha3.cpython-37m-x86_64-linux-gnu.so
+2b6ece2fa000-2b6ece30d000 r-xp 00003000 00:30 111817357                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_sha3.cpython-37m-x86_64-linux-gnu.so
+2b6ece30d000-2b6ece30e000 r--p 00016000 00:30 111817357                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_sha3.cpython-37m-x86_64-linux-gnu.so
+2b6ece30e000-2b6ece30f000 ---p 00017000 00:30 111817357                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_sha3.cpython-37m-x86_64-linux-gnu.so
+2b6ece30f000-2b6ece310000 r--p 00017000 00:30 111817357                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_sha3.cpython-37m-x86_64-linux-gnu.so
+2b6ece310000-2b6ece312000 rw-p 00018000 00:30 111817357                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_sha3.cpython-37m-x86_64-linux-gnu.so
+2b6ece312000-2b6ece313000 r--p 00000000 00:30 111817300                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bisect.cpython-37m-x86_64-linux-gnu.so
+2b6ece313000-2b6ece314000 r-xp 00001000 00:30 111817300                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bisect.cpython-37m-x86_64-linux-gnu.so
+2b6ece314000-2b6ece315000 r--p 00002000 00:30 111817300                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bisect.cpython-37m-x86_64-linux-gnu.so
+2b6ece315000-2b6ece316000 r--p 00002000 00:30 111817300                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bisect.cpython-37m-x86_64-linux-gnu.so
+2b6ece316000-2b6ece317000 rw-p 00003000 00:30 111817300                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bisect.cpython-37m-x86_64-linux-gnu.so
+2b6ece317000-2b6ece319000 r--p 00000000 00:30 111817311                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_random.cpython-37m-x86_64-linux-gnu.so
+2b6ece319000-2b6ece31b000 r-xp 00002000 00:30 111817311                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_random.cpython-37m-x86_64-linux-gnu.so
+2b6ece31b000-2b6ece31c000 r--p 00004000 00:30 111817311                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_random.cpython-37m-x86_64-linux-gnu.so
+2b6ece31c000-2b6ece31d000 r--p 00004000 00:30 111817311                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_random.cpython-37m-x86_64-linux-gnu.so
+2b6ece31d000-2b6ece31e000 rw-p 00005000 00:30 111817311                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_random.cpython-37m-x86_64-linux-gnu.so
+2b6ece31e000-2b6ece323000 r--p 00000000 00:30 111817358                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_datetime.cpython-37m-x86_64-linux-gnu.so
+2b6ece323000-2b6ece333000 r-xp 00005000 00:30 111817358                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_datetime.cpython-37m-x86_64-linux-gnu.so
+2b6ece333000-2b6ece339000 r--p 00015000 00:30 111817358                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_datetime.cpython-37m-x86_64-linux-gnu.so
+2b6ece339000-2b6ece33a000 r--p 0001a000 00:30 111817358                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_datetime.cpython-37m-x86_64-linux-gnu.so
+2b6ece33a000-2b6ece33c000 rw-p 0001b000 00:30 111817358                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_datetime.cpython-37m-x86_64-linux-gnu.so
+2b6ece33c000-2b6ece3bc000 rw-p 00000000 00:00 0 
+2b6ece3bc000-2b6ece3be000 r--p 00000000 00:30 111817312                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_queue.cpython-37m-x86_64-linux-gnu.so
+2b6ece3be000-2b6ece3bf000 r-xp 00002000 00:30 111817312                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_queue.cpython-37m-x86_64-linux-gnu.so
+2b6ece3bf000-2b6ece3c0000 r--p 00003000 00:30 111817312                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_queue.cpython-37m-x86_64-linux-gnu.so
+2b6ece3c0000-2b6ece3c1000 r--p 00003000 00:30 111817312                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_queue.cpython-37m-x86_64-linux-gnu.so
+2b6ece3c1000-2b6ece3c2000 rw-p 00004000 00:30 111817312                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_queue.cpython-37m-x86_64-linux-gnu.so
+2b6ece3c2000-2b6ece402000 rw-p 00000000 00:00 0 
+2b6ece402000-2b6ece404000 r--p 00000000 00:30 111817329                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/zlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece404000-2b6ece408000 r-xp 00002000 00:30 111817329                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/zlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece408000-2b6ece409000 r--p 00006000 00:30 111817329                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/zlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece409000-2b6ece40a000 ---p 00007000 00:30 111817329                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/zlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece40a000-2b6ece40b000 r--p 00007000 00:30 111817329                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/zlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece40b000-2b6ece40d000 rw-p 00008000 00:30 111817329                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/zlib.cpython-37m-x86_64-linux-gnu.so
+2b6ece40d000-2b6ece54d000 rw-p 00000000 00:00 0 
+2b6ece54d000-2b6ece550000 r--p 00000000 00:30 111817334                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bz2.cpython-37m-x86_64-linux-gnu.so
+2b6ece550000-2b6ece55f000 r-xp 00003000 00:30 111817334                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bz2.cpython-37m-x86_64-linux-gnu.so
+2b6ece55f000-2b6ece561000 r--p 00012000 00:30 111817334                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bz2.cpython-37m-x86_64-linux-gnu.so
+2b6ece561000-2b6ece562000 ---p 00014000 00:30 111817334                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bz2.cpython-37m-x86_64-linux-gnu.so
+2b6ece562000-2b6ece563000 r--p 00014000 00:30 111817334                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bz2.cpython-37m-x86_64-linux-gnu.so
+2b6ece563000-2b6ece565000 rw-p 00015000 00:30 111817334                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_bz2.cpython-37m-x86_64-linux-gnu.so
+2b6ece565000-2b6ece568000 r--p 00000000 00:30 111817330                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_lzma.cpython-37m-x86_64-linux-gnu.so
+2b6ece568000-2b6ece56c000 r-xp 00003000 00:30 111817330                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_lzma.cpython-37m-x86_64-linux-gnu.so
+2b6ece56c000-2b6ece56e000 r--p 00007000 00:30 111817330                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_lzma.cpython-37m-x86_64-linux-gnu.so
+2b6ece56e000-2b6ece56f000 r--p 00008000 00:30 111817330                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_lzma.cpython-37m-x86_64-linux-gnu.so
+2b6ece56f000-2b6ece571000 rw-p 00009000 00:30 111817330                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_lzma.cpython-37m-x86_64-linux-gnu.so
+2b6ece571000-2b6ece596000 r-xp 00000000 00:30 111746240                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/liblzma.so.5.2.4
+2b6ece596000-2b6ece795000 ---p 00025000 00:30 111746240                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/liblzma.so.5.2.4
+2b6ece795000-2b6ece796000 r--p 00024000 00:30 111746240                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/liblzma.so.5.2.4
+2b6ece796000-2b6ece797000 rw-p 00025000 00:30 111746240                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/liblzma.so.5.2.4
+2b6ece797000-2b6ece799000 r--p 00000000 00:30 111817305                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/grp.cpython-37m-x86_64-linux-gnu.so
+2b6ece799000-2b6ece79a000 r-xp 00002000 00:30 111817305                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/grp.cpython-37m-x86_64-linux-gnu.so
+2b6ece79a000-2b6ece79b000 r--p 00003000 00:30 111817305                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/grp.cpython-37m-x86_64-linux-gnu.so
+2b6ece79b000-2b6ece79c000 r--p 00003000 00:30 111817305                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/grp.cpython-37m-x86_64-linux-gnu.so
+2b6ece79c000-2b6ece79d000 rw-p 00004000 00:30 111817305                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/grp.cpython-37m-x86_64-linux-gnu.so
+2b6ece79d000-2b6ece7dd000 rw-p 00000000 00:00 0 
+2b6ece7dd000-2b6ece7df000 r--p 00000000 00:30 111817349                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_json.cpython-37m-x86_64-linux-gnu.so
+2b6ece7df000-2b6ece7ed000 r-xp 00002000 00:30 111817349                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_json.cpython-37m-x86_64-linux-gnu.so
+2b6ece7ed000-2b6ece7ef000 r--p 00010000 00:30 111817349                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_json.cpython-37m-x86_64-linux-gnu.so
+2b6ece7ef000-2b6ece7f0000 r--p 00011000 00:30 111817349                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_json.cpython-37m-x86_64-linux-gnu.so
+2b6ece7f0000-2b6ece7f1000 rw-p 00012000 00:30 111817349                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_json.cpython-37m-x86_64-linux-gnu.so
+2b6ece7f1000-2b6ece871000 rw-p 00000000 00:00 0 
+2b6ece871000-2b6ece874000 r--p 00000000 00:30 111817361                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/unicodedata.cpython-37m-x86_64-linux-gnu.so
+2b6ece874000-2b6ece879000 r-xp 00003000 00:30 111817361                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/unicodedata.cpython-37m-x86_64-linux-gnu.so
+2b6ece879000-2b6ece95a000 r--p 00008000 00:30 111817361                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/unicodedata.cpython-37m-x86_64-linux-gnu.so
+2b6ece95a000-2b6ece95b000 r--p 000e8000 00:30 111817361                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/unicodedata.cpython-37m-x86_64-linux-gnu.so
+2b6ece95b000-2b6ece978000 rw-p 000e9000 00:30 111817361                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/unicodedata.cpython-37m-x86_64-linux-gnu.so
+2b6ece978000-2b6ece9f8000 rw-p 00000000 00:00 0 
+2b6ece9f8000-2b6ece9ff000 r--p 00000000 00:30 111817360                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/pyexpat.cpython-37m-x86_64-linux-gnu.so
+2b6ece9ff000-2b6ecea29000 r-xp 00007000 00:30 111817360                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/pyexpat.cpython-37m-x86_64-linux-gnu.so
+2b6ecea29000-2b6ecea33000 r--p 00031000 00:30 111817360                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/pyexpat.cpython-37m-x86_64-linux-gnu.so
+2b6ecea33000-2b6ecea36000 r--p 0003a000 00:30 111817360                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/pyexpat.cpython-37m-x86_64-linux-gnu.so
+2b6ecea36000-2b6ecea38000 rw-p 0003d000 00:30 111817360                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/pyexpat.cpython-37m-x86_64-linux-gnu.so
+2b6ecea38000-2b6ecea78000 rw-p 00000000 00:00 0 
+2b6ecea78000-2b6ecea7d000 r--p 00000000 00:30 111817356                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_pickle.cpython-37m-x86_64-linux-gnu.so
+2b6ecea7d000-2b6ecea90000 r-xp 00005000 00:30 111817356                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_pickle.cpython-37m-x86_64-linux-gnu.so
+2b6ecea90000-2b6ecea94000 r--p 00018000 00:30 111817356                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_pickle.cpython-37m-x86_64-linux-gnu.so
+2b6ecea94000-2b6ecea95000 r--p 0001b000 00:30 111817356                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_pickle.cpython-37m-x86_64-linux-gnu.so
+2b6ecea95000-2b6ecea98000 rw-p 0001c000 00:30 111817356                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_pickle.cpython-37m-x86_64-linux-gnu.so
+2b6ecea98000-2b6eceb18000 rw-p 00000000 00:00 0 
+2b6eceb18000-2b6eceec3000 r-xp 00000000 00:30 112332254                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so
+2b6eceec3000-2b6ecf0c2000 ---p 003ab000 00:30 112332254                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so
+2b6ecf0c2000-2b6ecf0e1000 rw-p 003aa000 00:30 112332254                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so
+2b6ecf0e1000-2b6ecf102000 rw-p 00000000 00:00 0 
+2b6ecf102000-2b6ecf109000 rw-p 01452000 00:30 112332254                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_umath.cpython-37m-x86_64-linux-gnu.so
+2b6ecf109000-2b6ed0bff000 r-xp 00000000 00:30 112332575                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/.libs/libopenblasp-r0-34a18dc3.3.7.so
+2b6ed0bff000-2b6ed0dfe000 ---p 01af6000 00:30 112332575                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/.libs/libopenblasp-r0-34a18dc3.3.7.so
+2b6ed0dfe000-2b6ed0e17000 rw-p 01af5000 00:30 112332575                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/.libs/libopenblasp-r0-34a18dc3.3.7.so
+2b6ed0e17000-2b6ed0e22000 rw-p 00000000 00:00 0 
+2b6ed0e22000-2b6ed0e9a000 rw-p 01be1000 00:30 112332575                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/.libs/libopenblasp-r0-34a18dc3.3.7.so
+2b6ed0e9a000-2b6ed0f8a000 r-xp 00000000 00:30 112332574                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+2b6ed0f8a000-2b6ed1189000 ---p 000f0000 00:30 112332574                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+2b6ed1189000-2b6ed118b000 rw-p 000ef000 00:30 112332574                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+2b6ed118b000-2b6ed118c000 rw-p 00000000 00:00 0 
+2b6ed118c000-2b6ed1194000 rw-p 000f2000 00:30 112332574                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/.libs/libgfortran-ed201abd.so.3.0.0
+2b6ed1194000-2b6ed1195000 ---p 00000000 00:00 0 
+2b6ed1195000-2b6ed1395000 rw-p 00000000 00:00 0 
+2b6ed1395000-2b6ed1396000 ---p 00000000 00:00 0 
+2b6ed1396000-2b6ed1596000 rw-p 00000000 00:00 0 
+2b6ed1596000-2b6ed5596000 rw-p 00000000 00:00 0 
+2b6ed5596000-2b6ed5597000 ---p 00000000 00:00 0 
+2b6ed5597000-2b6ed5797000 rw-p 00000000 00:00 0 
+2b6ed5797000-2b6ed5798000 ---p 00000000 00:00 0 
+2b6ed5798000-2b6ed5998000 rw-p 00000000 00:00 0 
+2b6ed5998000-2b6ed7998000 rw-p 00000000 00:00 0 
+2b6ed7998000-2b6ed7999000 ---p 00000000 00:00 0 
+2b6ed7999000-2b6ed7b99000 rw-p 00000000 00:00 0 
+2b6ed7b99000-2b6ed9b99000 rw-p 00000000 00:00 0 
+2b6ed9b99000-2b6ed9b9a000 ---p 00000000 00:00 0 
+2b6ed9b9a000-2b6ed9d9a000 rw-p 00000000 00:00 0 
+2b6ed9d9a000-2b6edbd9a000 rw-p 00000000 00:00 0 
+2b6edbd9a000-2b6edbd9b000 ---p 00000000 00:00 0 
+2b6edbd9b000-2b6edbf9b000 rw-p 00000000 00:00 0 
+2b6edbf9b000-2b6eddf9b000 rw-p 00000000 00:00 0 
+2b6eddf9b000-2b6eddf9c000 ---p 00000000 00:00 0 
+2b6eddf9c000-2b6ede19c000 rw-p 00000000 00:00 0 
+2b6ede19c000-2b6ee019c000 rw-p 00000000 00:00 0 
+2b6ee019c000-2b6ee019d000 ---p 00000000 00:00 0 
+2b6ee019d000-2b6ee039d000 rw-p 00000000 00:00 0 
+2b6ee039d000-2b6ee239d000 rw-p 00000000 00:00 0 
+2b6ee239d000-2b6ee239e000 ---p 00000000 00:00 0 
+2b6ee239e000-2b6ee259e000 rw-p 00000000 00:00 0 
+2b6ee259e000-2b6ee459e000 rw-p 00000000 00:00 0 
+2b6ee459e000-2b6ee459f000 ---p 00000000 00:00 0 
+2b6ee459f000-2b6ee479f000 rw-p 00000000 00:00 0 
+2b6ee479f000-2b6ee679f000 rw-p 00000000 00:00 0 
+2b6ee679f000-2b6ee67a0000 ---p 00000000 00:00 0 
+2b6ee67a0000-2b6ee69a0000 rw-p 00000000 00:00 0 
+2b6ee69a0000-2b6ee89a0000 rw-p 00000000 00:00 0 
+2b6ee89a0000-2b6ee89a1000 ---p 00000000 00:00 0 
+2b6ee89a1000-2b6ee8ba1000 rw-p 00000000 00:00 0 
+2b6ee8ba1000-2b6eeaba1000 rw-p 00000000 00:00 0 
+2b6eeaba1000-2b6eeaba2000 ---p 00000000 00:00 0 
+2b6eeaba2000-2b6eeada2000 rw-p 00000000 00:00 0 
+2b6eeada2000-2b6eecda2000 rw-p 00000000 00:00 0 
+2b6eecda2000-2b6eecda3000 ---p 00000000 00:00 0 
+2b6eecda3000-2b6eecfa3000 rw-p 00000000 00:00 0 
+2b6eecfa3000-2b6eeefa3000 rw-p 00000000 00:00 0 
+2b6eeefa3000-2b6eeefa4000 ---p 00000000 00:00 0 
+2b6eeefa4000-2b6eef1a4000 rw-p 00000000 00:00 0 
+2b6eef1a4000-2b6ef11a4000 rw-p 00000000 00:00 0 
+2b6ef11a4000-2b6ef11a5000 ---p 00000000 00:00 0 
+2b6ef11a5000-2b6ef13a5000 rw-p 00000000 00:00 0 
+2b6ef13a5000-2b6ef33a5000 rw-p 00000000 00:00 0 
+2b6ef33a5000-2b6ef33a6000 ---p 00000000 00:00 0 
+2b6ef33a6000-2b6ef35a6000 rw-p 00000000 00:00 0 
+2b6ef35a6000-2b6ef55a6000 rw-p 00000000 00:00 0 
+2b6ef55a6000-2b6ef55a7000 ---p 00000000 00:00 0 
+2b6ef55a7000-2b6ef57a7000 rw-p 00000000 00:00 0 
+2b6ef57a7000-2b6ef77a7000 rw-p 00000000 00:00 0 
+2b6ef77a7000-2b6ef77a8000 ---p 00000000 00:00 0 
+2b6ef77a8000-2b6ef79a8000 rw-p 00000000 00:00 0 
+2b6ef79a8000-2b6ef99a8000 rw-p 00000000 00:00 0 
+2b6ef99a8000-2b6ef99a9000 ---p 00000000 00:00 0 
+2b6ef99a9000-2b6ef9ba9000 rw-p 00000000 00:00 0 
+2b6ef9ba9000-2b6efbba9000 rw-p 00000000 00:00 0 
+2b6efbba9000-2b6efbbaa000 ---p 00000000 00:00 0 
+2b6efbbaa000-2b6efbdaa000 rw-p 00000000 00:00 0 
+2b6efbdaa000-2b6efddaa000 rw-p 00000000 00:00 0 
+2b6efddaa000-2b6efddab000 ---p 00000000 00:00 0 
+2b6efddab000-2b6efdfab000 rw-p 00000000 00:00 0 
+2b6efdfab000-2b6efffab000 rw-p 00000000 00:00 0 
+2b6efffab000-2b6efffac000 ---p 00000000 00:00 0 
+2b6efffac000-2b6f001ac000 rw-p 00000000 00:00 0 
+2b6f001ac000-2b6f021ac000 rw-p 00000000 00:00 0 
+2b6f021ac000-2b6f021ad000 ---p 00000000 00:00 0 
+2b6f021ad000-2b6f023ad000 rw-p 00000000 00:00 0 
+2b6f023ad000-2b6f043ad000 rw-p 00000000 00:00 0 
+2b6f043ad000-2b6f043ae000 ---p 00000000 00:00 0 
+2b6f043ae000-2b6f045ae000 rw-p 00000000 00:00 0 
+2b6f045ae000-2b6f065ae000 rw-p 00000000 00:00 0 
+2b6f065ae000-2b6f065af000 ---p 00000000 00:00 0 
+2b6f065af000-2b6f067af000 rw-p 00000000 00:00 0 
+2b6f067af000-2b6f087af000 rw-p 00000000 00:00 0 
+2b6f087af000-2b6f087b0000 ---p 00000000 00:00 0 
+2b6f087b0000-2b6f089b0000 rw-p 00000000 00:00 0 
+2b6f089b0000-2b6f0a9b0000 rw-p 00000000 00:00 0 
+2b6f0a9b0000-2b6f0a9b1000 ---p 00000000 00:00 0 
+2b6f0a9b1000-2b6f0abb1000 rw-p 00000000 00:00 0 
+2b6f0abb1000-2b6f0cbb1000 rw-p 00000000 00:00 0 
+2b6f0cbb1000-2b6f0cbb2000 ---p 00000000 00:00 0 
+2b6f0cbb2000-2b6f0cdb2000 rw-p 00000000 00:00 0 
+2b6f0cdb2000-2b6f0edb2000 rw-p 00000000 00:00 0 
+2b6f0edb2000-2b6f0edb3000 ---p 00000000 00:00 0 
+2b6f0edb3000-2b6f0efb3000 rw-p 00000000 00:00 0 
+2b6f0efb3000-2b6f10fb3000 rw-p 00000000 00:00 0 
+2b6f10fb3000-2b6f10fb4000 ---p 00000000 00:00 0 
+2b6f10fb4000-2b6f111b4000 rw-p 00000000 00:00 0 
+2b6f111b4000-2b6f131b4000 rw-p 00000000 00:00 0 
+2b6f131b4000-2b6f131b5000 ---p 00000000 00:00 0 
+2b6f131b5000-2b6f133b5000 rw-p 00000000 00:00 0 
+2b6f133b5000-2b6f153b5000 rw-p 00000000 00:00 0 
+2b6f153b5000-2b6f153b6000 ---p 00000000 00:00 0 
+2b6f153b6000-2b6f155b6000 rw-p 00000000 00:00 0 
+2b6f155b6000-2b6f175b6000 rw-p 00000000 00:00 0 
+2b6f175b6000-2b6f175b7000 ---p 00000000 00:00 0 
+2b6f175b7000-2b6f177b7000 rw-p 00000000 00:00 0 
+2b6f177b7000-2b6f197b7000 rw-p 00000000 00:00 0 
+2b6f197b7000-2b6f197b8000 ---p 00000000 00:00 0 
+2b6f197b8000-2b6f199b8000 rw-p 00000000 00:00 0 
+2b6f199b8000-2b6f1b9b8000 rw-p 00000000 00:00 0 
+2b6f1b9b8000-2b6f1d9b8000 rw-p 00000000 00:00 0 
+2b6f1d9b8000-2b6f1d9b9000 ---p 00000000 00:00 0 
+2b6f1d9b9000-2b6f1dbb9000 rw-p 00000000 00:00 0 
+2b6f1dbb9000-2b6f1dbba000 ---p 00000000 00:00 0 
+2b6f1dbba000-2b6f1ddba000 rw-p 00000000 00:00 0 
+2b6f1ddba000-2b6f1fdba000 rw-p 00000000 00:00 0 
+2b6f1fdba000-2b6f1fdbb000 ---p 00000000 00:00 0 
+2b6f1fdbb000-2b6f1ffbb000 rw-p 00000000 00:00 0 
+2b6f1ffbb000-2b6f21fbb000 rw-p 00000000 00:00 0 
+2b6f21fbb000-2b6f21fbc000 ---p 00000000 00:00 0 
+2b6f21fbc000-2b6f221bc000 rw-p 00000000 00:00 0 
+2b6f221bc000-2b6f241bc000 rw-p 00000000 00:00 0 
+2b6f241bc000-2b6f241bd000 ---p 00000000 00:00 0 
+2b6f241bd000-2b6f243bd000 rw-p 00000000 00:00 0 
+2b6f243bd000-2b6f263bd000 rw-p 00000000 00:00 0 
+2b6f263bd000-2b6f263be000 ---p 00000000 00:00 0 
+2b6f263be000-2b6f265be000 rw-p 00000000 00:00 0 
+2b6f265be000-2b6f285be000 rw-p 00000000 00:00 0 
+2b6f285be000-2b6f285bf000 ---p 00000000 00:00 0 
+2b6f285bf000-2b6f287bf000 rw-p 00000000 00:00 0 
+2b6f287bf000-2b6f2a7bf000 rw-p 00000000 00:00 0 
+2b6f2a7bf000-2b6f2a7c0000 ---p 00000000 00:00 0 
+2b6f2a7c0000-2b6f2a9c0000 rw-p 00000000 00:00 0 
+2b6f2a9c0000-2b6f2c9c0000 rw-p 00000000 00:00 0 
+2b6f2c9c0000-2b6f2c9c1000 ---p 00000000 00:00 0 
+2b6f2c9c1000-2b6f2cbc1000 rw-p 00000000 00:00 0 
+2b6f2cbc1000-2b6f2cbc2000 ---p 00000000 00:00 0 
+2b6f2cbc2000-2b6f2cdc2000 rw-p 00000000 00:00 0 
+2b6f2cdc2000-2b6f30dc2000 rw-p 00000000 00:00 0 
+2b6f30dc2000-2b6f30dc3000 ---p 00000000 00:00 0 
+2b6f30dc3000-2b6f30fc3000 rw-p 00000000 00:00 0 
+2b6f30fc3000-2b6f34fc3000 rw-p 00000000 00:00 0 
+2b6f34fc3000-2b6f35143000 rw-p 00000000 00:00 0 
+2b6f35143000-2b6f35162000 r-xp 00000000 00:30 112332263                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_tests.cpython-37m-x86_64-linux-gnu.so
+2b6f35162000-2b6f35361000 ---p 0001f000 00:30 112332263                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_tests.cpython-37m-x86_64-linux-gnu.so
+2b6f35361000-2b6f35363000 rw-p 0001e000 00:30 112332263                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/core/_multiarray_tests.cpython-37m-x86_64-linux-gnu.so
+2b6f35363000-2b6f3536b000 r--p 00000000 00:30 111817359                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so
+2b6f3536b000-2b6f3537c000 r-xp 00008000 00:30 111817359                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so
+2b6f3537c000-2b6f35383000 r--p 00019000 00:30 111817359                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so
+2b6f35383000-2b6f35384000 r--p 0001f000 00:30 111817359                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so
+2b6f35384000-2b6f35388000 rw-p 00020000 00:30 111817359                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_ctypes.cpython-37m-x86_64-linux-gnu.so
+2b6f35388000-2b6f3538f000 r-xp 00000000 00:30 111745110                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libffi.so.6.0.4
+2b6f3538f000-2b6f3558f000 ---p 00007000 00:30 111745110                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libffi.so.6.0.4
+2b6f3558f000-2b6f35590000 r--p 00007000 00:30 111745110                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libffi.so.6.0.4
+2b6f35590000-2b6f35591000 rw-p 00008000 00:30 111745110                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libffi.so.6.0.4
+2b6f35591000-2b6f355d1000 rw-p 00000000 00:00 0 
+2b6f355d1000-2b6f355d3000 r--p 00000000 00:30 111817316                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-x86_64-linux-gnu.so
+2b6f355d3000-2b6f355d5000 r-xp 00002000 00:30 111817316                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-x86_64-linux-gnu.so
+2b6f355d5000-2b6f355d6000 r--p 00004000 00:30 111817316                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-x86_64-linux-gnu.so
+2b6f355d6000-2b6f355d7000 r--p 00004000 00:30 111817316                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-x86_64-linux-gnu.so
+2b6f355d7000-2b6f355d8000 rw-p 00005000 00:30 111817316                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_posixsubprocess.cpython-37m-x86_64-linux-gnu.so
+2b6f355d8000-2b6f35658000 rw-p 00000000 00:00 0 
+2b6f35658000-2b6f3565c000 r-xp 00000000 00:30 112332700                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/linalg/lapack_lite.cpython-37m-x86_64-linux-gnu.so
+2b6f3565c000-2b6f3585c000 ---p 00004000 00:30 112332700                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/linalg/lapack_lite.cpython-37m-x86_64-linux-gnu.so
+2b6f3585c000-2b6f3585d000 rw-p 00004000 00:30 112332700                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/linalg/lapack_lite.cpython-37m-x86_64-linux-gnu.so
+2b6f3585d000-2b6f3585f000 rw-p 0001a000 00:30 112332700                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/linalg/lapack_lite.cpython-37m-x86_64-linux-gnu.so
+2b6f3585f000-2b6f3588a000 r-xp 00000000 00:30 112332698                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/linalg/_umath_linalg.cpython-37m-x86_64-linux-gnu.so
+2b6f3588a000-2b6f35a89000 ---p 0002b000 00:30 112332698                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/linalg/_umath_linalg.cpython-37m-x86_64-linux-gnu.so
+2b6f35a89000-2b6f35a8b000 rw-p 0002a000 00:30 112332698                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/linalg/_umath_linalg.cpython-37m-x86_64-linux-gnu.so
+2b6f35a8b000-2b6f35a8e000 rw-p 000d3000 00:30 112332698                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/linalg/_umath_linalg.cpython-37m-x86_64-linux-gnu.so
+2b6f35a8e000-2b6f35b4e000 rw-p 00000000 00:00 0 
+2b6f35b4e000-2b6f35b55000 r--p 00000000 00:30 111817362                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_decimal.cpython-37m-x86_64-linux-gnu.so
+2b6f35b55000-2b6f35b8a000 r-xp 00007000 00:30 111817362                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_decimal.cpython-37m-x86_64-linux-gnu.so
+2b6f35b8a000-2b6f35b94000 r--p 0003c000 00:30 111817362                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_decimal.cpython-37m-x86_64-linux-gnu.so
+2b6f35b94000-2b6f35b95000 ---p 00046000 00:30 111817362                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_decimal.cpython-37m-x86_64-linux-gnu.so
+2b6f35b95000-2b6f35b96000 r--p 00046000 00:30 111817362                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_decimal.cpython-37m-x86_64-linux-gnu.so
+2b6f35b96000-2b6f35b9e000 rw-p 00047000 00:30 111817362                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_decimal.cpython-37m-x86_64-linux-gnu.so
+2b6f35b9e000-2b6f35bde000 rw-p 00000000 00:00 0 
+2b6f35bde000-2b6f35bf4000 r-xp 00000000 00:30 112332680                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/fft/_pocketfft_internal.cpython-37m-x86_64-linux-gnu.so
+2b6f35bf4000-2b6f35df3000 ---p 00016000 00:30 112332680                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/fft/_pocketfft_internal.cpython-37m-x86_64-linux-gnu.so
+2b6f35df3000-2b6f35df4000 rw-p 00015000 00:30 112332680                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/fft/_pocketfft_internal.cpython-37m-x86_64-linux-gnu.so
+2b6f35df4000-2b6f35e34000 rw-p 00000000 00:00 0 
+2b6f35e34000-2b6f35eb7000 r-xp 00000000 00:30 112332494                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/mtrand.cpython-37m-x86_64-linux-gnu.so
+2b6f35eb7000-2b6f360b7000 ---p 00083000 00:30 112332494                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/mtrand.cpython-37m-x86_64-linux-gnu.so
+2b6f360b7000-2b6f360db000 rw-p 00083000 00:30 112332494                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/mtrand.cpython-37m-x86_64-linux-gnu.so
+2b6f360db000-2b6f360dd000 rw-p 00000000 00:00 0 
+2b6f360dd000-2b6f36118000 r-xp 00000000 00:30 112332495                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/common.cpython-37m-x86_64-linux-gnu.so
+2b6f36118000-2b6f36318000 ---p 0003b000 00:30 112332495                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/common.cpython-37m-x86_64-linux-gnu.so
+2b6f36318000-2b6f3631a000 rw-p 0003b000 00:30 112332495                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/common.cpython-37m-x86_64-linux-gnu.so
+2b6f3631a000-2b6f3631b000 rw-p 00000000 00:00 0 
+2b6f3631b000-2b6f36378000 r-xp 00000000 00:30 112332502                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/bounded_integers.cpython-37m-x86_64-linux-gnu.so
+2b6f36378000-2b6f36577000 ---p 0005d000 00:30 112332502                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/bounded_integers.cpython-37m-x86_64-linux-gnu.so
+2b6f36577000-2b6f36579000 rw-p 0005c000 00:30 112332502                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/bounded_integers.cpython-37m-x86_64-linux-gnu.so
+2b6f36579000-2b6f3657b000 rw-p 00000000 00:00 0 
+2b6f3657b000-2b6f36594000 r-xp 00000000 00:30 112332499                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/mt19937.cpython-37m-x86_64-linux-gnu.so
+2b6f36594000-2b6f36793000 ---p 00019000 00:30 112332499                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/mt19937.cpython-37m-x86_64-linux-gnu.so
+2b6f36793000-2b6f36795000 rw-p 00018000 00:30 112332499                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/mt19937.cpython-37m-x86_64-linux-gnu.so
+2b6f36795000-2b6f36796000 rw-p 00000000 00:00 0 
+2b6f36796000-2b6f367bf000 r-xp 00000000 00:30 112332508                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/bit_generator.cpython-37m-x86_64-linux-gnu.so
+2b6f367bf000-2b6f369bf000 ---p 00029000 00:30 112332508                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/bit_generator.cpython-37m-x86_64-linux-gnu.so
+2b6f369bf000-2b6f369c4000 rw-p 00029000 00:30 112332508                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/bit_generator.cpython-37m-x86_64-linux-gnu.so
+2b6f369c4000-2b6f369c5000 rw-p 00000000 00:00 0 
+2b6f369c5000-2b6f369d7000 r-xp 00000000 00:30 112332506                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/philox.cpython-37m-x86_64-linux-gnu.so
+2b6f369d7000-2b6f36bd6000 ---p 00012000 00:30 112332506                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/philox.cpython-37m-x86_64-linux-gnu.so
+2b6f36bd6000-2b6f36bd9000 rw-p 00011000 00:30 112332506                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/philox.cpython-37m-x86_64-linux-gnu.so
+2b6f36bd9000-2b6f36be8000 r-xp 00000000 00:30 112332498                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/pcg64.cpython-37m-x86_64-linux-gnu.so
+2b6f36be8000-2b6f36de7000 ---p 0000f000 00:30 112332498                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/pcg64.cpython-37m-x86_64-linux-gnu.so
+2b6f36de7000-2b6f36dea000 rw-p 0000e000 00:30 112332498                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/pcg64.cpython-37m-x86_64-linux-gnu.so
+2b6f36dea000-2b6f36df6000 r-xp 00000000 00:30 112332507                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/sfc64.cpython-37m-x86_64-linux-gnu.so
+2b6f36df6000-2b6f36ff5000 ---p 0000c000 00:30 112332507                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/sfc64.cpython-37m-x86_64-linux-gnu.so
+2b6f36ff5000-2b6f36ff7000 rw-p 0000b000 00:30 112332507                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/sfc64.cpython-37m-x86_64-linux-gnu.so
+2b6f36ff7000-2b6f37090000 r-xp 00000000 00:30 112332504                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/generator.cpython-37m-x86_64-linux-gnu.so
+2b6f37090000-2b6f3728f000 ---p 00099000 00:30 112332504                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/generator.cpython-37m-x86_64-linux-gnu.so
+2b6f3728f000-2b6f372b2000 rw-p 00098000 00:30 112332504                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/numpy/random/generator.cpython-37m-x86_64-linux-gnu.so
+2b6f372b2000-2b6f37435000 rw-p 00000000 00:00 0 
+2b6f37435000-2b6f37437000 r--p 00000000 00:30 111817331                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_csv.cpython-37m-x86_64-linux-gnu.so
+2b6f37437000-2b6f3743b000 r-xp 00002000 00:30 111817331                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_csv.cpython-37m-x86_64-linux-gnu.so
+2b6f3743b000-2b6f3743c000 r--p 00006000 00:30 111817331                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_csv.cpython-37m-x86_64-linux-gnu.so
+2b6f3743c000-2b6f3743d000 ---p 00007000 00:30 111817331                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_csv.cpython-37m-x86_64-linux-gnu.so
+2b6f3743d000-2b6f3743e000 r--p 00007000 00:30 111817331                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_csv.cpython-37m-x86_64-linux-gnu.so
+2b6f3743e000-2b6f37440000 rw-p 00008000 00:30 111817331                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_csv.cpython-37m-x86_64-linux-gnu.so
+2b6f37440000-2b6f37480000 rw-p 00000000 00:00 0 
+2b6f37480000-2b6f37481000 r--p 00000000 00:30 111817297                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_opcode.cpython-37m-x86_64-linux-gnu.so
+2b6f37481000-2b6f37482000 r-xp 00001000 00:30 111817297                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_opcode.cpython-37m-x86_64-linux-gnu.so
+2b6f37482000-2b6f37483000 r--p 00002000 00:30 111817297                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_opcode.cpython-37m-x86_64-linux-gnu.so
+2b6f37483000-2b6f37484000 r--p 00002000 00:30 111817297                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_opcode.cpython-37m-x86_64-linux-gnu.so
+2b6f37484000-2b6f37485000 rw-p 00003000 00:30 111817297                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_opcode.cpython-37m-x86_64-linux-gnu.so
+2b6f37485000-2b6f374c5000 rw-p 00000000 00:00 0 
+2b6f374c5000-2b6f3750d000 r-xp 00000000 00:30 110279310                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/conversion.cpython-37m-x86_64-linux-gnu.so
+2b6f3750d000-2b6f3770d000 ---p 00048000 00:30 110279310                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/conversion.cpython-37m-x86_64-linux-gnu.so
+2b6f3770d000-2b6f37712000 rw-p 00048000 00:30 110279310                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/conversion.cpython-37m-x86_64-linux-gnu.so
+2b6f37712000-2b6f37713000 rw-p 00000000 00:00 0 
+2b6f37713000-2b6f37754000 r-xp 00000000 00:30 110279300                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/c_timestamp.cpython-37m-x86_64-linux-gnu.so
+2b6f37754000-2b6f37953000 ---p 00041000 00:30 110279300                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/c_timestamp.cpython-37m-x86_64-linux-gnu.so
+2b6f37953000-2b6f37957000 rw-p 00040000 00:30 110279300                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/c_timestamp.cpython-37m-x86_64-linux-gnu.so
+2b6f37957000-2b6f37959000 rw-p 00000000 00:00 0 
+2b6f37959000-2b6f37982000 r-xp 00000000 00:30 110279302                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/nattype.cpython-37m-x86_64-linux-gnu.so
+2b6f37982000-2b6f37b82000 ---p 00029000 00:30 110279302                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/nattype.cpython-37m-x86_64-linux-gnu.so
+2b6f37b82000-2b6f37b87000 rw-p 00029000 00:30 110279302                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/nattype.cpython-37m-x86_64-linux-gnu.so
+2b6f37b87000-2b6f37b88000 rw-p 00000000 00:00 0 
+2b6f37b88000-2b6f37b93000 r-xp 00000000 00:30 110279313                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/np_datetime.cpython-37m-x86_64-linux-gnu.so
+2b6f37b93000-2b6f37d93000 ---p 0000b000 00:30 110279313                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/np_datetime.cpython-37m-x86_64-linux-gnu.so
+2b6f37d93000-2b6f37d94000 rw-p 0000b000 00:30 110279313                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/np_datetime.cpython-37m-x86_64-linux-gnu.so
+2b6f37d94000-2b6f37dcc000 r-xp 00000000 00:30 110279307                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timezones.cpython-37m-x86_64-linux-gnu.so
+2b6f37dcc000-2b6f37fcc000 ---p 00038000 00:30 110279307                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timezones.cpython-37m-x86_64-linux-gnu.so
+2b6f37fcc000-2b6f37fd0000 rw-p 00038000 00:30 110279307                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timezones.cpython-37m-x86_64-linux-gnu.so
+2b6f37fd0000-2b6f38051000 rw-p 00000000 00:00 0 
+2b6f38051000-2b6f3809f000 r-xp 00000000 00:30 110279304                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/tzconversion.cpython-37m-x86_64-linux-gnu.so
+2b6f3809f000-2b6f3829e000 ---p 0004e000 00:30 110279304                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/tzconversion.cpython-37m-x86_64-linux-gnu.so
+2b6f3829e000-2b6f382a3000 rw-p 0004d000 00:30 110279304                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/tzconversion.cpython-37m-x86_64-linux-gnu.so
+2b6f382a3000-2b6f382a4000 rw-p 00000000 00:00 0 
+2b6f382a4000-2b6f3831a000 r-xp 00000000 00:30 110279309                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timedeltas.cpython-37m-x86_64-linux-gnu.so
+2b6f3831a000-2b6f3851a000 ---p 00076000 00:30 110279309                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timedeltas.cpython-37m-x86_64-linux-gnu.so
+2b6f3851a000-2b6f38522000 rw-p 00076000 00:30 110279309                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timedeltas.cpython-37m-x86_64-linux-gnu.so
+2b6f38522000-2b6f38525000 rw-p 00000000 00:00 0 
+2b6f38525000-2b6f3858b000 r-xp 00000000 00:30 110279308                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/offsets.cpython-37m-x86_64-linux-gnu.so
+2b6f3858b000-2b6f3878a000 ---p 00066000 00:30 110279308                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/offsets.cpython-37m-x86_64-linux-gnu.so
+2b6f3878a000-2b6f38793000 rw-p 00065000 00:30 110279308                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/offsets.cpython-37m-x86_64-linux-gnu.so
+2b6f38793000-2b6f38796000 rw-p 00000000 00:00 0 
+2b6f38796000-2b6f387a3000 r-xp 00000000 00:30 110279301                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/ccalendar.cpython-37m-x86_64-linux-gnu.so
+2b6f387a3000-2b6f389a2000 ---p 0000d000 00:30 110279301                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/ccalendar.cpython-37m-x86_64-linux-gnu.so
+2b6f389a2000-2b6f389a5000 rw-p 0000c000 00:30 110279301                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/ccalendar.cpython-37m-x86_64-linux-gnu.so
+2b6f389a5000-2b6f38a0e000 r-xp 00000000 00:30 110279316                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/strptime.cpython-37m-x86_64-linux-gnu.so
+2b6f38a0e000-2b6f38c0d000 ---p 00069000 00:30 110279316                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/strptime.cpython-37m-x86_64-linux-gnu.so
+2b6f38c0d000-2b6f38c15000 rw-p 00068000 00:30 110279316                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/strptime.cpython-37m-x86_64-linux-gnu.so
+2b6f38c15000-2b6f38c57000 rw-p 00000000 00:00 0 
+2b6f38c57000-2b6f38c96000 r-xp 00000000 00:30 110279306                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/fields.cpython-37m-x86_64-linux-gnu.so
+2b6f38c96000-2b6f38e96000 ---p 0003f000 00:30 110279306                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/fields.cpython-37m-x86_64-linux-gnu.so
+2b6f38e96000-2b6f38e9a000 rw-p 0003f000 00:30 110279306                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/fields.cpython-37m-x86_64-linux-gnu.so
+2b6f38e9a000-2b6f38e9c000 rw-p 00000000 00:00 0 
+2b6f38e9c000-2b6f38f04000 r-xp 00000000 00:30 110279312                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/parsing.cpython-37m-x86_64-linux-gnu.so
+2b6f38f04000-2b6f39104000 ---p 00068000 00:30 110279312                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/parsing.cpython-37m-x86_64-linux-gnu.so
+2b6f39104000-2b6f3910c000 rw-p 00068000 00:30 110279312                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/parsing.cpython-37m-x86_64-linux-gnu.so
+2b6f3910c000-2b6f3910e000 rw-p 00000000 00:00 0 
+2b6f3910e000-2b6f3917d000 r-xp 00000000 00:30 110279314                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/period.cpython-37m-x86_64-linux-gnu.so
+2b6f3917d000-2b6f3937c000 ---p 0006f000 00:30 110279314                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/period.cpython-37m-x86_64-linux-gnu.so
+2b6f3937c000-2b6f39385000 rw-p 0006e000 00:30 110279314                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/period.cpython-37m-x86_64-linux-gnu.so
+2b6f39385000-2b6f393c7000 rw-p 00000000 00:00 0 
+2b6f393c7000-2b6f393e6000 r-xp 00000000 00:30 110279311                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/frequencies.cpython-37m-x86_64-linux-gnu.so
+2b6f393e6000-2b6f395e6000 ---p 0001f000 00:30 110279311                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/frequencies.cpython-37m-x86_64-linux-gnu.so
+2b6f395e6000-2b6f395e9000 rw-p 0001f000 00:30 110279311                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/frequencies.cpython-37m-x86_64-linux-gnu.so
+2b6f395e9000-2b6f395ea000 rw-p 00000000 00:00 0 
+2b6f395ea000-2b6f39633000 r-xp 00000000 00:30 110279305                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timestamps.cpython-37m-x86_64-linux-gnu.so
+2b6f39633000-2b6f39833000 ---p 00049000 00:30 110279305                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timestamps.cpython-37m-x86_64-linux-gnu.so
+2b6f39833000-2b6f3983b000 rw-p 00049000 00:30 110279305                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/timestamps.cpython-37m-x86_64-linux-gnu.so
+2b6f3983b000-2b6f3983d000 rw-p 00000000 00:00 0 
+2b6f3983d000-2b6f3987a000 r-xp 00000000 00:30 110279315                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/resolution.cpython-37m-x86_64-linux-gnu.so
+2b6f3987a000-2b6f39a7a000 ---p 0003d000 00:30 110279315                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/resolution.cpython-37m-x86_64-linux-gnu.so
+2b6f39a7a000-2b6f39a7f000 rw-p 0003d000 00:30 110279315                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslibs/resolution.cpython-37m-x86_64-linux-gnu.so
+2b6f39a7f000-2b6f39a80000 rw-p 00000000 00:00 0 
+2b6f39a80000-2b6f39b0e000 r-xp 00000000 00:30 110279281                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/hashtable.cpython-37m-x86_64-linux-gnu.so
+2b6f39b0e000-2b6f39d0e000 ---p 0008e000 00:30 110279281                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/hashtable.cpython-37m-x86_64-linux-gnu.so
+2b6f39d0e000-2b6f39d1a000 rw-p 0008e000 00:30 110279281                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/hashtable.cpython-37m-x86_64-linux-gnu.so
+2b6f39d1a000-2b6f39d1c000 rw-p 00000000 00:00 0 
+2b6f39d1c000-2b6f39d2e000 r-xp 00000000 00:30 110279289                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/missing.cpython-37m-x86_64-linux-gnu.so
+2b6f39d2e000-2b6f39f2d000 ---p 00012000 00:30 110279289                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/missing.cpython-37m-x86_64-linux-gnu.so
+2b6f39f2d000-2b6f39f30000 rw-p 00011000 00:30 110279289                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/missing.cpython-37m-x86_64-linux-gnu.so
+2b6f39f30000-2b6f39fbc000 r-xp 00000000 00:30 110279277                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/lib.cpython-37m-x86_64-linux-gnu.so
+2b6f39fbc000-2b6f3a1bb000 ---p 0008c000 00:30 110279277                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/lib.cpython-37m-x86_64-linux-gnu.so
+2b6f3a1bb000-2b6f3a1c8000 rw-p 0008b000 00:30 110279277                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/lib.cpython-37m-x86_64-linux-gnu.so
+2b6f3a1c8000-2b6f3a1cb000 rw-p 00000000 00:00 0 
+2b6f3a1cb000-2b6f3a219000 r-xp 00000000 00:30 110279292                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslib.cpython-37m-x86_64-linux-gnu.so
+2b6f3a219000-2b6f3a418000 ---p 0004e000 00:30 110279292                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslib.cpython-37m-x86_64-linux-gnu.so
+2b6f3a418000-2b6f3a41d000 rw-p 0004d000 00:30 110279292                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/tslib.cpython-37m-x86_64-linux-gnu.so
+2b6f3a41d000-2b6f3a45f000 rw-p 00000000 00:00 0 
+2b6f3a45f000-2b6f3a609000 r-xp 00000000 00:30 110279286                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/algos.cpython-37m-x86_64-linux-gnu.so
+2b6f3a609000-2b6f3a808000 ---p 001aa000 00:30 110279286                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/algos.cpython-37m-x86_64-linux-gnu.so
+2b6f3a808000-2b6f3a814000 rw-p 001a9000 00:30 110279286                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/algos.cpython-37m-x86_64-linux-gnu.so
+2b6f3a814000-2b6f3a85a000 rw-p 00000000 00:00 0 
+2b6f3a85a000-2b6f3aa8a000 r-xp 00000000 00:30 110279295                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/interval.cpython-37m-x86_64-linux-gnu.so
+2b6f3aa8a000-2b6f3ac8a000 ---p 00230000 00:30 110279295                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/interval.cpython-37m-x86_64-linux-gnu.so
+2b6f3ac8a000-2b6f3ac9c000 rw-p 00230000 00:30 110279295                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/interval.cpython-37m-x86_64-linux-gnu.so
+2b6f3ac9c000-2b6f3ad60000 rw-p 00000000 00:00 0 
+2b6f3ad60000-2b6f3ad69000 r--p 00000000 00:30 112333836                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pyfp.cpython-37m-x86_64-linux-gnu.so
+2b6f3ad69000-2b6f3ada6000 r-xp 00009000 00:30 112333836                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pyfp.cpython-37m-x86_64-linux-gnu.so
+2b6f3ada6000-2b6f3adb2000 r--p 00046000 00:30 112333836                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pyfp.cpython-37m-x86_64-linux-gnu.so
+2b6f3adb2000-2b6f3adb3000 ---p 00052000 00:30 112333836                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pyfp.cpython-37m-x86_64-linux-gnu.so
+2b6f3adb3000-2b6f3adb4000 r--p 00052000 00:30 112333836                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pyfp.cpython-37m-x86_64-linux-gnu.so
+2b6f3adb4000-2b6f3adb5000 rw-p 00053000 00:30 112333836                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pyfp.cpython-37m-x86_64-linux-gnu.so
+2b6f3adb5000-2b6f3adbf000 r--p 00000000 00:30 111746261                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libgomp.so.1.0.0
+2b6f3adbf000-2b6f3add6000 r-xp 0000a000 00:30 111746261                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libgomp.so.1.0.0
+2b6f3add6000-2b6f3addf000 r--p 00021000 00:30 111746261                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libgomp.so.1.0.0
+2b6f3addf000-2b6f3ade0000 ---p 0002a000 00:30 111746261                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libgomp.so.1.0.0
+2b6f3ade0000-2b6f3ade1000 r--p 0002a000 00:30 111746261                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libgomp.so.1.0.0
+2b6f3ade1000-2b6f3ade2000 rw-p 0002b000 00:30 111746261                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/libgomp.so.1.0.0
+2b6f3ade2000-2b6f3ae22000 rw-p 00000000 00:00 0 
+2b6f3ae61000-2b6f3ae6e000 r-xp 00000000 00:30 110279290                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/properties.cpython-37m-x86_64-linux-gnu.so
+2b6f3ae6e000-2b6f3b06e000 ---p 0000d000 00:30 110279290                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/properties.cpython-37m-x86_64-linux-gnu.so
+2b6f3b06e000-2b6f3b070000 rw-p 0000d000 00:30 110279290                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/properties.cpython-37m-x86_64-linux-gnu.so
+2b6f3b070000-2b6f3b099000 r-xp 00000000 00:30 110279296                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/hashing.cpython-37m-x86_64-linux-gnu.so
+2b6f3b099000-2b6f3b299000 ---p 00029000 00:30 110279296                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/hashing.cpython-37m-x86_64-linux-gnu.so
+2b6f3b299000-2b6f3b29c000 rw-p 00029000 00:30 110279296                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/hashing.cpython-37m-x86_64-linux-gnu.so
+2b6f3b29c000-2b6f3b2dd000 rw-p 00000000 00:00 0 
+2b6f3b2dd000-2b6f3b311000 r-xp 00000000 00:30 110279293                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/ops.cpython-37m-x86_64-linux-gnu.so
+2b6f3b311000-2b6f3b511000 ---p 00034000 00:30 110279293                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/ops.cpython-37m-x86_64-linux-gnu.so
+2b6f3b511000-2b6f3b515000 rw-p 00034000 00:30 110279293                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/ops.cpython-37m-x86_64-linux-gnu.so
+2b6f3b515000-2b6f3b696000 rw-p 00000000 00:00 0 
+2b6f3b696000-2b6f3b730000 r-xp 00000000 00:30 110279294                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/index.cpython-37m-x86_64-linux-gnu.so
+2b6f3b730000-2b6f3b92f000 ---p 0009a000 00:30 110279294                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/index.cpython-37m-x86_64-linux-gnu.so
+2b6f3b92f000-2b6f3b938000 rw-p 00099000 00:30 110279294                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/index.cpython-37m-x86_64-linux-gnu.so
+2b6f3b938000-2b6f3b93b000 rw-p 00000000 00:00 0 
+2b6f3b93b000-2b6f3bbca000 r-xp 00000000 00:30 110279280                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/join.cpython-37m-x86_64-linux-gnu.so
+2b6f3bbca000-2b6f3bdca000 ---p 0028f000 00:30 110279280                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/join.cpython-37m-x86_64-linux-gnu.so
+2b6f3bdca000-2b6f3bdd3000 rw-p 0028f000 00:30 110279280                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/join.cpython-37m-x86_64-linux-gnu.so
+2b6f3bdd3000-2b6f3be99000 rw-p 00000000 00:00 0 
+2b6f3be99000-2b6f3bf72000 r-xp 00000000 00:30 110279288                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/sparse.cpython-37m-x86_64-linux-gnu.so
+2b6f3bf72000-2b6f3c172000 ---p 000d9000 00:30 110279288                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/sparse.cpython-37m-x86_64-linux-gnu.so
+2b6f3c172000-2b6f3c179000 rw-p 000d9000 00:30 110279288                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/sparse.cpython-37m-x86_64-linux-gnu.so
+2b6f3c179000-2b6f3c2fb000 rw-p 00000000 00:00 0 
+2b6f3c2fb000-2b6f3c304000 r-xp 00000000 00:30 110279274                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/indexing.cpython-37m-x86_64-linux-gnu.so
+2b6f3c304000-2b6f3c503000 ---p 00009000 00:30 110279274                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/indexing.cpython-37m-x86_64-linux-gnu.so
+2b6f3c503000-2b6f3c505000 rw-p 00008000 00:30 110279274                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/indexing.cpython-37m-x86_64-linux-gnu.so
+2b6f3c505000-2b6f3c545000 rw-p 00000000 00:00 0 
+2b6f3c545000-2b6f3c585000 r-xp 00000000 00:30 110279282                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/internals.cpython-37m-x86_64-linux-gnu.so
+2b6f3c585000-2b6f3c785000 ---p 00040000 00:30 110279282                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/internals.cpython-37m-x86_64-linux-gnu.so
+2b6f3c785000-2b6f3c78a000 rw-p 00040000 00:30 110279282                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/internals.cpython-37m-x86_64-linux-gnu.so
+2b6f3c78a000-2b6f3c80b000 rw-p 00000000 00:00 0 
+2b6f3c80b000-2b6f3c80d000 r--p 00000000 00:30 111817321                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/mmap.cpython-37m-x86_64-linux-gnu.so
+2b6f3c80d000-2b6f3c810000 r-xp 00002000 00:30 111817321                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/mmap.cpython-37m-x86_64-linux-gnu.so
+2b6f3c810000-2b6f3c811000 r--p 00005000 00:30 111817321                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/mmap.cpython-37m-x86_64-linux-gnu.so
+2b6f3c811000-2b6f3c812000 ---p 00006000 00:30 111817321                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/mmap.cpython-37m-x86_64-linux-gnu.so
+2b6f3c812000-2b6f3c813000 r--p 00006000 00:30 111817321                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/mmap.cpython-37m-x86_64-linux-gnu.so
+2b6f3c813000-2b6f3c814000 rw-p 00007000 00:30 111817321                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/mmap.cpython-37m-x86_64-linux-gnu.so
+2b6f3c814000-2b6f3c854000 rw-p 00000000 00:00 0 
+2b6f3c854000-2b6f3c891000 r-xp 00000000 00:30 110279273                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/reshape.cpython-37m-x86_64-linux-gnu.so
+2b6f3c891000-2b6f3ca91000 ---p 0003d000 00:30 110279273                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/reshape.cpython-37m-x86_64-linux-gnu.so
+2b6f3ca91000-2b6f3ca96000 rw-p 0003d000 00:30 110279273                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/reshape.cpython-37m-x86_64-linux-gnu.so
+2b6f3ca96000-2b6f3cad7000 rw-p 00000000 00:00 0 
+2b6f3cad7000-2b6f3cb95000 r-xp 00000000 00:30 110279287                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/window.cpython-37m-x86_64-linux-gnu.so
+2b6f3cb95000-2b6f3cd95000 ---p 000be000 00:30 110279287                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/window.cpython-37m-x86_64-linux-gnu.so
+2b6f3cd95000-2b6f3cd9d000 rw-p 000be000 00:30 110279287                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/window.cpython-37m-x86_64-linux-gnu.so
+2b6f3cd9d000-2b6f3cd9f000 rw-p 00000000 00:00 0 
+2b6f3cd9f000-2b6f3cf0f000 r-xp 00000000 00:28 36183962                   /software/apps/compilers/gcc/6.4.0/lib64/libstdc++.so.6.0.22
+2b6f3cf0f000-2b6f3d10f000 ---p 00170000 00:28 36183962                   /software/apps/compilers/gcc/6.4.0/lib64/libstdc++.so.6.0.22
+2b6f3d10f000-2b6f3d119000 r--p 00170000 00:28 36183962                   /software/apps/compilers/gcc/6.4.0/lib64/libstdc++.so.6.0.22
+2b6f3d119000-2b6f3d11b000 rw-p 0017a000 00:28 36183962                   /software/apps/compilers/gcc/6.4.0/lib64/libstdc++.so.6.0.22
+2b6f3d11b000-2b6f3d11f000 rw-p 00000000 00:00 0 
+2b6f3d11f000-2b6f3d135000 r-xp 00000000 00:28 36183957                   /software/apps/compilers/gcc/6.4.0/lib64/libgcc_s.so.1
+2b6f3d135000-2b6f3d334000 ---p 00016000 00:28 36183957                   /software/apps/compilers/gcc/6.4.0/lib64/libgcc_s.so.1
+2b6f3d334000-2b6f3d335000 r--p 00015000 00:28 36183957                   /software/apps/compilers/gcc/6.4.0/lib64/libgcc_s.so.1
+2b6f3d335000-2b6f3d336000 rw-p 00016000 00:28 36183957                   /software/apps/compilers/gcc/6.4.0/lib64/libgcc_s.so.1
+2b6f3d336000-2b6f3d349000 r-xp 00000000 00:30 110279275                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/skiplist.cpython-37m-x86_64-linux-gnu.so
+2b6f3d349000-2b6f3d548000 ---p 00013000 00:30 110279275                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/skiplist.cpython-37m-x86_64-linux-gnu.so
+2b6f3d548000-2b6f3d54a000 rw-p 00012000 00:30 110279275                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/skiplist.cpython-37m-x86_64-linux-gnu.so
+2b6f3d54a000-2b6f3d58a000 rw-p 00000000 00:00 0 
+2b6f3d58a000-2b6f3d685000 r-xp 00000000 00:30 110279284                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/groupby.cpython-37m-x86_64-linux-gnu.so
+2b6f3d685000-2b6f3d885000 ---p 000fb000 00:30 110279284                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/groupby.cpython-37m-x86_64-linux-gnu.so
+2b6f3d885000-2b6f3d88f000 rw-p 000fb000 00:30 110279284                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/groupby.cpython-37m-x86_64-linux-gnu.so
+2b6f3d88f000-2b6f3d912000 rw-p 00000000 00:00 0 
+2b6f3d912000-2b6f3d96b000 r-xp 00000000 00:30 110279278                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/reduction.cpython-37m-x86_64-linux-gnu.so
+2b6f3d96b000-2b6f3db6b000 ---p 00059000 00:30 110279278                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/reduction.cpython-37m-x86_64-linux-gnu.so
+2b6f3db6b000-2b6f3db70000 rw-p 00059000 00:30 110279278                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/reduction.cpython-37m-x86_64-linux-gnu.so
+2b6f3db70000-2b6f3dbf2000 rw-p 00000000 00:00 0 
+2b6f3dbf2000-2b6f3dc78000 r-xp 00000000 00:30 110279283                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/parsers.cpython-37m-x86_64-linux-gnu.so
+2b6f3dc78000-2b6f3de78000 ---p 00086000 00:30 110279283                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/parsers.cpython-37m-x86_64-linux-gnu.so
+2b6f3de78000-2b6f3de7f000 rw-p 00086000 00:30 110279283                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/parsers.cpython-37m-x86_64-linux-gnu.so
+2b6f3de7f000-2b6f3dec2000 rw-p 00000000 00:00 0 
+2b6f3dec2000-2b6f3ded6000 r-xp 00000000 00:30 110279291                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/json.cpython-37m-x86_64-linux-gnu.so
+2b6f3ded6000-2b6f3e0d6000 ---p 00014000 00:30 110279291                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/json.cpython-37m-x86_64-linux-gnu.so
+2b6f3e0d6000-2b6f3e0d7000 rw-p 00014000 00:30 110279291                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/json.cpython-37m-x86_64-linux-gnu.so
+2b6f3e0d7000-2b6f3e117000 rw-p 00000000 00:00 0 
+2b6f3e117000-2b6f3e149000 r-xp 00000000 00:30 110279285                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/writers.cpython-37m-x86_64-linux-gnu.so
+2b6f3e149000-2b6f3e348000 ---p 00032000 00:30 110279285                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/writers.cpython-37m-x86_64-linux-gnu.so
+2b6f3e348000-2b6f3e34c000 rw-p 00031000 00:30 110279285                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/writers.cpython-37m-x86_64-linux-gnu.so
+2b6f3e34c000-2b6f3e34d000 rw-p 00000000 00:00 0 
+2b6f3e34d000-2b6f3e34e000 r-xp 00000000 00:30 110279257                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/util/_move.cpython-37m-x86_64-linux-gnu.so
+2b6f3e34e000-2b6f3e54e000 ---p 00001000 00:30 110279257                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/util/_move.cpython-37m-x86_64-linux-gnu.so
+2b6f3e54e000-2b6f3e54f000 rw-p 00001000 00:30 110279257                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/util/_move.cpython-37m-x86_64-linux-gnu.so
+2b6f3e54f000-2b6f3e560000 r-xp 00000000 00:30 110279721                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/io/msgpack/_packer.cpython-37m-x86_64-linux-gnu.so
+2b6f3e560000-2b6f3e760000 ---p 00011000 00:30 110279721                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/io/msgpack/_packer.cpython-37m-x86_64-linux-gnu.so
+2b6f3e760000-2b6f3e762000 rw-p 00011000 00:30 110279721                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/io/msgpack/_packer.cpython-37m-x86_64-linux-gnu.so
+2b6f3e762000-2b6f3e778000 r-xp 00000000 00:30 110279722                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/io/msgpack/_unpacker.cpython-37m-x86_64-linux-gnu.so
+2b6f3e778000-2b6f3e977000 ---p 00016000 00:30 110279722                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/io/msgpack/_unpacker.cpython-37m-x86_64-linux-gnu.so
+2b6f3e977000-2b6f3e97a000 rw-p 00015000 00:30 110279722                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/io/msgpack/_unpacker.cpython-37m-x86_64-linux-gnu.so
+2b6f3e97a000-2b6f3ea7a000 rw-p 00000000 00:00 0 
+2b6f3ea7a000-2b6f3ea8e000 r-xp 00000000 00:30 110279279                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/testing.cpython-37m-x86_64-linux-gnu.so
+2b6f3ea8e000-2b6f3ec8e000 ---p 00014000 00:30 110279279                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/testing.cpython-37m-x86_64-linux-gnu.so
+2b6f3ec8e000-2b6f3ec90000 rw-p 00014000 00:30 110279279                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/pandas/_libs/testing.cpython-37m-x86_64-linux-gnu.so
+2b6f3ec90000-2b6f3ecd0000 rw-p 00000000 00:00 0 
+2b6f3ecd0000-2b6f3ecdf000 r-xp 00000000 00:30 112329514                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/_lib/_ccallback_c.cpython-37m-x86_64-linux-gnu.so
+2b6f3ecdf000-2b6f3eede000 ---p 0000f000 00:30 112329514                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/_lib/_ccallback_c.cpython-37m-x86_64-linux-gnu.so
+2b6f3eede000-2b6f3eee0000 rw-p 0000e000 00:30 112329514                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/_lib/_ccallback_c.cpython-37m-x86_64-linux-gnu.so
+2b6f3eee0000-2b6f3f229000 r-xp 00000000 00:30 112329267                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/_sparsetools.cpython-37m-x86_64-linux-gnu.so
+2b6f3f229000-2b6f3f429000 ---p 00349000 00:30 112329267                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/_sparsetools.cpython-37m-x86_64-linux-gnu.so
+2b6f3f429000-2b6f3f42a000 rw-p 00349000 00:30 112329267                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/_sparsetools.cpython-37m-x86_64-linux-gnu.so
+2b6f3f42a000-2b6f3f46a000 rw-p 00000000 00:00 0 
+2b6f3f46a000-2b6f3f46e000 r--p 00000000 00:30 111817343                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/array.cpython-37m-x86_64-linux-gnu.so
+2b6f3f46e000-2b6f3f475000 r-xp 00004000 00:30 111817343                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/array.cpython-37m-x86_64-linux-gnu.so
+2b6f3f475000-2b6f3f478000 r--p 0000b000 00:30 111817343                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/array.cpython-37m-x86_64-linux-gnu.so
+2b6f3f478000-2b6f3f479000 ---p 0000e000 00:30 111817343                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/array.cpython-37m-x86_64-linux-gnu.so
+2b6f3f479000-2b6f3f47a000 r--p 0000e000 00:30 111817343                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/array.cpython-37m-x86_64-linux-gnu.so
+2b6f3f47a000-2b6f3f47d000 rw-p 0000f000 00:30 111817343                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/array.cpython-37m-x86_64-linux-gnu.so
+2b6f3f47d000-2b6f3f4bd000 rw-p 00000000 00:00 0 
+2b6f3f4bd000-2b6f3f529000 r-xp 00000000 00:30 112329279                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/_csparsetools.cpython-37m-x86_64-linux-gnu.so
+2b6f3f529000-2b6f3f728000 ---p 0006c000 00:30 112329279                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/_csparsetools.cpython-37m-x86_64-linux-gnu.so
+2b6f3f728000-2b6f3f72e000 rw-p 0006b000 00:30 112329279                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/_csparsetools.cpython-37m-x86_64-linux-gnu.so
+2b6f3f72e000-2b6f3f770000 rw-p 00000000 00:00 0 
+2b6f3f770000-2b6f3f7cd000 r-xp 00000000 00:30 112329342                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-37m-x86_64-linux-gnu.so
+2b6f3f7cd000-2b6f3f9cc000 ---p 0005d000 00:30 112329342                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-37m-x86_64-linux-gnu.so
+2b6f3f9cc000-2b6f3f9d5000 rw-p 0005c000 00:30 112329342                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-37m-x86_64-linux-gnu.so
+2b6f3f9d5000-2b6f3f9d7000 rw-p 00000000 00:00 0 
+2b6f3f9d7000-2b6f3f9f9000 r-xp 00000000 00:30 112329336                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_tools.cpython-37m-x86_64-linux-gnu.so
+2b6f3f9f9000-2b6f3fbf9000 ---p 00022000 00:30 112329336                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_tools.cpython-37m-x86_64-linux-gnu.so
+2b6f3fbf9000-2b6f3fbfe000 rw-p 00022000 00:30 112329336                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_tools.cpython-37m-x86_64-linux-gnu.so
+2b6f3fbfe000-2b6f3fbff000 rw-p 00000000 00:00 0 
+2b6f3fbff000-2b6f3fc1f000 r-xp 00000000 00:30 112329337                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_traversal.cpython-37m-x86_64-linux-gnu.so
+2b6f3fc1f000-2b6f3fe1f000 ---p 00020000 00:30 112329337                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_traversal.cpython-37m-x86_64-linux-gnu.so
+2b6f3fe1f000-2b6f3fe24000 rw-p 00020000 00:30 112329337                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_traversal.cpython-37m-x86_64-linux-gnu.so
+2b6f3fe24000-2b6f3fe50000 r-xp 00000000 00:30 112329340                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-37m-x86_64-linux-gnu.so
+2b6f3fe50000-2b6f4004f000 ---p 0002c000 00:30 112329340                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-37m-x86_64-linux-gnu.so
+2b6f4004f000-2b6f40053000 rw-p 0002b000 00:30 112329340                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-37m-x86_64-linux-gnu.so
+2b6f40053000-2b6f40054000 rw-p 00000000 00:00 0 
+2b6f40054000-2b6f4009f000 r-xp 00000000 00:30 112329335                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_reordering.cpython-37m-x86_64-linux-gnu.so
+2b6f4009f000-2b6f4029f000 ---p 0004b000 00:30 112329335                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_reordering.cpython-37m-x86_64-linux-gnu.so
+2b6f4029f000-2b6f402a5000 rw-p 0004b000 00:30 112329335                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/csgraph/_reordering.cpython-37m-x86_64-linux-gnu.so
+2b6f402a5000-2b6f40326000 rw-p 00000000 00:00 0 
+2b6f40326000-2b6f40329000 r-xp 00000000 00:30 112333327                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/__check_build/_check_build.cpython-37m-x86_64-linux-gnu.so
+2b6f40329000-2b6f40529000 ---p 00003000 00:30 112333327                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/__check_build/_check_build.cpython-37m-x86_64-linux-gnu.so
+2b6f40529000-2b6f4052c000 rw-p 00003000 00:30 112333327                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/__check_build/_check_build.cpython-37m-x86_64-linux-gnu.so
+2b6f4052c000-2b6f40539000 r-xp 00000000 00:30 112332895                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/.libs/libgomp-3300acd3.so.1.0.0
+2b6f40539000-2b6f40739000 ---p 0000d000 00:30 112332895                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/.libs/libgomp-3300acd3.so.1.0.0
+2b6f40739000-2b6f4073c000 rw-p 0000d000 00:30 112332895                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/.libs/libgomp-3300acd3.so.1.0.0
+2b6f4073c000-2b6f4074f000 r-xp 00000000 00:30 112331296                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/murmurhash.cpython-37m-x86_64-linux-gnu.so
+2b6f4074f000-2b6f4094e000 ---p 00013000 00:30 112331296                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/murmurhash.cpython-37m-x86_64-linux-gnu.so
+2b6f4094e000-2b6f40952000 rw-p 00012000 00:30 112331296                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/murmurhash.cpython-37m-x86_64-linux-gnu.so
+2b6f40952000-2b6f40c52000 rw-p 00000000 00:00 0 
+2b6f40c52000-2b6f40c54000 r--p 00000000 00:30 111817308                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_multiprocessing.cpython-37m-x86_64-linux-gnu.so
+2b6f40c54000-2b6f40c55000 r-xp 00002000 00:30 111817308                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_multiprocessing.cpython-37m-x86_64-linux-gnu.so
+2b6f40c55000-2b6f40c56000 r--p 00003000 00:30 111817308                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_multiprocessing.cpython-37m-x86_64-linux-gnu.so
+2b6f40c56000-2b6f40c57000 r--p 00003000 00:30 111817308                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_multiprocessing.cpython-37m-x86_64-linux-gnu.so
+2b6f40c57000-2b6f40c58000 rw-p 00004000 00:30 111817308                  /home-net/home-4/sju7@jhu.edu/miniconda3/envs/tealeaf/lib/python3.7/lib-dynload/_multiprocessing.cpython-37m-x86_64-linux-gnu.so
+2b6f40c58000-2b6f40d18000 rw-p 00000000 00:00 0 
+2b6f40d18000-2b6f40d49000 r-xp 00000000 00:30 112329470                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/isolve/_iterative.cpython-37m-x86_64-linux-gnu.so
+2b6f40d49000-2b6f40f49000 ---p 00031000 00:30 112329470                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/isolve/_iterative.cpython-37m-x86_64-linux-gnu.so
+2b6f40f49000-2b6f40f50000 rw-p 00031000 00:30 112329470                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/isolve/_iterative.cpython-37m-x86_64-linux-gnu.so
+2b6f40f50000-2b6f40f52000 rw-p 00000000 00:00 0 
+2b6f40f52000-2b6f40f55000 rw-p 00039000 00:30 112329470                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/isolve/_iterative.cpython-37m-x86_64-linux-gnu.so
+2b6f40f55000-2b6f42a50000 r-xp 00000000 00:30 112329567                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/.libs/libopenblasp-r0-2ecf47d5.3.7.dev.so
+2b6f42a50000-2b6f42c50000 ---p 01afb000 00:30 112329567                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/.libs/libopenblasp-r0-2ecf47d5.3.7.dev.so
+2b6f42c50000-2b6f42c69000 rw-p 01afb000 00:30 112329567                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/.libs/libopenblasp-r0-2ecf47d5.3.7.dev.so
+2b6f42c69000-2b6f42c74000 rw-p 00000000 00:00 0 
+2b6f42c74000-2b6f42cec000 rw-p 01be7000 00:30 112329567                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/.libs/libopenblasp-r0-2ecf47d5.3.7.dev.so
+2b6f42cec000-2b6f42ced000 ---p 00000000 00:00 0 
+2b6f42ced000-2b6f42eed000 rw-p 00000000 00:00 0 
+2b6f42eed000-2b6f42eee000 ---p 00000000 00:00 0 
+2b6f42eee000-2b6f430ee000 rw-p 00000000 00:00 0 
+2b6f430ee000-2b6f430ef000 ---p 00000000 00:00 0 
+2b6f430ef000-2b6f432ef000 rw-p 00000000 00:00 0 
+2b6f432ef000-2b6f452ef000 rw-p 00000000 00:00 0 
+2b6f452ef000-2b6f472ef000 rw-p 00000000 00:00 0 
+2b6f472ef000-2b6f472f0000 ---p 00000000 00:00 0 
+2b6f472f0000-2b6f474f0000 rw-p 00000000 00:00 0 
+2b6f474f0000-2b6f494f0000 rw-p 00000000 00:00 0 
+2b6f494f0000-2b6f494f1000 ---p 00000000 00:00 0 
+2b6f494f1000-2b6f496f1000 rw-p 00000000 00:00 0 
+2b6f496f1000-2b6f4b6f1000 rw-p 00000000 00:00 0 
+2b6f4b6f1000-2b6f4b6f2000 ---p 00000000 00:00 0 
+2b6f4b6f2000-2b6f4b8f2000 rw-p 00000000 00:00 0 
+2b6f4b8f2000-2b6f4d8f2000 rw-p 00000000 00:00 0 
+2b6f4d8f2000-2b6f4d8f3000 ---p 00000000 00:00 0 
+2b6f4d8f3000-2b6f4daf3000 rw-p 00000000 00:00 0 
+2b6f4daf3000-2b6f4faf3000 rw-p 00000000 00:00 0 
+2b6f4faf3000-2b6f4faf4000 ---p 00000000 00:00 0 
+2b6f4faf4000-2b6f4fcf4000 rw-p 00000000 00:00 0 
+2b6f4fcf4000-2b6f51cf4000 rw-p 00000000 00:00 0 
+2b6f51cf4000-2b6f51cf5000 ---p 00000000 00:00 0 
+2b6f51cf5000-2b6f51ef5000 rw-p 00000000 00:00 0 
+2b6f51ef5000-2b6f53ef5000 rw-p 00000000 00:00 0 
+2b6f53ef5000-2b6f53ef6000 ---p 00000000 00:00 0 
+2b6f53ef6000-2b6f540f6000 rw-p 00000000 00:00 0 
+2b6f540f6000-2b6f560f6000 rw-p 00000000 00:00 0 
+2b6f560f6000-2b6f560f7000 ---p 00000000 00:00 0 
+2b6f560f7000-2b6f562f7000 rw-p 00000000 00:00 0 
+2b6f562f7000-2b6f582f7000 rw-p 00000000 00:00 0 
+2b6f582f7000-2b6f582f8000 ---p 00000000 00:00 0 
+2b6f582f8000-2b6f584f8000 rw-p 00000000 00:00 0 
+2b6f584f8000-2b6f5a4f8000 rw-p 00000000 00:00 0 
+2b6f5a4f8000-2b6f5a4f9000 ---p 00000000 00:00 0 
+2b6f5a4f9000-2b6f5a6f9000 rw-p 00000000 00:00 0 
+2b6f5a6f9000-2b6f5c6f9000 rw-p 00000000 00:00 0 
+2b6f5c6f9000-2b6f5c6fa000 ---p 00000000 00:00 0 
+2b6f5c6fa000-2b6f5c8fa000 rw-p 00000000 00:00 0 
+2b6f5c8fa000-2b6f5e8fa000 rw-p 00000000 00:00 0 
+2b6f5e8fa000-2b6f5e8fb000 ---p 00000000 00:00 0 
+2b6f5e8fb000-2b6f5eafb000 rw-p 00000000 00:00 0 
+2b6f5eafb000-2b6f60afb000 rw-p 00000000 00:00 0 
+2b6f60afb000-2b6f60afc000 ---p 00000000 00:00 0 
+2b6f60afc000-2b6f60cfc000 rw-p 00000000 00:00 0 
+2b6f60cfc000-2b6f62cfc000 rw-p 00000000 00:00 0 
+2b6f62cfc000-2b6f62cfd000 ---p 00000000 00:00 0 
+2b6f62cfd000-2b6f62efd000 rw-p 00000000 00:00 0 
+2b6f62efd000-2b6f62efe000 ---p 00000000 00:00 0 
+2b6f62efe000-2b6f630fe000 rw-p 00000000 00:00 0 
+2b6f630fe000-2b6f630ff000 ---p 00000000 00:00 0 
+2b6f630ff000-2b6f632ff000 rw-p 00000000 00:00 0 
+2b6f632ff000-2b6f63300000 ---p 00000000 00:00 0 
+2b6f63300000-2b6f63500000 rw-p 00000000 00:00 0 
+2b6f63500000-2b6f63501000 ---p 00000000 00:00 0 
+2b6f63501000-2b6f63701000 rw-p 00000000 00:00 0 
+2b6f63701000-2b6f63702000 ---p 00000000 00:00 0 
+2b6f63702000-2b6f63902000 rw-p 00000000 00:00 0 
+2b6f63902000-2b6f63903000 ---p 00000000 00:00 0 
+2b6f63903000-2b6f63b03000 rw-p 00000000 00:00 0 
+2b6f63b03000-2b6f63b04000 ---p 00000000 00:00 0 
+2b6f63b04000-2b6f63d04000 rw-p 00000000 00:00 0 
+2b6f63d04000-2b6f63d05000 ---p 00000000 00:00 0 
+2b6f63d05000-2b6f63f05000 rw-p 00000000 00:00 0 
+2b6f63f05000-2b6f63f06000 ---p 00000000 00:00 0 
+2b6f63f06000-2b6f64106000 rw-p 00000000 00:00 0 
+2b6f64106000-2b6f64107000 ---p 00000000 00:00 0 
+2b6f64107000-2b6f64307000 rw-p 00000000 00:00 0 
+2b6f64307000-2b6f64308000 ---p 00000000 00:00 0 
+2b6f64308000-2b6f64508000 rw-p 00000000 00:00 0 
+2b6f64508000-2b6f64509000 ---p 00000000 00:00 0 
+2b6f64509000-2b6f64709000 rw-p 00000000 00:00 0 
+2b6f64709000-2b6f6470a000 ---p 00000000 00:00 0 
+2b6f6470a000-2b6f6490a000 rw-p 00000000 00:00 0 
+2b6f6490a000-2b6f6490b000 ---p 00000000 00:00 0 
+2b6f6490b000-2b6f64b0b000 rw-p 00000000 00:00 0 
+2b6f64b0b000-2b6f64b0c000 ---p 00000000 00:00 0 
+2b6f64b0c000-2b6f64d0c000 rw-p 00000000 00:00 0 
+2b6f64d0c000-2b6f64d0d000 ---p 00000000 00:00 0 
+2b6f64d0d000-2b6f64f0d000 rw-p 00000000 00:00 0 
+2b6f64f0d000-2b6f64f0e000 ---p 00000000 00:00 0 
+2b6f64f0e000-2b6f6510e000 rw-p 00000000 00:00 0 
+2b6f6510e000-2b6f6510f000 ---p 00000000 00:00 0 
+2b6f6510f000-2b6f6530f000 rw-p 00000000 00:00 0 
+2b6f6530f000-2b6f65310000 ---p 00000000 00:00 0 
+2b6f65310000-2b6f65510000 rw-p 00000000 00:00 0 
+2b6f65510000-2b6f65511000 ---p 00000000 00:00 0 
+2b6f65511000-2b6f65711000 rw-p 00000000 00:00 0 
+2b6f65711000-2b6f65712000 ---p 00000000 00:00 0 
+2b6f65712000-2b6f65912000 rw-p 00000000 00:00 0 
+2b6f65912000-2b6f65913000 ---p 00000000 00:00 0 
+2b6f65913000-2b6f65b13000 rw-p 00000000 00:00 0 
+2b6f65b13000-2b6f65b14000 ---p 00000000 00:00 0 
+2b6f65b14000-2b6f65d14000 rw-p 00000000 00:00 0 
+2b6f65d14000-2b6f65d15000 ---p 00000000 00:00 0 
+2b6f65d15000-2b6f65f15000 rw-p 00000000 00:00 0 
+2b6f65f15000-2b6f65f16000 ---p 00000000 00:00 0 
+2b6f65f16000-2b6f66116000 rw-p 00000000 00:00 0 
+2b6f66116000-2b6f6a116000 rw-p 00000000 00:00 0 
+2b6f6a116000-2b6f6a117000 ---p 00000000 00:00 0 
+2b6f6a117000-2b6f6a317000 rw-p 00000000 00:00 0 
+2b6f6a317000-2b6f6c317000 rw-p 00000000 00:00 0 
+2b6f6c317000-2b6f6e317000 rw-p 00000000 00:00 0 
+2b6f6e317000-2b6f7c317000 rw-p 00000000 00:00 0 
+2b6f7c317000-2b6f7e317000 rw-p 00000000 00:00 0 
+2b6f7e317000-2b6f8a317000 rw-p 00000000 00:00 0 
+2b6f8a317000-2b6f8c317000 rw-p 00000000 00:00 0 
+2b6f8c317000-2b6f8e317000 rw-p 00000000 00:00 0 
+2b6f8e317000-2b6f92317000 rw-p 00000000 00:00 0 
+2b6f92317000-2b6f92318000 ---p 00000000 00:00 0 
+2b6f92318000-2b6f92518000 rw-p 00000000 00:00 0 
+2b6f92518000-2b6f94518000 rw-p 00000000 00:00 0 
+2b6f94518000-2b6f94519000 ---p 00000000 00:00 0 
+2b6f94519000-2b6f94719000 rw-p 00000000 00:00 0 
+2b6f94719000-2b6f9a719000 rw-p 00000000 00:00 0 
+2b6f9a719000-2b6f9a71a000 ---p 00000000 00:00 0 
+2b6f9a71a000-2b6f9a91a000 rw-p 00000000 00:00 0 
+2b6f9a91a000-2b6f9c91a000 rw-p 00000000 00:00 0 
+2b6f9c91a000-2b6f9c91b000 ---p 00000000 00:00 0 
+2b6f9c91b000-2b6f9cb1b000 rw-p 00000000 00:00 0 
+2b6f9cb1b000-2b6fa0b1b000 rw-p 00000000 00:00 0 
+2b6fa0b1b000-2b6fa0b5b000 rw-p 00000000 00:00 0 
+2b6fa0b5b000-2b6fa0bc7000 r-xp 00000000 00:30 112330675                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_fblas.cpython-37m-x86_64-linux-gnu.so
+2b6fa0bc7000-2b6fa0dc7000 ---p 0006c000 00:30 112330675                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_fblas.cpython-37m-x86_64-linux-gnu.so
+2b6fa0dc7000-2b6fa0ded000 rw-p 0006c000 00:30 112330675                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_fblas.cpython-37m-x86_64-linux-gnu.so
+2b6fa0ded000-2b6fa0df1000 rw-p 00093000 00:30 112330675                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_fblas.cpython-37m-x86_64-linux-gnu.so
+2b6fa0df1000-2b6fa2df1000 rw-p 00000000 00:00 0 
+2b6fa2df1000-2b6fa2e31000 rw-p 00000000 00:00 0 
+2b6fa2e31000-2b6fa4e31000 rw-p 00000000 00:00 0 
+2b6fa4e31000-2b6fa4f3b000 r-xp 00000000 00:30 112330645                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_flapack.cpython-37m-x86_64-linux-gnu.so
+2b6fa4f3b000-2b6fa513a000 ---p 0010a000 00:30 112330645                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_flapack.cpython-37m-x86_64-linux-gnu.so
+2b6fa513a000-2b6fa519c000 rw-p 00109000 00:30 112330645                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_flapack.cpython-37m-x86_64-linux-gnu.so
+2b6fa519c000-2b6fa519d000 rw-p 00000000 00:00 0 
+2b6fa519d000-2b6fa51a5000 rw-p 0016c000 00:30 112330645                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_flapack.cpython-37m-x86_64-linux-gnu.so
+2b6fa51a5000-2b6fa71a5000 rw-p 00000000 00:00 0 
+2b6fa71a5000-2b6fa71b2000 r-xp 00000000 00:30 112330658                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_flinalg.cpython-37m-x86_64-linux-gnu.so
+2b6fa71b2000-2b6fa73b2000 ---p 0000d000 00:30 112330658                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_flinalg.cpython-37m-x86_64-linux-gnu.so
+2b6fa73b2000-2b6fa73b5000 rw-p 0000d000 00:30 112330658                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_flinalg.cpython-37m-x86_64-linux-gnu.so
+2b6fa73b5000-2b6fa73b8000 rw-p 00011000 00:30 112330658                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_flinalg.cpython-37m-x86_64-linux-gnu.so
+2b6fa73b8000-2b6fa73ec000 r-xp 00000000 00:30 112330666                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_solve_toeplitz.cpython-37m-x86_64-linux-gnu.so
+2b6fa73ec000-2b6fa75ec000 ---p 00034000 00:30 112330666                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_solve_toeplitz.cpython-37m-x86_64-linux-gnu.so
+2b6fa75ec000-2b6fa75f0000 rw-p 00034000 00:30 112330666                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_solve_toeplitz.cpython-37m-x86_64-linux-gnu.so
+2b6fa75f0000-2b6fa7631000 rw-p 00000000 00:00 0 
+2b6fa7631000-2b6fa7679000 r-xp 00000000 00:30 112330653                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_decomp_update.cpython-37m-x86_64-linux-gnu.so
+2b6fa7679000-2b6fa7879000 ---p 00048000 00:30 112330653                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_decomp_update.cpython-37m-x86_64-linux-gnu.so
+2b6fa7879000-2b6fa787f000 rw-p 00048000 00:30 112330653                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/_decomp_update.cpython-37m-x86_64-linux-gnu.so
+2b6fa787f000-2b6fa7880000 rw-p 00000000 00:00 0 
+2b6fa7880000-2b6fa78b9000 r-xp 00000000 00:30 112330667                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/cython_blas.cpython-37m-x86_64-linux-gnu.so
+2b6fa78b9000-2b6fa7ab9000 ---p 00039000 00:30 112330667                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/cython_blas.cpython-37m-x86_64-linux-gnu.so
+2b6fa7ab9000-2b6fa7ac3000 rw-p 00039000 00:30 112330667                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/cython_blas.cpython-37m-x86_64-linux-gnu.so
+2b6fa7ac3000-2b6fa7b5d000 r-xp 00000000 00:30 112330649                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/cython_lapack.cpython-37m-x86_64-linux-gnu.so
+2b6fa7b5d000-2b6fa7d5c000 ---p 0009a000 00:30 112330649                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/cython_lapack.cpython-37m-x86_64-linux-gnu.so
+2b6fa7d5c000-2b6fa7d60000 rw-p 00099000 00:30 112330649                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/cython_lapack.cpython-37m-x86_64-linux-gnu.so
+2b6fa7d60000-2b6fa7d75000 rw-p 0009e000 00:30 112330649                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/linalg/cython_lapack.cpython-37m-x86_64-linux-gnu.so
+2b6fa7d75000-2b6fa7db5000 rw-p 00000000 00:00 0 
+2b6fa7db5000-2b6fa7e02000 r-xp 00000000 00:30 112329406                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.cpython-37m-x86_64-linux-gnu.so
+2b6fa7e02000-2b6fa8001000 ---p 0004d000 00:30 112329406                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.cpython-37m-x86_64-linux-gnu.so
+2b6fa8001000-2b6fa8003000 rw-p 0004c000 00:30 112329406                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.cpython-37m-x86_64-linux-gnu.so
+2b6fa8003000-2b6fa8006000 rw-p 0004f000 00:30 112329406                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/dsolve/_superlu.cpython-37m-x86_64-linux-gnu.so
+2b6fa8006000-2b6fa808f000 r-xp 00000000 00:30 112329447                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.cpython-37m-x86_64-linux-gnu.so
+2b6fa808f000-2b6fa828e000 ---p 00089000 00:30 112329447                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.cpython-37m-x86_64-linux-gnu.so
+2b6fa828e000-2b6fa8299000 rw-p 00088000 00:30 112329447                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.cpython-37m-x86_64-linux-gnu.so
+2b6fa8299000-2b6fa829b000 rw-p 00000000 00:00 0 
+2b6fa829b000-2b6fa829f000 rw-p 00094000 00:30 112329447                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/sparse/linalg/eigen/arpack/_arpack.cpython-37m-x86_64-linux-gnu.so
+2b6fa829f000-2b6fa82df000 rw-p 00000000 00:00 0 
+2b6fa82df000-2b6fa847d000 r-xp 00000000 00:30 112330519                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ufuncs.cpython-37m-x86_64-linux-gnu.so
+2b6fa847d000-2b6fa867c000 ---p 0019e000 00:30 112330519                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ufuncs.cpython-37m-x86_64-linux-gnu.so
+2b6fa867c000-2b6fa8684000 rw-p 0019d000 00:30 112330519                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ufuncs.cpython-37m-x86_64-linux-gnu.so
+2b6fa8684000-2b6fa868d000 rw-p 00000000 00:00 0 
+2b6fa868d000-2b6fa8693000 rw-p 001a6000 00:30 112330519                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ufuncs.cpython-37m-x86_64-linux-gnu.so
+2b6fa8693000-2b6fa86b0000 r-xp 00000000 00:30 112330510                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ufuncs_cxx.cpython-37m-x86_64-linux-gnu.so
+2b6fa86b0000-2b6fa88af000 ---p 0001d000 00:30 112330510                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ufuncs_cxx.cpython-37m-x86_64-linux-gnu.so
+2b6fa88af000-2b6fa88b1000 rw-p 0001c000 00:30 112330510                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ufuncs_cxx.cpython-37m-x86_64-linux-gnu.so
+2b6fa88b1000-2b6fa8966000 r-xp 00000000 00:30 112330500                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/specfun.cpython-37m-x86_64-linux-gnu.so
+2b6fa8966000-2b6fa8b66000 ---p 000b5000 00:30 112330500                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/specfun.cpython-37m-x86_64-linux-gnu.so
+2b6fa8b66000-2b6fa8b6f000 rw-p 000b5000 00:30 112330500                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/specfun.cpython-37m-x86_64-linux-gnu.so
+2b6fa8b6f000-2b6fa8baf000 rw-p 00000000 00:00 0 
+2b6fa8baf000-2b6fa8bb5000 r-xp 00000000 00:30 112330502                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_comb.cpython-37m-x86_64-linux-gnu.so
+2b6fa8bb5000-2b6fa8db5000 ---p 00006000 00:30 112330502                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_comb.cpython-37m-x86_64-linux-gnu.so
+2b6fa8db5000-2b6fa8db6000 rw-p 00006000 00:30 112330502                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_comb.cpython-37m-x86_64-linux-gnu.so
+2b6fa8db6000-2b6fa8dc8000 r-xp 00000000 00:30 112330506                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ellip_harm_2.cpython-37m-x86_64-linux-gnu.so
+2b6fa8dc8000-2b6fa8fc8000 ---p 00012000 00:30 112330506                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ellip_harm_2.cpython-37m-x86_64-linux-gnu.so
+2b6fa8fc8000-2b6fa8fcd000 rw-p 00012000 00:30 112330506                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/special/_ellip_harm_2.cpython-37m-x86_64-linux-gnu.so
+2b6fa8fcd000-2b6fa904d000 rw-p 00000000 00:00 0 
+2b6fa904d000-2b6fa9056000 r-xp 00000000 00:30 112329825                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/minpack2.cpython-37m-x86_64-linux-gnu.so
+2b6fa9056000-2b6fa9256000 ---p 00009000 00:30 112329825                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/minpack2.cpython-37m-x86_64-linux-gnu.so
+2b6fa9256000-2b6fa9257000 rw-p 00009000 00:30 112329825                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/minpack2.cpython-37m-x86_64-linux-gnu.so
+2b6fa9257000-2b6fa9259000 rw-p 0000b000 00:30 112329825                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/minpack2.cpython-37m-x86_64-linux-gnu.so
+2b6fa9259000-2b6fa92a3000 r-xp 00000000 00:30 112330061                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_trlib/_trlib.cpython-37m-x86_64-linux-gnu.so
+2b6fa92a3000-2b6fa94a2000 ---p 0004a000 00:30 112330061                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_trlib/_trlib.cpython-37m-x86_64-linux-gnu.so
+2b6fa94a2000-2b6fa94a6000 rw-p 00049000 00:30 112330061                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_trlib/_trlib.cpython-37m-x86_64-linux-gnu.so
+2b6fa94a6000-2b6fa94a7000 rw-p 00000000 00:00 0 
+2b6fa94a7000-2b6fa94ab000 rw-p 0004e000 00:30 112330061                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_trlib/_trlib.cpython-37m-x86_64-linux-gnu.so
+2b6fa94ab000-2b6fa94eb000 rw-p 00000000 00:00 0 
+2b6fa94eb000-2b6fa94f4000 r-xp 00000000 00:30 112329517                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/_lib/messagestream.cpython-37m-x86_64-linux-gnu.so
+2b6fa94f4000-2b6fa96f3000 ---p 00009000 00:30 112329517                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/_lib/messagestream.cpython-37m-x86_64-linux-gnu.so
+2b6fa96f3000-2b6fa96f5000 rw-p 00008000 00:30 112329517                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/_lib/messagestream.cpython-37m-x86_64-linux-gnu.so
+2b6fa96f5000-2b6fa9721000 r-xp 00000000 00:30 112329841                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_group_columns.cpython-37m-x86_64-linux-gnu.so
+2b6fa9721000-2b6fa9920000 ---p 0002c000 00:30 112329841                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_group_columns.cpython-37m-x86_64-linux-gnu.so
+2b6fa9920000-2b6fa9923000 rw-p 0002b000 00:30 112329841                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_group_columns.cpython-37m-x86_64-linux-gnu.so
+2b6fa9923000-2b6fa9964000 rw-p 00000000 00:00 0 
+2b6fa9964000-2b6fa9982000 r-xp 00000000 00:30 112329831                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_lbfgsb.cpython-37m-x86_64-linux-gnu.so
+2b6fa9982000-2b6fa9b82000 ---p 0001e000 00:30 112329831                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_lbfgsb.cpython-37m-x86_64-linux-gnu.so
+2b6fa9b82000-2b6fa9b83000 rw-p 0001e000 00:30 112329831                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_lbfgsb.cpython-37m-x86_64-linux-gnu.so
+2b6fa9b83000-2b6fa9b86000 rw-p 00020000 00:30 112329831                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_lbfgsb.cpython-37m-x86_64-linux-gnu.so
+2b6fa9b86000-2b6fa9b92000 r-xp 00000000 00:30 112329816                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/moduleTNC.cpython-37m-x86_64-linux-gnu.so
+2b6fa9b92000-2b6fa9d91000 ---p 0000c000 00:30 112329816                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/moduleTNC.cpython-37m-x86_64-linux-gnu.so
+2b6fa9d91000-2b6fa9d92000 rw-p 0000b000 00:30 112329816                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/moduleTNC.cpython-37m-x86_64-linux-gnu.so
+2b6fa9d92000-2b6fa9db0000 r-xp 00000000 00:30 112329839                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_cobyla.cpython-37m-x86_64-linux-gnu.so
+2b6fa9db0000-2b6fa9fb0000 ---p 0001e000 00:30 112329839                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_cobyla.cpython-37m-x86_64-linux-gnu.so
+2b6fa9fb0000-2b6fa9fb1000 rw-p 0001e000 00:30 112329839                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_cobyla.cpython-37m-x86_64-linux-gnu.so
+2b6fa9fb1000-2b6fa9fb3000 rw-p 00020000 00:30 112329839                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_cobyla.cpython-37m-x86_64-linux-gnu.so
+2b6fa9fb3000-2b6fa9fcb000 r-xp 00000000 00:30 112329809                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_slsqp.cpython-37m-x86_64-linux-gnu.so
+2b6fa9fcb000-2b6faa1ca000 ---p 00018000 00:30 112329809                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_slsqp.cpython-37m-x86_64-linux-gnu.so
+2b6faa1ca000-2b6faa1ce000 rw-p 00017000 00:30 112329809                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_slsqp.cpython-37m-x86_64-linux-gnu.so
+2b6faa1ce000-2b6faa1ed000 r-xp 00000000 00:30 112329811                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_minpack.cpython-37m-x86_64-linux-gnu.so
+2b6faa1ed000-2b6faa3ed000 ---p 0001f000 00:30 112329811                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_minpack.cpython-37m-x86_64-linux-gnu.so
+2b6faa3ed000-2b6faa3f0000 rw-p 0001f000 00:30 112329811                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_minpack.cpython-37m-x86_64-linux-gnu.so
+2b6faa3f0000-2b6faa430000 rw-p 00000000 00:00 0 
+2b6faa430000-2b6faa457000 r-xp 00000000 00:30 112330039                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_lsq/givens_elimination.cpython-37m-x86_64-linux-gnu.so
+2b6faa457000-2b6faa657000 ---p 00027000 00:30 112330039                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_lsq/givens_elimination.cpython-37m-x86_64-linux-gnu.so
+2b6faa657000-2b6faa65a000 rw-p 00027000 00:30 112330039                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_lsq/givens_elimination.cpython-37m-x86_64-linux-gnu.so
+2b6faa65a000-2b6faa65b000 rw-p 00000000 00:00 0 
+2b6faa65b000-2b6faa65e000 r-xp 00000000 00:30 112329846                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_zeros.cpython-37m-x86_64-linux-gnu.so
+2b6faa65e000-2b6faa85d000 ---p 00003000 00:30 112329846                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_zeros.cpython-37m-x86_64-linux-gnu.so
+2b6faa85d000-2b6faa85e000 rw-p 00002000 00:30 112329846                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_zeros.cpython-37m-x86_64-linux-gnu.so
+2b6faa85e000-2b6faa868000 r-xp 00000000 00:30 112329858                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_nnls.cpython-37m-x86_64-linux-gnu.so
+2b6faa868000-2b6faaa68000 ---p 0000a000 00:30 112329858                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_nnls.cpython-37m-x86_64-linux-gnu.so
+2b6faaa68000-2b6faaa69000 rw-p 0000a000 00:30 112329858                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_nnls.cpython-37m-x86_64-linux-gnu.so
+2b6faaa69000-2b6faaa6b000 rw-p 0000c000 00:30 112329858                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_nnls.cpython-37m-x86_64-linux-gnu.so
+2b6faaa6b000-2b6faaaab000 rw-p 00000000 00:00 0 
+2b6faaaab000-2b6faaaed000 r-xp 00000000 00:30 112329855                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_bglu_dense.cpython-37m-x86_64-linux-gnu.so
+2b6faaaed000-2b6faacec000 ---p 00042000 00:30 112329855                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_bglu_dense.cpython-37m-x86_64-linux-gnu.so
+2b6faacec000-2b6faacf1000 rw-p 00041000 00:30 112329855                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/optimize/_bglu_dense.cpython-37m-x86_64-linux-gnu.so
+2b6faacf1000-2b6faad32000 rw-p 00000000 00:00 0 
+2b6faad32000-2b6faade3000 r-xp 00000000 00:30 112329153                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/ckdtree.cpython-37m-x86_64-linux-gnu.so
+2b6faade3000-2b6faafe3000 ---p 000b1000 00:30 112329153                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/ckdtree.cpython-37m-x86_64-linux-gnu.so
+2b6faafe3000-2b6faafed000 rw-p 000b1000 00:30 112329153                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/ckdtree.cpython-37m-x86_64-linux-gnu.so
+2b6faafed000-2b6faafef000 rw-p 00000000 00:00 0 
+2b6faafef000-2b6fab0c5000 r-xp 00000000 00:30 112329162                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/qhull.cpython-37m-x86_64-linux-gnu.so
+2b6fab0c5000-2b6fab2c5000 ---p 000d6000 00:30 112329162                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/qhull.cpython-37m-x86_64-linux-gnu.so
+2b6fab2c5000-2b6fab2ce000 rw-p 000d6000 00:30 112329162                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/qhull.cpython-37m-x86_64-linux-gnu.so
+2b6fab2ce000-2b6fab2d1000 rw-p 00000000 00:00 0 
+2b6fab2d1000-2b6fab2d5000 rw-p 000e0000 00:30 112329162                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/qhull.cpython-37m-x86_64-linux-gnu.so
+2b6fab2d5000-2b6fab2ff000 r-xp 00000000 00:30 112329155                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_voronoi.cpython-37m-x86_64-linux-gnu.so
+2b6fab2ff000-2b6fab4fe000 ---p 0002a000 00:30 112329155                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_voronoi.cpython-37m-x86_64-linux-gnu.so
+2b6fab4fe000-2b6fab501000 rw-p 00029000 00:30 112329155                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_voronoi.cpython-37m-x86_64-linux-gnu.so
+2b6fab501000-2b6fab502000 rw-p 00000000 00:00 0 
+2b6fab502000-2b6fab519000 r-xp 00000000 00:30 112329156                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_distance_wrap.cpython-37m-x86_64-linux-gnu.so
+2b6fab519000-2b6fab719000 ---p 00017000 00:30 112329156                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_distance_wrap.cpython-37m-x86_64-linux-gnu.so
+2b6fab719000-2b6fab71a000 rw-p 00017000 00:30 112329156                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_distance_wrap.cpython-37m-x86_64-linux-gnu.so
+2b6fab71a000-2b6fab744000 r-xp 00000000 00:30 112329164                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_hausdorff.cpython-37m-x86_64-linux-gnu.so
+2b6fab744000-2b6fab944000 ---p 0002a000 00:30 112329164                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_hausdorff.cpython-37m-x86_64-linux-gnu.so
+2b6fab944000-2b6fab947000 rw-p 0002a000 00:30 112329164                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/spatial/_hausdorff.cpython-37m-x86_64-linux-gnu.so
+2b6fab947000-2b6fab988000 rw-p 00000000 00:00 0 
+2b6fab988000-2b6fab99e000 r-xp 00000000 00:30 112329633                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_odepack.cpython-37m-x86_64-linux-gnu.so
+2b6fab99e000-2b6fabb9d000 ---p 00016000 00:30 112329633                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_odepack.cpython-37m-x86_64-linux-gnu.so
+2b6fabb9d000-2b6fabb9e000 rw-p 00015000 00:30 112329633                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_odepack.cpython-37m-x86_64-linux-gnu.so
+2b6fabb9e000-2b6fabb9f000 rw-p 00000000 00:00 0 
+2b6fabb9f000-2b6fabba2000 rw-p 00017000 00:30 112329633                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_odepack.cpython-37m-x86_64-linux-gnu.so
+2b6fabba2000-2b6fabbe2000 rw-p 00000000 00:00 0 
+2b6fabbe2000-2b6fabbfc000 r-xp 00000000 00:30 112329631                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_quadpack.cpython-37m-x86_64-linux-gnu.so
+2b6fabbfc000-2b6fabdfc000 ---p 0001a000 00:30 112329631                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_quadpack.cpython-37m-x86_64-linux-gnu.so
+2b6fabdfc000-2b6fabdfd000 rw-p 0001a000 00:30 112329631                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_quadpack.cpython-37m-x86_64-linux-gnu.so
+2b6fabdfd000-2b6fabe00000 rw-p 0001c000 00:30 112329631                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_quadpack.cpython-37m-x86_64-linux-gnu.so
+2b6fabe00000-2b6fabe31000 r-xp 00000000 00:30 112329632                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/vode.cpython-37m-x86_64-linux-gnu.so
+2b6fabe31000-2b6fac030000 ---p 00031000 00:30 112329632                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/vode.cpython-37m-x86_64-linux-gnu.so
+2b6fac030000-2b6fac032000 rw-p 00030000 00:30 112329632                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/vode.cpython-37m-x86_64-linux-gnu.so
+2b6fac032000-2b6fac033000 rw-p 00000000 00:00 0 
+2b6fac033000-2b6fac037000 rw-p 00033000 00:30 112329632                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/vode.cpython-37m-x86_64-linux-gnu.so
+2b6fac037000-2b6fac052000 r-xp 00000000 00:30 112329634                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_dop.cpython-37m-x86_64-linux-gnu.so
+2b6fac052000-2b6fac251000 ---p 0001b000 00:30 112329634                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_dop.cpython-37m-x86_64-linux-gnu.so
+2b6fac251000-2b6fac253000 rw-p 0001a000 00:30 112329634                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_dop.cpython-37m-x86_64-linux-gnu.so
+2b6fac253000-2b6fac256000 rw-p 0001d000 00:30 112329634                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/_dop.cpython-37m-x86_64-linux-gnu.so
+2b6fac256000-2b6fac26f000 r-xp 00000000 00:30 112329640                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/lsoda.cpython-37m-x86_64-linux-gnu.so
+2b6fac26f000-2b6fac46f000 ---p 00019000 00:30 112329640                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/lsoda.cpython-37m-x86_64-linux-gnu.so
+2b6fac46f000-2b6fac470000 rw-p 00019000 00:30 112329640                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/lsoda.cpython-37m-x86_64-linux-gnu.so
+2b6fac470000-2b6fac471000 rw-p 00000000 00:00 0 
+2b6fac471000-2b6fac474000 rw-p 0001b000 00:30 112329640                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/integrate/lsoda.cpython-37m-x86_64-linux-gnu.so
+2b6fac474000-2b6fac574000 rw-p 00000000 00:00 0 
+2b6fac574000-2b6fac5a8000 r-xp 00000000 00:30 112330112                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_fitpack.cpython-37m-x86_64-linux-gnu.so
+2b6fac5a8000-2b6fac7a8000 ---p 00034000 00:30 112330112                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_fitpack.cpython-37m-x86_64-linux-gnu.so
+2b6fac7a8000-2b6fac7a9000 rw-p 00034000 00:30 112330112                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_fitpack.cpython-37m-x86_64-linux-gnu.so
+2b6fac7a9000-2b6fac7ab000 rw-p 00036000 00:30 112330112                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_fitpack.cpython-37m-x86_64-linux-gnu.so
+2b6fac7ab000-2b6fac809000 r-xp 00000000 00:30 112330109                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/dfitpack.cpython-37m-x86_64-linux-gnu.so
+2b6fac809000-2b6faca09000 ---p 0005e000 00:30 112330109                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/dfitpack.cpython-37m-x86_64-linux-gnu.so
+2b6faca09000-2b6faca10000 rw-p 0005e000 00:30 112330109                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/dfitpack.cpython-37m-x86_64-linux-gnu.so
+2b6faca10000-2b6faca12000 rw-p 00066000 00:30 112330109                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/dfitpack.cpython-37m-x86_64-linux-gnu.so
+2b6faca12000-2b6faca4f000 r-xp 00000000 00:30 112330111                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_bspl.cpython-37m-x86_64-linux-gnu.so
+2b6faca4f000-2b6facc4f000 ---p 0003d000 00:30 112330111                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_bspl.cpython-37m-x86_64-linux-gnu.so
+2b6facc4f000-2b6facc55000 rw-p 0003d000 00:30 112330111                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_bspl.cpython-37m-x86_64-linux-gnu.so
+2b6facc55000-2b6facc56000 rw-p 00000000 00:00 0 
+2b6facc56000-2b6facc59000 rw-p 00043000 00:30 112330111                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_bspl.cpython-37m-x86_64-linux-gnu.so
+2b6facc59000-2b6faccaa000 r-xp 00000000 00:30 112330103                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_ppoly.cpython-37m-x86_64-linux-gnu.so
+2b6faccaa000-2b6facea9000 ---p 00051000 00:30 112330103                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_ppoly.cpython-37m-x86_64-linux-gnu.so
+2b6facea9000-2b6faceaf000 rw-p 00050000 00:30 112330103                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_ppoly.cpython-37m-x86_64-linux-gnu.so
+2b6faceaf000-2b6faceb0000 rw-p 00000000 00:00 0 
+2b6faceb0000-2b6faceb3000 rw-p 00057000 00:30 112330103                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/_ppoly.cpython-37m-x86_64-linux-gnu.so
+2b6faceb3000-2b6facf07000 r-xp 00000000 00:30 112330105                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/interpnd.cpython-37m-x86_64-linux-gnu.so
+2b6facf07000-2b6fad107000 ---p 00054000 00:30 112330105                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/interpnd.cpython-37m-x86_64-linux-gnu.so
+2b6fad107000-2b6fad10c000 rw-p 00054000 00:30 112330105                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/interpolate/interpnd.cpython-37m-x86_64-linux-gnu.so
+2b6fad10c000-2b6fad14d000 rw-p 00000000 00:00 0 
+2b6fad14d000-2b6fad1ae000 r-xp 00000000 00:30 112329710                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/_stats.cpython-37m-x86_64-linux-gnu.so
+2b6fad1ae000-2b6fad3ae000 ---p 00061000 00:30 112329710                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/_stats.cpython-37m-x86_64-linux-gnu.so
+2b6fad3ae000-2b6fad3b3000 rw-p 00061000 00:30 112329710                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/_stats.cpython-37m-x86_64-linux-gnu.so
+2b6fad3b3000-2b6fad4f5000 rw-p 00000000 00:00 0 
+2b6fad4f5000-2b6fad4ff000 r-xp 00000000 00:30 112329714                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/statlib.cpython-37m-x86_64-linux-gnu.so
+2b6fad4ff000-2b6fad6fe000 ---p 0000a000 00:30 112329714                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/statlib.cpython-37m-x86_64-linux-gnu.so
+2b6fad6fe000-2b6fad700000 rw-p 00009000 00:30 112329714                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/statlib.cpython-37m-x86_64-linux-gnu.so
+2b6fad700000-2b6fad702000 rw-p 0000c000 00:30 112329714                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/statlib.cpython-37m-x86_64-linux-gnu.so
+2b6fad702000-2b6fad742000 rw-p 00000000 00:00 0 
+2b6fad742000-2b6fad755000 r-xp 00000000 00:30 112329709                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/mvn.cpython-37m-x86_64-linux-gnu.so
+2b6fad755000-2b6fad954000 ---p 00013000 00:30 112329709                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/mvn.cpython-37m-x86_64-linux-gnu.so
+2b6fad954000-2b6fad956000 rw-p 00012000 00:30 112329709                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/mvn.cpython-37m-x86_64-linux-gnu.so
+2b6fad956000-2b6fada4d000 rw-p 00000000 00:00 0 
+2b6fada4d000-2b6fada4f000 rw-p 00015000 00:30 112329709                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/stats/mvn.cpython-37m-x86_64-linux-gnu.so
+2b6fada4f000-2b6fada8f000 rw-p 00000000 00:00 0 
+2b6fada8f000-2b6fadab5000 r-xp 00000000 00:30 112331325                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_logistic_sigmoid.cpython-37m-x86_64-linux-gnu.so
+2b6fadab5000-2b6fadcb5000 ---p 00026000 00:30 112331325                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_logistic_sigmoid.cpython-37m-x86_64-linux-gnu.so
+2b6fadcb5000-2b6fadcb8000 rw-p 00026000 00:30 112331325                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_logistic_sigmoid.cpython-37m-x86_64-linux-gnu.so
+2b6fadcb8000-2b6fadcb9000 rw-p 00000000 00:00 0 
+2b6fadcb9000-2b6fadcbc000 rw-p 00029000 00:30 112331325                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_logistic_sigmoid.cpython-37m-x86_64-linux-gnu.so
+2b6fadcbc000-2b6fadd50000 r-xp 00000000 00:30 112331326                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/sparsefuncs_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fadd50000-2b6fadf4f000 ---p 00094000 00:30 112331326                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/sparsefuncs_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fadf4f000-2b6fadf55000 rw-p 00093000 00:30 112331326                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/sparsefuncs_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fadf55000-2b6fadf57000 rw-p 00000000 00:00 0 
+2b6fadf57000-2b6fadf5b000 rw-p 0009a000 00:30 112331326                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/sparsefuncs_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fadf5b000-2b6fadf9b000 rw-p 00000000 00:00 0 
+2b6fadf9b000-2b6fadfa3000 r-xp 00000000 00:30 112330221                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/mio_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fadfa3000-2b6fae1a2000 ---p 00008000 00:30 112330221                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/mio_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fae1a2000-2b6fae1a4000 rw-p 00007000 00:30 112330221                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/mio_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fae1a4000-2b6fae1d3000 r-xp 00000000 00:30 112330225                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/mio5_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fae1d3000-2b6fae3d2000 ---p 0002f000 00:30 112330225                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/mio5_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fae3d2000-2b6fae3d6000 rw-p 0002e000 00:30 112330225                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/mio5_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fae3d6000-2b6fae3d7000 rw-p 00000000 00:00 0 
+2b6fae3d7000-2b6fae3f2000 r-xp 00000000 00:30 112330222                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/streams.cpython-37m-x86_64-linux-gnu.so
+2b6fae3f2000-2b6fae5f2000 ---p 0001b000 00:30 112330222                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/streams.cpython-37m-x86_64-linux-gnu.so
+2b6fae5f2000-2b6fae5f4000 rw-p 0001b000 00:30 112330222                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/scipy/io/matlab/streams.cpython-37m-x86_64-linux-gnu.so
+2b6fae5f4000-2b6fae635000 rw-p 00000000 00:00 0 
+2b6fae635000-2b6fae66f000 r-xp 00000000 00:30 112331680                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/preprocessing/_csr_polynomial_expansion.cpython-37m-x86_64-linux-gnu.so
+2b6fae66f000-2b6fae86e000 ---p 0003a000 00:30 112331680                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/preprocessing/_csr_polynomial_expansion.cpython-37m-x86_64-linux-gnu.so
+2b6fae86e000-2b6fae872000 rw-p 00039000 00:30 112331680                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/preprocessing/_csr_polynomial_expansion.cpython-37m-x86_64-linux-gnu.so
+2b6fae872000-2b6fae873000 rw-p 00000000 00:00 0 
+2b6fae873000-2b6fae876000 rw-p 0003e000 00:30 112331680                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/preprocessing/_csr_polynomial_expansion.cpython-37m-x86_64-linux-gnu.so
+2b6fae876000-2b6fae8b6000 rw-p 00000000 00:00 0 
+2b6fae8b6000-2b6fae8cc000 r-xp 00000000 00:30 112333154                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/metrics/cluster/expected_mutual_info_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fae8cc000-2b6faeacb000 ---p 00016000 00:30 112333154                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/metrics/cluster/expected_mutual_info_fast.cpython-37m-x86_64-linux-gnu.so
+2b6faeacb000-2b6faead0000 rw-p 00015000 00:30 112333154                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/metrics/cluster/expected_mutual_info_fast.cpython-37m-x86_64-linux-gnu.so
+2b6faead0000-2b6faead4000 r-xp 00000000 00:30 112331307                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/lgamma.cpython-37m-x86_64-linux-gnu.so
+2b6faead4000-2b6faecd4000 ---p 00004000 00:30 112331307                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/lgamma.cpython-37m-x86_64-linux-gnu.so
+2b6faecd4000-2b6faecd7000 rw-p 00004000 00:30 112331307                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/lgamma.cpython-37m-x86_64-linux-gnu.so
+2b6faecd7000-2b6faed17000 rw-p 00000000 00:00 0 
+2b6faed17000-2b6faed4c000 r-xp 00000000 00:30 112333137                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/metrics/pairwise_fast.cpython-37m-x86_64-linux-gnu.so
+2b6faed4c000-2b6faef4b000 ---p 00035000 00:30 112333137                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/metrics/pairwise_fast.cpython-37m-x86_64-linux-gnu.so
+2b6faef4b000-2b6faef4f000 rw-p 00034000 00:30 112333137                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/metrics/pairwise_fast.cpython-37m-x86_64-linux-gnu.so
+2b6faef4f000-2b6faef50000 rw-p 00000000 00:00 0 
+2b6faef50000-2b6faef54000 rw-p 00039000 00:30 112333137                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/metrics/pairwise_fast.cpython-37m-x86_64-linux-gnu.so
+2b6faef54000-2b6faefb3000 r-xp 00000000 00:30 112331292                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_cython_blas.cpython-37m-x86_64-linux-gnu.so
+2b6faefb3000-2b6faf1b3000 ---p 0005f000 00:30 112331292                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_cython_blas.cpython-37m-x86_64-linux-gnu.so
+2b6faf1b3000-2b6faf1b8000 rw-p 0005f000 00:30 112331292                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_cython_blas.cpython-37m-x86_64-linux-gnu.so
+2b6faf1b8000-2b6faf1b9000 rw-p 00000000 00:00 0 
+2b6faf1b9000-2b6faf1bd000 rw-p 00065000 00:30 112331292                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_cython_blas.cpython-37m-x86_64-linux-gnu.so
+2b6faf1bd000-2b6faf47e000 rw-p 00000000 00:00 0 
+2b6faf47e000-2b6faf491000 r-xp 00000000 00:30 112331298                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_random.cpython-37m-x86_64-linux-gnu.so
+2b6faf491000-2b6faf691000 ---p 00013000 00:30 112331298                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_random.cpython-37m-x86_64-linux-gnu.so
+2b6faf691000-2b6faf697000 rw-p 00013000 00:30 112331298                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/_random.cpython-37m-x86_64-linux-gnu.so
+2b6faf697000-2b6faf6c6000 r-xp 00000000 00:30 112331649                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_criterion.cpython-37m-x86_64-linux-gnu.so
+2b6faf6c6000-2b6faf8c6000 ---p 0002f000 00:30 112331649                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_criterion.cpython-37m-x86_64-linux-gnu.so
+2b6faf8c6000-2b6faf8ca000 rw-p 0002f000 00:30 112331649                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_criterion.cpython-37m-x86_64-linux-gnu.so
+2b6faf8ca000-2b6faf8cb000 rw-p 00000000 00:00 0 
+2b6faf8cb000-2b6faf8ce000 rw-p 00033000 00:30 112331649                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_criterion.cpython-37m-x86_64-linux-gnu.so
+2b6faf8ce000-2b6faf904000 r-xp 00000000 00:30 112331642                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_splitter.cpython-37m-x86_64-linux-gnu.so
+2b6faf904000-2b6fafb04000 ---p 00036000 00:30 112331642                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_splitter.cpython-37m-x86_64-linux-gnu.so
+2b6fafb04000-2b6fafb08000 rw-p 00036000 00:30 112331642                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_splitter.cpython-37m-x86_64-linux-gnu.so
+2b6fafb08000-2b6fafb09000 rw-p 00000000 00:00 0 
+2b6fafb09000-2b6fafb0c000 rw-p 0003b000 00:30 112331642                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_splitter.cpython-37m-x86_64-linux-gnu.so
+2b6fafb0c000-2b6fafb5d000 r-xp 00000000 00:30 112331637                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fafb5d000-2b6fafd5d000 ---p 00051000 00:30 112331637                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fafd5d000-2b6fafd62000 rw-p 00051000 00:30 112331637                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fafd62000-2b6fafd64000 rw-p 00000000 00:00 0 
+2b6fafd64000-2b6fafd67000 rw-p 00057000 00:30 112331637                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fafd67000-2b6fafdd5000 r-xp 00000000 00:30 112333385                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/ball_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fafdd5000-2b6faffd5000 ---p 0006e000 00:30 112333385                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/ball_tree.cpython-37m-x86_64-linux-gnu.so
+2b6faffd5000-2b6faffdc000 rw-p 0006e000 00:30 112333385                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/ball_tree.cpython-37m-x86_64-linux-gnu.so
+2b6faffdc000-2b6faffdf000 rw-p 00000000 00:00 0 
+2b6faffdf000-2b6faffe3000 rw-p 00076000 00:30 112333385                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/ball_tree.cpython-37m-x86_64-linux-gnu.so
+2b6faffe3000-2b6fb0027000 r-xp 00000000 00:30 112333376                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/dist_metrics.cpython-37m-x86_64-linux-gnu.so
+2b6fb0027000-2b6fb0226000 ---p 00044000 00:30 112333376                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/dist_metrics.cpython-37m-x86_64-linux-gnu.so
+2b6fb0226000-2b6fb022d000 rw-p 00043000 00:30 112333376                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/dist_metrics.cpython-37m-x86_64-linux-gnu.so
+2b6fb022d000-2b6fb022f000 rw-p 00000000 00:00 0 
+2b6fb022f000-2b6fb0233000 rw-p 0004a000 00:30 112333376                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/dist_metrics.cpython-37m-x86_64-linux-gnu.so
+2b6fb0233000-2b6fb0237000 r-xp 00000000 00:30 112333387                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/typedefs.cpython-37m-x86_64-linux-gnu.so
+2b6fb0237000-2b6fb0437000 ---p 00004000 00:30 112333387                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/typedefs.cpython-37m-x86_64-linux-gnu.so
+2b6fb0437000-2b6fb0438000 rw-p 00004000 00:30 112333387                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/typedefs.cpython-37m-x86_64-linux-gnu.so
+2b6fb0438000-2b6fb043a000 rw-p 00006000 00:30 112333387                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/typedefs.cpython-37m-x86_64-linux-gnu.so
+2b6fb043a000-2b6fb04a8000 r-xp 00000000 00:30 112333377                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/kd_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fb04a8000-2b6fb06a7000 ---p 0006e000 00:30 112333377                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/kd_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fb06a7000-2b6fb06af000 rw-p 0006d000 00:30 112333377                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/kd_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fb06af000-2b6fb06b1000 rw-p 00000000 00:00 0 
+2b6fb06b1000-2b6fb06b5000 rw-p 00075000 00:30 112333377                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/kd_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fb06b5000-2b6fb06f5000 rw-p 00000000 00:00 0 
+2b6fb06f5000-2b6fb071b000 r-xp 00000000 00:30 112331579                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/decomposition/cdnmf_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb071b000-2b6fb091a000 ---p 00026000 00:30 112331579                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/decomposition/cdnmf_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb091a000-2b6fb091d000 rw-p 00025000 00:30 112331579                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/decomposition/cdnmf_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb091d000-2b6fb091e000 rw-p 00000000 00:00 0 
+2b6fb091e000-2b6fb0921000 rw-p 00028000 00:30 112331579                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/decomposition/cdnmf_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb0921000-2b6fb093e000 r-xp 00000000 00:30 112331322                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/seq_dataset.cpython-37m-x86_64-linux-gnu.so
+2b6fb093e000-2b6fb0b3e000 ---p 0001d000 00:30 112331322                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/seq_dataset.cpython-37m-x86_64-linux-gnu.so
+2b6fb0b3e000-2b6fb0b44000 rw-p 0001d000 00:30 112331322                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/seq_dataset.cpython-37m-x86_64-linux-gnu.so
+2b6fb0b44000-2b6fb0b84000 rw-p 00000000 00:00 0 
+2b6fb0b84000-2b6fb0bb3000 r-xp 00000000 00:30 112331306                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/arrayfuncs.cpython-37m-x86_64-linux-gnu.so
+2b6fb0bb3000-2b6fb0db2000 ---p 0002f000 00:30 112331306                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/arrayfuncs.cpython-37m-x86_64-linux-gnu.so
+2b6fb0db2000-2b6fb0db6000 rw-p 0002e000 00:30 112331306                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/arrayfuncs.cpython-37m-x86_64-linux-gnu.so
+2b6fb0db6000-2b6fb0db7000 rw-p 00000000 00:00 0 
+2b6fb0db7000-2b6fb0dbb000 rw-p 00033000 00:30 112331306                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/arrayfuncs.cpython-37m-x86_64-linux-gnu.so
+2b6fb0dbb000-2b6fb0e1f000 r-xp 00000000 00:30 112332355                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/cd_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb0e1f000-2b6fb101e000 ---p 00064000 00:30 112332355                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/cd_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb101e000-2b6fb1024000 rw-p 00063000 00:30 112332355                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/cd_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb1024000-2b6fb1025000 rw-p 00000000 00:00 0 
+2b6fb1025000-2b6fb1029000 rw-p 00069000 00:30 112332355                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/cd_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb1029000-2b6fb1072000 r-xp 00000000 00:30 112332382                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/sgd_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb1072000-2b6fb1272000 ---p 00049000 00:30 112332382                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/sgd_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb1272000-2b6fb1279000 rw-p 00049000 00:30 112332382                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/sgd_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb1279000-2b6fb127b000 rw-p 00000000 00:00 0 
+2b6fb127b000-2b6fb127f000 rw-p 00051000 00:30 112332382                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/sgd_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb127f000-2b6fb128a000 r-xp 00000000 00:30 112331295                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/weight_vector.cpython-37m-x86_64-linux-gnu.so
+2b6fb128a000-2b6fb148a000 ---p 0000b000 00:30 112331295                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/weight_vector.cpython-37m-x86_64-linux-gnu.so
+2b6fb148a000-2b6fb148b000 rw-p 0000b000 00:30 112331295                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/weight_vector.cpython-37m-x86_64-linux-gnu.so
+2b6fb148b000-2b6fb148c000 rw-p 00000000 00:00 0 
+2b6fb148c000-2b6fb148f000 rw-p 0000d000 00:30 112331295                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/utils/weight_vector.cpython-37m-x86_64-linux-gnu.so
+2b6fb148f000-2b6fb14cf000 rw-p 00000000 00:00 0 
+2b6fb14cf000-2b6fb14f0000 r-xp 00000000 00:30 112332351                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/sag_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb14f0000-2b6fb16ef000 ---p 00021000 00:30 112332351                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/sag_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb16ef000-2b6fb16f2000 rw-p 00020000 00:30 112332351                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/sag_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb16f2000-2b6fb16f3000 rw-p 00000000 00:00 0 
+2b6fb16f3000-2b6fb16f6000 rw-p 00024000 00:30 112332351                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/linear_model/sag_fast.cpython-37m-x86_64-linux-gnu.so
+2b6fb16f6000-2b6fb173d000 r-xp 00000000 00:30 112333337                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/libsvm.cpython-37m-x86_64-linux-gnu.so
+2b6fb173d000-2b6fb193d000 ---p 00047000 00:30 112333337                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/libsvm.cpython-37m-x86_64-linux-gnu.so
+2b6fb193d000-2b6fb1941000 rw-p 00047000 00:30 112333337                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/libsvm.cpython-37m-x86_64-linux-gnu.so
+2b6fb1941000-2b6fb1942000 rw-p 00000000 00:00 0 
+2b6fb1942000-2b6fb1948000 rw-p 0004c000 00:30 112333337                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/libsvm.cpython-37m-x86_64-linux-gnu.so
+2b6fb1948000-2b6fb1962000 r-xp 00000000 00:30 112333341                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/liblinear.cpython-37m-x86_64-linux-gnu.so
+2b6fb1962000-2b6fb1b62000 ---p 0001a000 00:30 112333341                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/liblinear.cpython-37m-x86_64-linux-gnu.so
+2b6fb1b62000-2b6fb1b68000 rw-p 0001a000 00:30 112333341                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/liblinear.cpython-37m-x86_64-linux-gnu.so
+2b6fb1b68000-2b6fb1bac000 r-xp 00000000 00:30 112333334                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/libsvm_sparse.cpython-37m-x86_64-linux-gnu.so
+2b6fb1bac000-2b6fb1dab000 ---p 00044000 00:30 112333334                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/libsvm_sparse.cpython-37m-x86_64-linux-gnu.so
+2b6fb1dab000-2b6fb1dae000 rw-p 00043000 00:30 112333334                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/libsvm_sparse.cpython-37m-x86_64-linux-gnu.so
+2b6fb1dae000-2b6fb1daf000 rw-p 00000000 00:00 0 
+2b6fb1daf000-2b6fb1db5000 rw-p 00047000 00:30 112333334                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/svm/libsvm_sparse.cpython-37m-x86_64-linux-gnu.so
+2b6fb1db5000-2b6fb1df5000 rw-p 00000000 00:00 0 
+2b6fb1df5000-2b6fb1e00000 r-xp 00000000 00:30 112331575                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/decomposition/_online_lda.cpython-37m-x86_64-linux-gnu.so
+2b6fb1e00000-2b6fb2000000 ---p 0000b000 00:30 112331575                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/decomposition/_online_lda.cpython-37m-x86_64-linux-gnu.so
+2b6fb2000000-2b6fb2005000 rw-p 0000b000 00:30 112331575                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/decomposition/_online_lda.cpython-37m-x86_64-linux-gnu.so
+2b6fb2005000-2b6fb203c000 r-xp 00000000 00:30 112333383                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/quad_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fb203c000-2b6fb223c000 ---p 00037000 00:30 112333383                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/quad_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fb223c000-2b6fb2240000 rw-p 00037000 00:30 112333383                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/quad_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fb2240000-2b6fb2241000 rw-p 00000000 00:00 0 
+2b6fb2241000-2b6fb2244000 rw-p 0003b000 00:30 112333383                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/neighbors/quad_tree.cpython-37m-x86_64-linux-gnu.so
+2b6fb2244000-2b6fb2275000 r-xp 00000000 00:30 112331639                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fb2275000-2b6fb2474000 ---p 00031000 00:30 112331639                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fb2474000-2b6fb2477000 rw-p 00030000 00:30 112331639                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fb2477000-2b6fb2478000 rw-p 00000000 00:00 0 
+2b6fb2478000-2b6fb247b000 rw-p 00034000 00:30 112331639                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/tree/_utils.cpython-37m-x86_64-linux-gnu.so
+2b6fb247b000-2b6fb24bb000 rw-p 00000000 00:00 0 
+2b6fb24bb000-2b6fb24ea000 r-xp 00000000 00:30 112333203                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/ensemble/_gradient_boosting.cpython-37m-x86_64-linux-gnu.so
+2b6fb24ea000-2b6fb26ea000 ---p 0002f000 00:30 112333203                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/ensemble/_gradient_boosting.cpython-37m-x86_64-linux-gnu.so
+2b6fb26ea000-2b6fb26ee000 rw-p 0002f000 00:30 112333203                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/ensemble/_gradient_boosting.cpython-37m-x86_64-linux-gnu.so
+2b6fb26ee000-2b6fb26ef000 rw-p 00000000 00:00 0 
+2b6fb26ef000-2b6fb26f2000 rw-p 00033000 00:30 112333203                  /home-net/home-4/sju7@jhu.edu/tealeaf/lib/python3.7/site-packages/sklearn/ensemble/_gradient_boosting.cpython-37m-x86_64-linux-gnu.so
+2b6fb26f2000-2b6fb2772000 rw-p 00000000 00:00 0 
+2b6fb2772000-2b6fb277e000 r-xp 00000000 00:14 63174                      /usr/lib64/libnss_files-2.17.so
+2b6fb277e000-2b6fb297d000 ---p 0000c000 00:14 63174                      /usr/lib64/libnss_files-2.17.so
+2b6fb297d000-2b6fb297e000 r--p 0000b000 00:14 63174                      /usr/lib64/libnss_files-2.17.so
+2b6fb297e000-2b6fb297f000 rw-p 0000c000 00:14 63174                      /usr/lib64/libnss_files-2.17.so
+2b6fb297f000-2b6fb2985000 rw-p 00000000 00:00 0 
+2b6fb2985000-2b6fb2997000 r-xp 00000000 00:14 63177                      /usr/lib64/libnss_myhostname.so.2
+2b6fb2997000-2b6fb2b96000 ---p 00012000 00:14 63177                      /usr/lib64/libnss_myhostname.so.2
+2b6fb2b96000-2b6fb2b99000 r--p 00011000 00:14 63177                      /usr/lib64/libnss_myhostname.so.2
+2b6fb2b99000-2b6fb2b9a000 rw-p 00014000 00:14 63177                      /usr/lib64/libnss_myhostname.so.2
+2b6fb2b9a000-2b6fb2b9e000 r-xp 00000000 00:14 62996                      /usr/lib64/libcap.so.2.22
+2b6fb2b9e000-2b6fb2d9d000 ---p 00004000 00:14 62996                      /usr/lib64/libcap.so.2.22
+2b6fb2d9d000-2b6fb2d9e000 r--p 00003000 00:14 62996                      /usr/lib64/libcap.so.2.22
+2b6fb2d9e000-2b6fb2d9f000 rw-p 00004000 00:14 62996                      /usr/lib64/libcap.so.2.22
+2b6fb2d9f000-2b6fb2de3000 r-xp 00000000 00:14 63035                      /usr/lib64/libdw-0.170.so
+2b6fb2de3000-2b6fb2fe3000 ---p 00044000 00:14 63035                      /usr/lib64/libdw-0.170.so
+2b6fb2fe3000-2b6fb2fe5000 r--p 00044000 00:14 63035                      /usr/lib64/libdw-0.170.so
+2b6fb2fe5000-2b6fb2fe6000 rw-p 00046000 00:14 63035                      /usr/lib64/libdw-0.170.so
+2b6fb2fe6000-2b6fb2fea000 r-xp 00000000 00:14 62980                      /usr/lib64/libattr.so.1.1.0
+2b6fb2fea000-2b6fb31e9000 ---p 00004000 00:14 62980                      /usr/lib64/libattr.so.1.1.0
+2b6fb31e9000-2b6fb31ea000 r--p 00003000 00:14 62980                      /usr/lib64/libattr.so.1.1.0
+2b6fb31ea000-2b6fb31eb000 rw-p 00004000 00:14 62980                      /usr/lib64/libattr.so.1.1.0
+2b6fb31eb000-2b6fb3202000 r-xp 00000000 00:14 63041                      /usr/lib64/libelf-0.170.so
+2b6fb3202000-2b6fb3401000 ---p 00017000 00:14 63041                      /usr/lib64/libelf-0.170.so
+2b6fb3401000-2b6fb3402000 r--p 00016000 00:14 63041                      /usr/lib64/libelf-0.170.so
+2b6fb3402000-2b6fb3403000 rw-p 00017000 00:14 63041                      /usr/lib64/libelf-0.170.so
+2b6fb3403000-2b6fb3412000 r-xp 00000000 00:14 62991                      /usr/lib64/libbz2.so.1.0.6
+2b6fb3412000-2b6fb3611000 ---p 0000f000 00:14 62991                      /usr/lib64/libbz2.so.1.0.6
+2b6fb3611000-2b6fb3612000 r--p 0000e000 00:14 62991                      /usr/lib64/libbz2.so.1.0.6
+2b6fb3612000-2b6fb3613000 rw-p 0000f000 00:14 62991                      /usr/lib64/libbz2.so.1.0.6
+2b6fb3613000-2b6fb3618000 r-xp 00000000 00:14 63173                      /usr/lib64/libnss_dns-2.17.so
+2b6fb3618000-2b6fb3818000 ---p 00005000 00:14 63173                      /usr/lib64/libnss_dns-2.17.so
+2b6fb3818000-2b6fb3819000 r--p 00005000 00:14 63173                      /usr/lib64/libnss_dns-2.17.so
+2b6fb3819000-2b6fb381a000 rw-p 00006000 00:14 63173                      /usr/lib64/libnss_dns-2.17.so
+2b6fb381a000-2b6fb3830000 r-xp 00000000 00:14 63253                      /usr/lib64/libresolv-2.17.so
+2b6fb3830000-2b6fb3a2f000 ---p 00016000 00:14 63253                      /usr/lib64/libresolv-2.17.so
+2b6fb3a2f000-2b6fb3a30000 r--p 00015000 00:14 63253                      /usr/lib64/libresolv-2.17.so
+2b6fb3a30000-2b6fb3a31000 rw-p 00016000 00:14 63253                      /usr/lib64/libresolv-2.17.so
+2b6fb3a31000-2b6fb3ab3000 rw-p 00000000 00:00 0 
+2b6fb4000000-2b6fb4021000 rw-p 00000000 00:00 0 
+2b6fb4021000-2b6fb8000000 ---p 00000000 00:00 0 
+558d6c9f9000-558d6ca54000 r--p 00000000 00:30 98581462                   /home-net/home-4/sju7@jhu.edu/tealeaf/bin/python
+558d6ca54000-558d6cc30000 r-xp 0005b000 00:30 98581462                   /home-net/home-4/sju7@jhu.edu/tealeaf/bin/python
+558d6cc30000-558d6ccd7000 r--p 00237000 00:30 98581462                   /home-net/home-4/sju7@jhu.edu/tealeaf/bin/python
+558d6ccd8000-558d6ccdb000 r--p 002de000 00:30 98581462                   /home-net/home-4/sju7@jhu.edu/tealeaf/bin/python
+558d6ccdb000-558d6cd44000 rw-p 002e1000 00:30 98581462                   /home-net/home-4/sju7@jhu.edu/tealeaf/bin/python
+558d6cd44000-558d6cd64000 rw-p 00000000 00:00 0 
+558d6d7b0000-558d6ed5d000 rw-p 00000000 00:00 0                          [heap]
+7ffc77bc0000-7ffc77be3000 rw-p 00000000 00:00 0                          [stack]
+7ffc77bf7000-7ffc77bf9000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+max depth: 11
+avg leaf node depth: 5.63339
+num leaf nodes: 2294
+/var/spool/slurm//job38927537/slurm_script: line 22:  4064 Aborted                 python SPORF_OpenML_opti-hyper_100-trial.py
+Finished with job 38927537
