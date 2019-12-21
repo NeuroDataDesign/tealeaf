@@ -51,7 +51,7 @@ for task_id in benchmark_suite.tasks[:]:  # iterate over all tasks
         # specify parameters and distributions to sample from
         rerf_param_dict = {"n_estimators": np.arange(50,550,50),
                       "max_depth": max_depth_range_rerf,
-                      "min_samples_split": min_sample_splits_range_rerf,
+                      # "min_samples_split": min_sample_splits_range_rerf,
                       "feature_combinations": [1,2,3,4,5], 
                       "max_features": ["sqrt","log2", None, n_features**2]}
 
@@ -69,7 +69,7 @@ for task_id in benchmark_suite.tasks[:]:  # iterate over all tasks
         # specify parameters and distributions to sample from
         rf_param_dict = {"n_estimators": np.arange(50,550,50),
                       "max_depth": max_depth_range_rf,
-                      "min_samples_split": min_sample_splits_range_rf, 
+                      # "min_samples_split": min_sample_splits_range_rf, 
                       "max_features": ["sqrt","log2", None]}
 
         best_params = ho.hyperparameter_optimization_random(X, y, 
@@ -78,7 +78,7 @@ for task_id in benchmark_suite.tasks[:]:  # iterate over all tasks
         #extract values from dict - seperate each classifier's param dict
         keys, values = zip(*best_params.items())
 
-        f = open("SPORF_accuracies_opti-hyper_100.txt","a")
+        f = open("SPORF_accuracies_opti-hyper_100-trial.txt","a")
 
         #train test split
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
