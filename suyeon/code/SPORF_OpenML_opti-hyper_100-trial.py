@@ -27,7 +27,7 @@ simplefilter(action='ignore', category=FutureWarning)
 openml.config.apikey = '204cdba18d110fd68ad24b131ea92030'
 benchmark_suite = openml.study.get_suite('OpenML100')
 
-for task_id in benchmark_suite.tasks[81:82]:  # iterate over all tasks ,50:52,92:93,57:59
+for task_id in benchmark_suite.tasks[50:53]:  # iterate over all tasks 92:93,57:68
     # try:
         # get some data
         task = openml.tasks.get_task(task_id)
