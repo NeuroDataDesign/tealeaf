@@ -95,16 +95,6 @@ for task_id in benchmark_suite.tasks[92:93]:  # iterate over all tasks
         rerf_opti_time = str(datetime.now() - startTime)
         print('Time: '+ str(datetime.now() - startTime))
         startTime = datetime.now()
-            
-        rerf_default = RandomForestClassifier()
-        rerf_default.fit(X_train, y_train)
-        rerf_pred_default = rerf_default.predict(X_test)
-        rerf_accuracy_default = accuracy_score(y_test, rerf_pred_default)
-        print(rerf_accuracy_default)
-
-        rerf_default_time = str(datetime.now() - startTime)
-        print('Time: '+ str(datetime.now() - startTime))
-        startTime = datetime.now()
 
         rf_opti = RandomForestClassifier(**values[1])
         rf_opti.fit(X_train, y_train)
@@ -115,17 +105,8 @@ for task_id in benchmark_suite.tasks[92:93]:  # iterate over all tasks
         rf_opti_time = str(datetime.now() - startTime)
         print('Time: '+ str(datetime.now() - startTime))
         startTime = datetime.now()
-            
-        rf_default = RandomForestClassifier()
-        rf_default.fit(X_train, y_train)
-        rf_pred_default = rf_default.predict(X_test)
-        rf_accuracy_default = accuracy_score(y_test, rf_pred_default)
-        print(rf_accuracy_default)
 
-        rf_default_time = str(datetime.now() - startTime)
-        print('Time: '+ str(datetime.now() - startTime))
-
-        f.write('%i,%s,%s,%s,%s,%s,%f,%f,%f,%f,\n' % (task_id,task.get_dataset().name,rerf_opti_time,rerf_default_time,rf_opti_time,rf_default_time,rerf_accuracy_opti,rerf_accuracy_default,rf_accuracy_opti,rf_accuracy_default))
+        f.write('%i,%s,%s,%s,%f,%f,\n' % (task_id,task.get_dataset().name,rerf_opti_time,rf_opti_time,rerf_accuracy_opti,rf_accuracy_opti))
         f.close()
     # except:
     #     print('Error in OpenML 100 dataset ' + str(task_id))
