@@ -446,4 +446,4 @@ starting tree 1
 max depth: 20
 avg leaf node depth: 9.8318
 num leaf nodes: 14643
-starting tree 1
+starting tree 1slurmstepd: error: *** JOB 38946461 ON bigmem0017 CANCELLED AT 2019-12-22T20:21:37 ***
