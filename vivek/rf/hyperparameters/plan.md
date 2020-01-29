@@ -29,4 +29,4 @@ For each pair of hyperparameters, we make another table. Therefore, for simplici
 it'd be better to minimize the number of hyperparameters we optimize over (this will also help the program
 run faster on MARCC!).
 
-[figure6]: ./hyperparameters/figure.png
+[figure6]: ./figure.png
