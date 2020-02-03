@@ -17,7 +17,7 @@
 # module warnings
 # module rerf
 # module datetime
-# module hyperparamter_optimization
+# module hyperparam_optimization
 #### execute python code
-python SPORF_OpenML_opti-hyper_100-trial.py
+python SPORF_OpenML_opti-hyper_100.py
 echo "Finished with job $SLURM_JOBID"
