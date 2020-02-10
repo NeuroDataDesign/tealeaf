@@ -9,7 +9,7 @@ def gen_coeffs(num_dim):
 
     :return: a vector of coefficients
     """
-    coeff_vec = np.array([1 / (x+1) for x in range(num_dim)])
+    coeff_vec = np.array([1 / (x + 1) for x in range(num_dim)])
 
     return coeff_vec.reshape(-1, 1)
 
@@ -25,11 +25,7 @@ def gen_x_unif(num_samp, num_dim, low=-1, high=1):
 
     :return: uniformly distributed simulated data matrix
     """
-    uniform_vec = np.array(np.random.uniform(low=low, high=high,
-                                             size=num_samp * num_dim))
-    data_mat = uniform_vec.reshape(num_samp, num_dim)
-
-    return data_mat
+    return np.random.uniform(low=low, high=high, size=(num_samp, num_dim))
 
 
 def linear_sim(num_samp, num_dim, noise=1, indep=False, low=-1, high=1):
@@ -48,7 +44,7 @@ def linear_sim(num_samp, num_dim, noise=1, indep=False, low=-1, high=1):
     x = gen_x_unif(num_samp, num_dim, low=low, high=high)
     coeffs = gen_coeffs(num_dim)
     gauss_noise = np.random.normal(loc=0, scale=1, size=(num_samp, 1))
-    if (num_dim == 1):
+    if num_dim == 1:
         kappa = 1
     else:
         kappa = 0
